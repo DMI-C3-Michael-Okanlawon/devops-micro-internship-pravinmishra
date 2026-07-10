@@ -20,7 +20,7 @@ Discover exactly where Claude Code stores memory for this project.
 
 #### Screenshot 1 — Memory file path shown by Claude
 
-Add your screenshot here.
+(week-02-agentic-ai\screenshots\A7 Screenshot 1 — Memory file path shown by Claude.PNG)
 
 ---
 
@@ -34,7 +34,7 @@ Teach Claude three specific facts about the project and instruct it to save them
 
 #### Screenshot 2 — Claude confirming the memory was saved
 
-Add your screenshot here.
+(week-02-agentic-ai\screenshots\A7 Screenshot 2 — Claude confirming the memory.PNG)
 
 ---
 
@@ -42,7 +42,7 @@ Add your screenshot here.
 
 Add your screenshot here.
 
----
+(week-02-agentic-ai\screenshots\A7 Screenshot 3 — The MEMORY.md file.PNG)
 
 # Task 3 — Close the Session Completely
 
@@ -54,9 +54,8 @@ Terminate the current Claude Code session and restart it to ensure memory is the
 
 #### Screenshot 4 — VS Code reopened with a fresh Claude Code session showing no previous conversation
 
-Add your screenshot here.
+(week-02-agentic-ai\screenshots\A7 Screenshot 4 — VS Code reopened with a fresh Claude Code session.PNG)
 
----
 
 # Task 4 — Prove Memory Recall Across Sessions
 
@@ -68,13 +67,13 @@ Run three tests that prove Claude remembers what you told it — without you say
 
 #### Screenshot 5 — Claude recalling hero section colors
 
-Add your screenshot here.
 
----
+
+(week-02-agentic-ai\screenshots\A7 Screenshot 5 — Claude recalling hero section colors.PNG)
 
 #### Screenshot 6 — Claude refusing JavaScript request based on memory rule
 
-Add your screenshot here.
+(week-02-agentic-ai\screenshots\A7 Screenshot 6 — Claude refusing JavaScript request.PNG)
 
 ---
 
@@ -91,7 +90,7 @@ Add your screenshot here.
 
 Paste your Linkedin post link here:
 
-`__________________________`
+`https://www.linkedin.com/posts/michael-okanlawon_reflection-week-2-by-michael-oladunni-share-7481398657775341568-V3sO/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw`
 
 ---
 
@@ -99,7 +98,7 @@ Paste your Linkedin post link here:
 
 Paste your forked repository URL here:
 
-`__________________________`
+`https://github.com/DMI-C3-Michael-Okanlawon/Ultimate-Agentic-DevOps-with-Claude-Code.git`
 
 ---
 

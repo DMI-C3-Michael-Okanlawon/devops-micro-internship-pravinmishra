@@ -102,7 +102,7 @@ terraform version
 
 1. Open your project in VS Code.
 
-![project](./images/ss118.png)
+![project](week-02-agentic-ai\screenshots\Assignment3Screenshot 1 VS Code sidebar showing claude skills folder with all 4 subfolders visible.PNG)
 
 2. Open the terminal.
 

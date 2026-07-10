@@ -16,7 +16,7 @@ In this assignment, you will set up your local development environment for Agent
 
 Install the Claude Code CLI globally and authenticate it using your Anthropic account.
 
-### Evidence
+Claude code (week-02-agentic-ai\screenshots\Screenshot 1.PNG)
 
 #### Screenshot 1 — Terminal showing `claude --version` with the version number visible
 
@@ -77,7 +77,7 @@ Claude second question (week-02-agentic-ai\screenshots\Screenshot5.PNG)
 
 Paste your forked repository URL here:
 
-`__________________________`
+`https://github.com/DMI-C3-Michael-Okanlawon/devops-micro-internship-pravinmishra.git`
 
 ---
 
