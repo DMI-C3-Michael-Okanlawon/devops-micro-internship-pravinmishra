@@ -20,7 +20,7 @@ Verify the Ubuntu VM and Nginx are ready for deployment.
 
 #### Screenshot 0 — Output of `sudo systemctl status nginx --no-pager` showing Active (running)
 
-Add your screenshot here.
+(week-03-linux-for-devops\screenshots\A4 Screenshot 0 — Output of sudo systemctl status nginx --no-pager.PNG)
 
 ---
 
@@ -34,7 +34,7 @@ Download and extract the portfolio website template.
 
 #### Screenshot 1 — Output of `ls -la` showing the extracted project folder
 
-Add your screenshot here.
+(week-03-linux-for-devops\screenshots\A4 screenshot screenhot of ls -la.PNG)
 
 ---
 
@@ -48,7 +48,7 @@ Update the website footer with your deployment details.
 
 #### Screenshot 2 — Nano editor open with the updated footer showing your Full Name, Group, Week, and Date
 
-Add your screenshot here.
+(week-03-linux-for-devops\screenshots\A4 Screenshot 2 Nano editor open with the updated footer.PNG)
 
 ---
 
@@ -62,13 +62,13 @@ Deploy the portfolio website to the Nginx web root.
 
 #### Screenshot 3 — Output of `sudo nginx -t` showing configuration test successful
 
-Add your screenshot here.
+(week-03-linux-for-devops\screenshots\A4 Screenshot 3 — Output of sudo nginx -t.PNG)
 
 ---
 
 #### Screenshot 4 — Output of `ls /var/www/html` showing deployed website files
 
-Add your screenshot here.
+(week-03-linux-for-devops\screenshots\A4 screenshot 4 ls var-www-html.PNG)
 
 ---
 
@@ -82,13 +82,13 @@ Verify the deployed website is publicly accessible and the footer contains your 
 
 #### Screenshot 5 — Output of `curl ifconfig.me` showing the server's public IP address
 
-Add your screenshot here.
+(week-03-linux-for-devops\screenshots\A4 screenshot 5 curl ifconfigme.PNG)
 
 ---
 
 #### Screenshot 6 — Browser showing the live website with your Full Name and deployment details in the footer
 
-Add your screenshot here.
+(week-03-linux-for-devops\screenshots\A4 Screenshot 2 Nano editor open with the updated footer.PNG)
 
 ---
 
@@ -102,13 +102,13 @@ Verify the deployed website and Nginx service are healthy.
 
 #### Screenshot 7 — Output of `systemctl is-enabled nginx`
 
-Add your screenshot here.
+(week-03-linux-for-devops\screenshots\A4 Screenshot 7 systemctl is-enabled nginx.PNG)
 
 ---
 
 #### Screenshot 8 — Output of `curl -I http://localhost` showing 200 OK
 
-Add your screenshot here.
+(week-03-linux-for-devops\screenshots\A4 Screenshot 8 curl -I http-localhost.PNG)
 
 ---
 
@@ -120,13 +120,13 @@ Add your screenshot here.
 
 Paste your LinkedIn post URL here:
 
-`__________________________`
+`https://lnkd.in/p/eMjXjJ37`
 
 ---
 
 #### Screenshot — Published LinkedIn post showing the live website with your Full Name in the footer
 
-Add your screenshot here.
+(week-03-linux-for-devops\screenshots\A4 LinkedIn Crafted screenshot.PNG)
 
 ---
 
