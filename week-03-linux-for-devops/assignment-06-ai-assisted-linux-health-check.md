@@ -491,7 +491,7 @@ Paste your LinkedIn post URL here:
 
 Paste the URL of your GitHub folder or repository containing the assignment files here:
 
-`_____`
+`https://github.com/DMI-C3-Michael-Okanlawon/devops-micro-internship-pravinmishra/blob/main`
 
 ---
 
