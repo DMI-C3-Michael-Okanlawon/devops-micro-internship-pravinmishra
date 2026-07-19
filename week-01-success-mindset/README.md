@@ -193,8 +193,6 @@ If Yes:
 
 ## Answer
 
-Add your answer here...
-
 No
 
 # Assignment 5. What are 10 non-fiction books you plan to read in the next 1 year?
