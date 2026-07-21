@@ -25,7 +25,6 @@ Take a screenshot of your interaction showing:
 
 Save your screenshot in the `screenshots` folder and update the file name below.
 
-![Task 1 Screenshot]
 ![alt text](screenshots/task-1-chatgpt.PNG)
 
 
@@ -93,7 +92,6 @@ EpicReads bookstore has two application versions:
 Save your diagram image in the `screenshots` folder and update the file name below.
 
 ![Application Architecture Diagram](screenshots/task-3-diagram.png)
-![alt text](screenshots/task-3-diagram.png)
 
 Replace `task-3-diagram.png` with your actual diagram file name.
 
@@ -178,7 +176,7 @@ ls
 ## Screenshot
 
 Save your screenshot in the `screenshots` folder and update the file name below.
-![alt text](screenshots/task-5-vscode.PNG)
+
 ![VS Code Setup Screenshot](screenshots/task-5-vscode.png)
 
 
@@ -215,8 +213,6 @@ Add the following credit note at the end of your post:
 ---
 
 ## LinkedIn Post URL
-
-Paste your LinkedIn post URL here:
 
 `https://www.linkedin.com/posts/michael-okanlawon_devops-micro-internship-dmi-by-pravin-activity-7442557463683313664-Z0BJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw`
 
