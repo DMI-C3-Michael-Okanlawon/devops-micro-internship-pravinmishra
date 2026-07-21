@@ -13,11 +13,11 @@ Complete all tasks below and update your [progress tracker](../README.md).
 
 **What I did:**
 
-<!-- Write 2-3 sentences describing what you configured on your profile -->
+I updated my GitHub profile to make it look more professional by adding a profile picture, a short bio, and relevant information about my DevOps learning journey. I also reviewed my profile settings to ensure my repositories and contributions are presented properly.
 
 **Screenshot:**
 
-![GitHub Profile](./screenshots/task1-github-profile.png)
+![GitHub Profile](screenshots\github-profile.PNG)
 
 ---
 
