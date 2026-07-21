@@ -20,7 +20,7 @@ Install Node.js and npm on the Ubuntu VM and verify the installation.
 
 #### Screenshot 1 — Output of `node -v && npm -v` showing installed versions
 
-(week-03-linux-for-devops\screenshots\A1 Screenshot 1 — Output of node -v and npm -v.PNG)
+![alt text](../week-03-linux-for-devops/screenshots/A1-Screenshot-1-Output-of-node-v-and-npm-v.PNG)(week-03-linux-for-devops\screenshots\A1 Screenshot 1 — Output of node -v and npm -v.PNG)
 
 ---
 
@@ -34,7 +34,7 @@ Install Nginx, start the service, and confirm it is running.
 
 #### Screenshot 2 — Output of `systemctl status nginx --no-pager` showing Active (running)
 
-(week-03-linux-for-devops\screenshots\A1 Screenshot 2 — Output of systemctl status nginx --no-pager.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A1 Screenshot 2 — Output of systemctl status nginx --no-pager.PNG>)(week-03-linux-for-devops\screenshots\A1 Screenshot 2 — Output of systemctl status nginx --no-pager.PNG)
 
 ---
 
@@ -48,7 +48,7 @@ Clone the project repository and verify the project files are present.
 
 #### Screenshot 3 — Output of `ls` inside the `my-react-app` directory showing project files
 
-(week-03-linux-for-devops\screenshots\A1 Screenshot 3 — Output of ls inside the my-react-app.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A1 Screenshot 3 — Output of ls inside the my-react-app.PNG>)(week-03-linux-for-devops\screenshots\A1 Screenshot 3 — Output of ls inside the my-react-app.PNG)
 
 ---
 
@@ -62,7 +62,7 @@ Update `App.js` with your full name and the current date.
 
 #### Screenshot 4 — `nano App.js` open showing your full name and date filled in
 
-(week-03-linux-for-devops\screenshots\A1 Screenshot 4 — nano App.js showing name and date.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A1 Screenshot 4 — nano App.js showing name and date.PNG>)(week-03-linux-for-devops\screenshots\A1 Screenshot 4 — nano App.js showing name and date.PNG)
 
 ---
 
@@ -76,7 +76,7 @@ Install dependencies and generate the production build.
 
 #### Screenshot 5 — Output of `ls` inside `my-react-app` showing the `build/` folder generated
 
-(week-03-linux-for-devops\screenshots\A1 Screenshot 5 — Output of ls inside my-react-app.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A1 Screenshot 5 — Output of ls inside my-react-app.PNG>)(week-03-linux-for-devops\screenshots\A1 Screenshot 5 — Output of ls inside my-react-app.PNG)
 
 ---
 
@@ -90,7 +90,7 @@ Copy the production build files to the Nginx web root directory.
 
 #### Screenshot 6 — Output of `ls /var/www/html/` showing the deployed build contents
 
-(week-03-linux-for-devops\screenshots\A1 Screenshot 6 — Output of ls var-www-html.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A1 Screenshot 6 — Output of ls var-www-html.PNG>)(week-03-linux-for-devops\screenshots\A1 Screenshot 6 — Output of ls var-www-html.PNG)
 
 ---
 
@@ -104,13 +104,13 @@ Apply Nginx configuration for React routing and confirm the service is active.
 
 #### Screenshot 7 — Output of `systemctl is-active nginx` showing `active`
 
-(week-03-linux-for-devops\screenshots\A1 Screenshot 7 — Output of systemctl is-active nginx.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A1 Screenshot 7 — Output of systemctl is-active nginx.PNG>)(week-03-linux-for-devops\screenshots\A1 Screenshot 7 — Output of systemctl is-active nginx.PNG)
 
 ---
 
 #### Screenshot 8 — Output of `cat /etc/nginx/sites-available/default` showing the Nginx config
 
-(week-03-linux-for-devops\screenshots\A1 Screenshot 8 — Output of cat etc nginx sites-available default.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A1 Screenshot 8 — Output of cat etc nginx sites-available default.PNG>)(week-03-linux-for-devops\screenshots\A1 Screenshot 8 — Output of cat etc nginx sites-available default.PNG)
 
 ---
 
@@ -124,13 +124,13 @@ Verify the React application is publicly accessible via the server's public IP.
 
 #### Screenshot 9 — Output of `curl ifconfig.me` showing the server's public IP address
 
-(week-03-linux-for-devops\screenshots\A1 Screenshot 9 — Output of curl ifconfig.me.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A1 Screenshot 9 — Output of curl ifconfig.me.PNG>)(week-03-linux-for-devops\screenshots\A1 Screenshot 9 — Output of curl ifconfig.me.PNG)
 
 ---
 
 #### Screenshot 10 — Browser showing the deployed React app at `http://<public-ip>` with your name and date visible
 
-(week-03-linux-for-devops\screenshots\A1 Screenshot 10 — Browser showing the deployed React app.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A1 Screenshot 10 — Browser showing the deployed React app copy.PNG>)(week-03-linux-for-devops\screenshots\A1 Screenshot 10 — Browser showing the deployed React app.PNG)
 
 ---
 
@@ -142,17 +142,13 @@ Verify the React application is publicly accessible via the server's public IP.
 
 Paste your LinkedIn post URL here:
 
-<<<<<<< HEAD:week-03-linux-for-devops/assignment-02-deploy-a-react-app-on-ubuntu-vm-using-nginx.md
 `https://www.linkedin.com/posts/michael-okanlawon_devops-aws-amazonec2-share-7482157152757911553-T8tG/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw`
-=======
-`Add your URL here`
->>>>>>> upstream/main:week-03-linux-and-bash-for-devops/assignment-02-deploy-a-react-app-on-ubuntu-vm-using-nginx.md
 
 ---
 
 #### Screenshot — LinkedIn post showing the deployed application
 
-(week-03-linux-for-devops\screenshots\Linkedin Screenshot.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/Linkedin Screenshot.PNG>)(week-03-linux-for-devops\screenshots\Linkedin Screenshot.PNG)
 
 ---
 

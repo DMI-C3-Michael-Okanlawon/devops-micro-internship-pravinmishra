@@ -20,25 +20,25 @@ Verify that the deployed React application is reachable from the browser and con
 
 #### Screenshot 1 — Browser showing the React app with your Full Name visible on the UI
 
-(week-03-linux-for-devops\screenshots\A3 Screenshot 1.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A3 Screenshot 1.PNG>)(week-03-linux-for-devops\screenshots\A3 Screenshot 1.PNG)
 
 ---
 
 #### Screenshot 2 — Output of `ip a`
 
-(week-03-linux-for-devops\screenshots\A3 screenshot 2 output ip a.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A3 screenshot 2 output ip a.PNG>)(week-03-linux-for-devops\screenshots\A3 screenshot 2 output ip a.PNG)
 
 ---
 
 #### Screenshot 3 — Output of `sudo ss -tulpen`
 
-(week-03-linux-for-devops\screenshots\A3 screenshot 3 sudo ss -tulpen.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A3 screenshot 3 sudo ss -tulpen.PNG>)(week-03-linux-for-devops\screenshots\A3 screenshot 3 sudo ss -tulpen.PNG)
 
 ---
 
 #### Screenshot 4 — Output of `sudo ufw status`
 
-(week-03-linux-for-devops\screenshots\A3 screenshot 4 sudo ufw status.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A3 screenshot 4 sudo ufw status.PNG>)(week-03-linux-for-devops\screenshots\A3 screenshot 4 sudo ufw status.PNG)
 
 ---
 
@@ -74,19 +74,19 @@ Verify that Nginx is properly installed, running, enabled at boot, and safely co
 
 #### Screenshot 1 — Output of `systemctl status nginx --no-pager`
 
-(week-03-linux-for-devops\screenshots\A3 screenshot 5systemctl status nginx --no-pager.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A3 screenshot 5systemctl status nginx --no-pager.PNG>)(week-03-linux-for-devops\screenshots\A3 screenshot 5systemctl status nginx --no-pager.PNG)
 
 ---
 
 #### Screenshot 2 — Output of `sudo nginx -t`
 
-(week-03-linux-for-devops\screenshots\A3 screenshot 6 sudo nginx -t.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A3 screenshot 6 sudo nginx -t.PNG>)(week-03-linux-for-devops\screenshots\A3 screenshot 6 sudo nginx -t.PNG)
 
 ---
 
 #### Screenshot 3 — Output of `sudo ss -lptn '( sport = :80 )'`
 
-(week-03-linux-for-devops\screenshots\A3 screenshot 7 sudo ss -lptn sport = 80.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A3 screenshot 7 sudo ss -lptn sport = 80.PNG>)(week-03-linux-for-devops\screenshots\A3 screenshot 7 sudo ss -lptn sport = 80.PNG)
 
 ---
 
@@ -116,19 +116,19 @@ Verify real traffic flow and analyze logs to understand system behavior and erro
 
 #### Screenshot 1 — Output of `sudo tail -n 30 /var/log/nginx/access.log`
 
-(week-03-linux-for-devops\screenshots\A3 screenshot 8 sudo tail -n 30 var-log-nginx-access.log)
+![alt text](<../week-03-linux-for-devops/screenshots/A3 screenshot 8 sudo tail n 30 varlog nginx access log.PNG>)(week-03-linux-for-devops\screenshots\A3 screenshot 8 sudo tail -n 30 var-log-nginx-access.log)
 
 ---
 
 #### Screenshot 2 — Output of `sudo tail -n 30 /var/log/nginx/error.log`
 
-(week-03-linux-for-devops\screenshots\A3 screenshot 9 sudo tail -n 30 var-log-nginx-error.log)
+![alt text](<../week-03-linux-for-devops/screenshots/A3 screenshot 9 sudo tail -n 30 var-log-nginx-error log.PNG>)(week-03-linux-for-devops\screenshots\A3 screenshot 9 sudo tail -n 30 var-log-nginx-error.log)
 
 ---
 
 #### Screenshot 3 — Output of `sudo journalctl -u nginx --no-pager -n 50`
 
-(week-03-linux-for-devops\screenshots\A3 10 screenshot sudo journalctl -u nginx --no-pager -n 50.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A3 10 screenshot sudo journalctl -u nginx --no-pager -n 50.PNG>)(week-03-linux-for-devops\screenshots\A3 10 screenshot sudo journalctl -u nginx --no-pager -n 50.PNG)
 
 ---
 
@@ -177,25 +177,25 @@ Assess server capacity and detect potential performance or failure risks.
 
 #### Screenshot 1 — Output of `uptime`
 
-(week-03-linux-for-devops\screenshots\A3 screenshot 11 uptime.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A3 screenshot 11 uptime.PNG>)(week-03-linux-for-devops\screenshots\A3 screenshot 11 uptime.PNG)
 
 ---
 
 #### Screenshot 2 — Output of `free -h`
 
-(week-03-linux-for-devops\screenshots\A3 screenshot 12 free -h.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A3 screenshot 12 free -h.PNG>)(week-03-linux-for-devops\screenshots\A3 screenshot 12 free -h.PNG)
 
 ---
 
 #### Screenshot 3 — Output of `df -h`
 
-(week-03-linux-for-devops\screenshots\A3 screenshot 12 free -h.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A3 screenshot 13 df -h.PNG>)(week-03-linux-for-devops\screenshots\A3 screenshot 12 free -h.PNG)
 
 ---
 
 #### Screenshot 4 — Output of `sudo du -sh /var/* | sort -h`
 
-(week-03-linux-for-devops\screenshots\A3 screenshot 14 sudo du -sh var  sort -h.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A3 screenshot 14 sudo du -sh var  sort -h.PNG>)(week-03-linux-for-devops\screenshots\A3 screenshot 14 sudo du -sh var  sort -h.PNG)
 
 ---
 
@@ -225,19 +225,19 @@ Ensure the correct React build is deployed and Nginx is serving it properly.
 
 #### Screenshot 1 — Output of `ls -lah /var/www/html | head -n 20`
 
-(week-03-linux-for-devops\screenshots\A3 screenshot 15 ls -lah var www html head -n 20.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A3 screenshot 15 ls -lah var www html head -n 20.PNG>)(week-03-linux-for-devops\screenshots\A3 screenshot 15 ls -lah var www html head -n 20.PNG)
 
 ---
 
 #### Screenshot 2 — Output of `grep -R "Deployed by" -n /var/www/html 2>/dev/null | head`
 
-(week-03-linux-for-devops\screenshots\A3 screenshot 16 grep -R Deployed by -n var www html 2 dev null head.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A3 screenshot 16 grep -R Deployed by -n var www html 2 dev null head.PNG>)(week-03-linux-for-devops\screenshots\A3 screenshot 16 grep -R Deployed by -n var www html 2 dev null head.PNG)
 
 ---
 
 #### Screenshot 3 — Output of `grep -n "try_files" /etc/nginx/sites-available/default`
 
-(week-03-linux-for-devops\screenshots\A3 screenshot 17 grep -n try-files etc-nginx-sites-available-default.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A3 screenshot 17 grep -n try-files etc-nginx-sites-available-default.PNG>)(week-03-linux-for-devops\screenshots\A3 screenshot 17 grep -n try-files etc-nginx-sites-available-default.PNG)
 
 ---
 
@@ -261,19 +261,19 @@ Simulate a real-world Nginx misconfiguration and recover the service safely.
 
 #### Screenshot 1 — Output of `sudo nginx -t` showing the syntax error (broken config)
 
-(week-03-linux-for-devops\screenshots\A3 screenshot 18 sudo nginx -t error.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A3 screenshot 18 sudo nginx -t error.PNG>)(week-03-linux-for-devops\screenshots\A3 screenshot 18 sudo nginx -t error.PNG)
 
 ---
 
 #### Screenshot 2 — Output of `sudo nginx -t` showing syntax ok (fixed config)
 
-(week-03-linux-for-devops\screenshots\A3 screenshot 19 sudo nginx -t fixed.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A3 screenshot 19 sudo nginx -t fixed.PNG>)(week-03-linux-for-devops\screenshots\A3 screenshot 19 sudo nginx -t fixed.PNG)
 
 ---
 
 #### Screenshot 3 — Output of `curl -I http://<public-ip>` confirming recovery (200 OK)
 
-(week-03-linux-for-devops\screenshots\A3 screenshot 20 curl -I http 16 171 58 175.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A3 screenshot 20 curl -I http 16 171 58 175.PNG>)(week-03-linux-for-devops\screenshots\A3 screenshot 20 curl -I http 16 171 58 175.PNG)
 
 ---
 
@@ -309,13 +309,13 @@ Simulate missing deployment content and recover the application safely.
 
 #### Screenshot 1 — Output of `curl -I http://<public-ip>` showing failure (non-200 response)
 
-(week-03-linux-for-devops\screenshots\A3 screenshot 21 curl -I http 16 171 58 175 error.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A3 screenshot 21 curl -I http 16 171 58 175 error.PNG>)(week-03-linux-for-devops\screenshots\A3 screenshot 21 curl -I http 16 171 58 175 error.PNG)
 
 ---
 
 #### Screenshot 2 — Output of `curl -I http://<public-ip>` confirming recovery (200 OK)
 
-(week-03-linux-for-devops\screenshots\A3 screenshot 22 curl -I http 16 171 58 175.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A3 screenshot 22 curl -I http 16 171 58 175.PNG>)(week-03-linux-for-devops\screenshots\A3 screenshot 22 curl -I http 16 171 58 175.PNG)
 
 ---
 
@@ -389,17 +389,13 @@ Stopping or terminating unused cloud resources helps reduce unnecessary costs an
 
 Paste your LinkedIn post URL here:
 
-<<<<<<< HEAD:week-03-linux-for-devops/assignment-03-production-maintenance-drill-ops-checklist.md
-`https://lnkd.in/p/e8NYySb3`
-=======
-`Add your URL here`
->>>>>>> upstream/main:week-03-linux-and-bash-for-devops/assignment-03-production-maintenance-drill-ops-checklist.md
+`https://www.linkedin.com/posts/michael-okanlawon_devops-linux-aws-share-7482820729395150850-FB1B/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw`
 
 ---
 
 #### Screenshot — Published LinkedIn post
 
-(week-03-linux-for-devops\screenshots\Week 3 assignment 3 LinkedIn screenshot.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/Week 3 assignment 3 LinkedIn screenshot.PNG>)(week-03-linux-for-devops\screenshots\Week 3 assignment 3 LinkedIn screenshot.PNG)
 
 ---
 

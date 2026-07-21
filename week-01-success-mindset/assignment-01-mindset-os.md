@@ -371,14 +371,16 @@ Every Sunday at 8:00pm, I will break down the weekly assignment into clear daily
 
 Paste your LinkedIn post link here:
 
-`Add your URL here`
+`https://www.linkedin.com/posts/michael-okanlawon_my-20-version-looking-back-from-the-future-ugcPost-7477624769455091714-8KLu/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw`
 
 ---
 
 ## 10. Proof of Work
 
-- LinkedIn Post URL: [**ADD LINK HERE**  ](https://www.linkedin.com/posts/michael-okanlawon_my-20-version-looking-back-from-the-future-ugcPost-7477624769455091714-8KLu/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw)
-- Blog / Medium : **ADD LINK HERE**  (https://medium.com/@monolegend62/my-2-0-version-looking-back-from-the-future-553f51048ed8?sharedUserId=monolegend62)
+LinkedIn Post URL: [**ADD LINK HERE**  ]
+Blog / Medium : **ADD LINK HERE**  
+
+`https://medium.com/@monolegend62/my-2-0-version-looking-back-from-the-future-553f51048ed8?sharedUserId=monolegend62`
 
 ---
 

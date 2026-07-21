@@ -20,13 +20,13 @@ Verify that Bash is available on your system and create a clean workspace for th
 
 #### Screenshot 1 — Output of `echo $SHELL` and `bash --version`
 
-(week-03-linux-for-devops\screenshots\A5 Screenshot 1 — Output of echo SHELL and Bash version.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A5 Screenshot 1 — Output of echo SHELL and Bash version.PNG>)(week-03-linux-for-devops\screenshots\A5 Screenshot 1 — Output of echo SHELL and Bash version.PNG)
 
 ---
 
 #### Screenshot 2 — Output of `pwd` and `ls -lah` showing the scripts directory
 
-(week-03-linux-for-devops\screenshots\A5 Screenshot 2 pwd and ls -la for bash scripting.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A5 Screenshot 2 pwd and ls -la for bash scripting.PNG>)(week-03-linux-for-devops\screenshots\A5 Screenshot 2 pwd and ls -la for bash scripting.PNG)
 
 ---
 
@@ -62,18 +62,18 @@ Create your first Bash script, make it executable, and run it from the terminal.
 
 #### Screenshot 1 — Content of `first-script.sh`
 
-(week-03-linux-for-devops\screenshots\A5 Screenshot 3 content of first bash script.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A5 Screenshot 3 content of first bash script.PNG>)(week-03-linux-for-devops\screenshots\A5 Screenshot 3 content of first bash script.PNG)
 
 ---
 
 #### Screenshot 2 — Output of `./first-script.sh`
 
-(week-03-linux-for-devops\screenshots\A5 Screenshot 4 first-script-sh output.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A5 Screenshot 4 first-script-sh output.PNG>)(week-03-linux-for-devops\screenshots\A5 Screenshot 4 first-script-sh output.PNG)
 
 ---
 
 #### Screenshot 3 — Output of `ls -l first-script.sh` showing executable permission
-
+![alt text](<../week-03-linux-for-devops/screenshots/A5 Screenshot 5 showing execuatable permission.PNG>)
 (week-03-linux-for-devops\screenshots\A5 Screenshot 5 showing execuatable permission.PNG)
 
 ---
@@ -111,13 +111,13 @@ Use variables to store and display user-related information.
 
 #### Screenshot 1 — Content of `user-info.sh`
 
-(week-03-linux-for-devops\screenshots\A5 Screenshot 6 content of user-info-sh.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A5 Screenshot 6 content of user-info-sh.PNG>)(week-03-linux-for-devops\screenshots\A5 Screenshot 6 content of user-info-sh.PNG)
 
 ---
 
 #### Screenshot 2 — Output of `./user-info.sh`
 
-(week-03-linux-for-devops\screenshots\A5 Screenshot 7 output of user-info-sh.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A5 Screenshot 7 output of user-info-sh.PNG>)(week-03-linux-for-devops\screenshots\A5 Screenshot 7 output of user-info-sh.PNG)
 
 ---
 
@@ -153,13 +153,13 @@ Use arrays and loops to print a checklist of tools used in Bash scripting.
 
 #### Screenshot 1 — Content of `tools-checklist.sh`
 
-(week-03-linux-for-devops\screenshots\A5 Screenshot 8 content tools-checklist-sh.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A5 Screenshot 8 content tools-checklist-sh.PNG>)(week-03-linux-for-devops\screenshots\A5 Screenshot 8 content tools-checklist-sh.PNG)
 
 ---
 
 #### Screenshot 2 — Output of `./tools-checklist.sh`
 
-(week-03-linux-for-devops\screenshots\A5 Screenshot 9 output of tools-checklist-sh.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A5 Screenshot 9 output of tools-checklist-sh.PNG>)(week-03-linux-for-devops\screenshots\A5 Screenshot 9 output of tools-checklist-sh.PNG)
 
 ---
 
@@ -201,13 +201,13 @@ Use loops to repeat a task multiple times.
 
 #### Screenshot 1 — Content of `counter.sh`
 
-(week-03-linux-for-devops\screenshots\A5 Screenshot 10 content of counter-sh.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A5 Screenshot 10 content of counter-sh.PNG>)(week-03-linux-for-devops\screenshots\A5 Screenshot 10 content of counter-sh.PNG)
 
 ---
 
 #### Screenshot 2 — Output of `./counter.sh`
 
-(week-03-linux-for-devops\screenshots\A5 Screenshot 11 output of counter-sh.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A5 Screenshot 11 output of counter-sh.PNG>)(week-03-linux-for-devops\screenshots\A5 Screenshot 11 output of counter-sh.PNG)
 
 ---
 
@@ -249,19 +249,19 @@ Use file checks and conditionals to verify whether files and directories exist.
 
 #### Screenshot 1 — Output of `ls -lah ../test-folder`
 
-(week-03-linux-for-devops\screenshots\A5 Screenshot 12 ls-lah test-folder.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A5 Screenshot 12 ls-lah test-folder.PNG>)(week-03-linux-for-devops\screenshots\A5 Screenshot 12 ls-lah test-folder.PNG)
 
 ---
 
 #### Screenshot 2 — Content of `file-check.sh`
 
-(week-03-linux-for-devops\screenshots\A5 Screenshot 13 content of file-check-sh.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A5 Screenshot 13 content of file-check-sh.PNG>)(week-03-linux-for-devops\screenshots\A5 Screenshot 13 content of file-check-sh.PNG)
 
 ---
 
 #### Screenshot 3 — Output of `./file-check.sh`
 
-(week-03-linux-for-devops\screenshots\A5 Screenshot 14 output of file-chech-sh.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A5 Screenshot 14 output of file-chech-sh.PNG>)(week-03-linux-for-devops\screenshots\A5 Screenshot 14 output of file-chech-sh.PNG)
 
 ---
 
@@ -303,24 +303,26 @@ Use if-else conditionals to make decisions based on a variable value.
 
 #### Screenshot 1 — Content of `score-check.sh` with `score=85`
 
-(week-03-linux-for-devops\screenshots\A5 Screenshot 15 content of score-check-sh.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A5 Screenshot 15 content of score-check-sh.PNG>)(week-03-linux-for-devops\screenshots\A5 Screenshot 15 content of score-check-sh.PNG)
 
 ---
 
 #### Screenshot 2 — Output showing `Result: Pass`
 
-(week-03-linux-for-devops\screenshots\A5 Screenshot 16 output of score-check-sh 85.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A5 Screenshot 16 output of score-check-sh 85.PNG>)(week-03-linux-for-devops\screenshots\A5 Screenshot 16 output of score-check-sh 85.PNG)
 
 ---
 
 #### Screenshot 3 — Content of `score-check.sh` with `score=55`
+
+![alt text](<../week-03-linux-for-devops/screenshots/A5 Screenshot 17 content of score-check-sh 55.PNG>)
 (week-03-linux-for-devops\screenshots\A5 Screenshot 17 content of score-check-sh 55.PNG)
 
 ---
 
 #### Screenshot 4 — Output showing `Result: Retry`
 
-(week-03-linux-for-devops\screenshots\A5 Screenshot 18 output of score-check-sh 55.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A5 Screenshot 18 output of score-check-sh 55.PNG>)(week-03-linux-for-devops\screenshots\A5 Screenshot 18 output of score-check-sh 55.PNG)
 
 ---
 
@@ -362,19 +364,19 @@ Create a final Bash script using functions to organize reusable code.
 
 #### Screenshot 1 — Content of `final-automation.sh`
 
-(week-03-linux-for-devops\screenshots\A5 Screenshot 19 content final-automation.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A5 Screenshot 19 content final-automation.PNG>)(week-03-linux-for-devops\screenshots\A5 Screenshot 19 content final-automation.PNG)
 
 ---
 
 #### Screenshot 2 — Output of `./final-automation.sh`
 
-(week-03-linux-for-devops\screenshots\A5 Screenshot 20 output final-automation-sh.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A5 Screenshot 20 output final-automation-sh.PNG>)(week-03-linux-for-devops\screenshots\A5 Screenshot 20 output final-automation-sh.PNG)
 
 ---
 
 #### Screenshot 3 — Output of `ls -lah` showing all created scripts
 
-(week-03-linux-for-devops\screenshots\A5 Screenshot 21 ls-lah showing all scripts created.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A5 Screenshot 21 ls-lah showing all scripts created.PNG>)(week-03-linux-for-devops\screenshots\A5 Screenshot 21 ls-lah showing all scripts created.PNG)
 
 ---
 
@@ -420,17 +422,13 @@ The script stores important information such as my name, assignment name, and fi
 
 Paste your LinkedIn post URL here:
 
-<<<<<<< HEAD:week-03-linux-for-devops/assignment-05-bash-script-automation-drill-ops-checklist.md
 `https://www.linkedin.com/posts/michael-okanlawon_devops-linux-bash-activity-7483790929447968768-vMI1?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw`
-=======
-`Add your URL here`
->>>>>>> upstream/main:week-03-linux-and-bash-for-devops/assignment-05-bash-script-automation-drill-ops-checklist.md
 
 ---
 
 #### Screenshot — Published LinkedIn post
 
-(week-03-linux-for-devops\screenshots\A5 LinkedIn Post.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A5 LinkedIn Post.PNG>)(week-03-linux-for-devops\screenshots\A5 LinkedIn Post.PNG)
 
 ---
 

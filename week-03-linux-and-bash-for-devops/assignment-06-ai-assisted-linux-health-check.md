@@ -20,13 +20,13 @@ Confirm that Nginx and the React application are healthy before building the aut
 
 #### Screenshot 1 — Output of `systemctl is-active nginx`, `ss -ltn | grep ':80'`, and `curl -I http://localhost`
 
-(week-03-linux-for-devops\screenshots\A6 Screenshot 1 Nginx active.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A6 Screenshot 1 Nginx active.PNG>)(week-03-linux-for-devops\screenshots\A6 Screenshot 1 Nginx active.PNG)
 
 ---
 
 #### Screenshot 2 — Output of `pwd` and `find . -maxdepth 4 -type d | sort` showing the workspace folder structure
 
-(week-03-linux-for-devops\screenshots\A6 Screenshot 2 pwd.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A6 Screenshot 2 pwd.PNG>)(week-03-linux-for-devops\screenshots\A6 Screenshot 2 pwd.PNG)
 
 ---
 
@@ -62,7 +62,7 @@ Tell Claude exactly what this project does and what it is not allowed to do.
 
 #### Screenshot 3 — CLAUDE.md open in VS Code showing all four sections (Project Overview, Incident Workflow, Safety Rules, Output Rules)
 
-(week-03-linux-for-devops\screenshots\A6 Screenshot 3 — CLAUDE.md open in VS Code showing all four sections.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A6 Screenshot 3 — CLAUDE.md open in VS Code showing all four sections.PNG>)(week-03-linux-for-devops\screenshots\A6 Screenshot 3 — CLAUDE.md open in VS Code showing all four sections.PNG)
 
 ---
 
@@ -98,7 +98,7 @@ Use Claude Code to inspect the environment and produce a read-only plan before c
 
 #### Screenshot 4 — Claude Code showing the five-check plan and read-only inspection results
 
-(week-03-linux-for-devops\screenshots\A6 Task 3 — Using Agentic AI to Plan Before Writing the Script.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A6 Task 3 — Using Agentic AI to Plan Before Writing the Script.PNG>)(week-03-linux-for-devops\screenshots\A6 Task 3 — Using Agentic AI to Plan Before Writing the Script.PNG)
 
 ---
 
@@ -134,24 +134,26 @@ Create one Bash script that gathers consistent Linux and Nginx health evidence.
 
 #### Screenshot 5 — Top section of `linux-triage.sh` showing variables, thresholds, and the checks array
 
-(week-03-linux-for-devops\screenshots\A6 Screenshot 5 Top of section.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A6 Screenshot 5 Top of section.PNG>)(week-03-linux-for-devops\screenshots\A6 Screenshot 5 Top of section.PNG)
 
 ---
 
 #### Screenshot 6 — Middle section showing check functions and conditionals
+
+![alt text](<../week-03-linux-for-devops/screenshots/A6 Screenshot 6 Functions and conditions.PNG>)
 (week-03-linux-for-devops\screenshots\A6 Screenshot 6 Functions and conditions.PNG)
 
 ---
 
 #### Screenshot 7 — Bottom section showing the loop, summary function, and exit behavior
 
-(week-03-linux-for-devops\screenshots\A6 Screenshot 7 loop summary exit.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A6 Screenshot 7 loop summary exit.PNG>)(week-03-linux-for-devops\screenshots\A6 Screenshot 7 loop summary exit.PNG)
 
 ---
 
 #### Screenshot 8 — Output of `bash -n scripts/linux-triage.sh` (no syntax errors) and `ls -l scripts/linux-triage.sh` showing executable permission
 
-(week-03-linux-for-devops\screenshots\A6 Screenshot 8 ls -l scripts-linux-triage.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A6 Screenshot 8 ls -l scripts-linux-triage.PNG>)(week-03-linux-for-devops\screenshots\A6 Screenshot 8 ls -l scripts-linux-triage.PNG)
 
 ---
 
@@ -199,13 +201,13 @@ Run the Bash script against the healthy server and verify that it creates a repo
 
 #### Screenshot 9 — Output of `./scripts/linux-triage.sh` showing your Full Name and all five check results
 
-(A6 Screenshot 9 showing Full Name and all five check results.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A6 Screenshot 9 showing Full Name and all five check results.PNG>)(A6 Screenshot 9 showing Full Name and all five check results.PNG)
 
 ---
 
 #### Screenshot 10 — Output showing the captured exit code and final summary
 
-(A6 Screenshot 10 exit output 0.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A6 Screenshot 10 exit output 0.PNG>)(A6 Screenshot 10 exit output 0.PNG)
 
 ---
 
@@ -246,13 +248,13 @@ Turn the Bash script into a reusable, manually invoked Agentic AI workflow.
 
 #### Screenshot 11 — `SKILL.md` showing the frontmatter, allowed tool restrictions, and safety rules
 
-(week-03-linux-for-devops\screenshots\A6 Screenshot 11 cat Skill md.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A6 Screenshot 11 cat Skill md.PNG>)(week-03-linux-for-devops\screenshots\A6 Screenshot 11 cat Skill md.PNG)
 
 ---
 
 #### Screenshot 12 — `/linux-triage` output for the healthy server
 
-(A6 Screenshot 12 — linux-triage  output for the healthy server.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A6 Screenshot 12 — linux-triage  output for the healthy server.PNG>)
 
 ---
 
@@ -294,19 +296,19 @@ Create a controlled service failure, gather evidence through Bash, and let Claud
 
 #### Screenshot 13 — Output showing Nginx is inactive and the HTTP request fails
 
-(week-03-linux-for-devops\screenshots\A6 Screenshot 13 Output showing Nginx is inactive and the HTTP request fails.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A6 Screenshot 13 Output showing Nginx is inactive and the HTTP request fails.PNG>)
 
 ---
 
 #### Screenshot 14 — `/linux-triage` output showing failed evidence, most likely cause, and a suggested recovery command
 
-(week-03-linux-for-devops\screenshots\A6 Screenshot 14 failed evidence.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A6 Screenshot 14 failed evidence.PNG>)
 
 ---
 
 #### Screenshot 15 — `incident-failure-report.txt` showing the failed checks and your Full Name
 
-(week-03-linux-for-devops\screenshots\A6 Screenshot 15 Incide Failure report txt.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A6 Screenshot 15 Incide Failure report txt.PNG>)
 
 ---
 
@@ -354,25 +356,24 @@ Recover the service as the human operator and prove that the system is healthy a
 
 #### Screenshot 16 — Output showing Nginx is active and `curl -I http://localhost` returns 200 OK
 
-(week-03-linux-for-devops\screenshots\A6 Screenshot 16 Output showing Nginx is active after remediation.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A6 Screenshot 16 Output showing Nginx is active after remediation.PNG>)
 
 ---
 
 #### Screenshot 17 — Second `/linux-triage` output showing successful recovery with no FAIL results
 
-(week-03-linux-for-devops\screenshots\A6 Screenshot 17 — Second linux-triage output showing successful recovery.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A6 Screenshot 17 — Second linux-triage output showing successful recovery.PNG>)
 
 ---
 
 #### Screenshot 18 — Output of `ls -lah reports` showing both `incident-failure-report.txt` and `recovery-report.txt`
 
-(week-03-linux-for-devops\screenshots\A6 Screenshot 18 — Output of ls -lah reports.PNG)
-
+![alt text](<../week-03-linux-for-devops/screenshots/A6 Screenshot 18 — Output of ls -lah reports.PNG>)
 ---
 
 #### Screenshot 19 — `incident-summary.md` showing all required sections and your Full Name
 
-(week-03-linux-for-devops\screenshots\A6 Screenshot 19 — incident-summary.md)
+![alt text](<../week-03-linux-for-devops/screenshots/A6 Screenshot 19 incident-summary.png>)
 
 ---
 
@@ -477,17 +478,13 @@ Verify: I reran the health checks and confirmed that the server returned to a he
 
 Paste your LinkedIn post URL here:
 
-<<<<<<< HEAD:week-03-linux-for-devops/assignment-06-ai-assisted-linux-health-check.md
 `https://www.linkedin.com/posts/michael-okanlawon_devops-linux-aws-activity-7483906002413719552-tFYV?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw`
-=======
-`Add your URL here`
->>>>>>> upstream/main:week-03-linux-and-bash-for-devops/assignment-06-ai-assisted-linux-health-check.md
 
 ---
 
 #### Screenshot — Published LinkedIn post
 
-(week-03-linux-for-devops\screenshots\Week 3 Assignment 6 linkedln screenshot.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/Week 3 Assignment 6 linkedln screenshot.PNG>)
 
 ---
 
@@ -495,11 +492,7 @@ Paste your LinkedIn post URL here:
 
 Paste the URL of your GitHub folder or repository containing the assignment files here:
 
-<<<<<<< HEAD:week-03-linux-for-devops/assignment-06-ai-assisted-linux-health-check.md
 `https://github.com/DMI-C3-Michael-Okanlawon/devops-micro-internship-pravinmishra/blob/main`
-=======
-`Add your URL here`
->>>>>>> upstream/main:week-03-linux-and-bash-for-devops/assignment-06-ai-assisted-linux-health-check.md
 
 ---
 

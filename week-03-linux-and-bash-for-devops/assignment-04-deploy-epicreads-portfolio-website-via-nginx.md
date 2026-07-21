@@ -20,7 +20,7 @@ Verify the Ubuntu VM and Nginx are ready for deployment.
 
 #### Screenshot 0 — Output of `sudo systemctl status nginx --no-pager` showing Active (running)
 
-(week-03-linux-for-devops\screenshots\A4 Screenshot 0 — Output of sudo systemctl status nginx --no-pager.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A4 Screenshot 0 — Output of sudo systemctl status nginx --no-pager.PNG>)(week-03-linux-for-devops\screenshots\A4 Screenshot 0 — Output of sudo systemctl status nginx --no-pager.PNG)
 
 ---
 
@@ -34,7 +34,7 @@ Download and extract the portfolio website template.
 
 #### Screenshot 1 — Output of `ls -la` showing the extracted project folder
 
-(week-03-linux-for-devops\screenshots\A4 screenshot screenhot of ls -la.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A4 screenshot screenhot of ls -la.PNG>)(week-03-linux-for-devops\screenshots\A4 screenshot screenhot of ls -la.PNG)
 
 ---
 
@@ -48,7 +48,7 @@ Update the website footer with your deployment details.
 
 #### Screenshot 2 — Nano editor open with the updated footer showing your Full Name, Group, Week, and Date
 
-(week-03-linux-for-devops\screenshots\A4 Screenshot 2 Nano editor open with the updated footer.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A4 Screenshot 2 Nano editor open with the updated footer.PNG>)(week-03-linux-for-devops\screenshots\A4 Screenshot 2 Nano editor open with the updated footer.PNG)
 
 ---
 
@@ -62,13 +62,13 @@ Deploy the portfolio website to the Nginx web root.
 
 #### Screenshot 3 — Output of `sudo nginx -t` showing configuration test successful
 
-(week-03-linux-for-devops\screenshots\A4 Screenshot 3 — Output of sudo nginx -t.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A4 Screenshot 3 — Output of sudo nginx -t.PNG>)(week-03-linux-for-devops\screenshots\A4 Screenshot 3 — Output of sudo nginx -t.PNG)
 
 ---
 
 #### Screenshot 4 — Output of `ls /var/www/html` showing deployed website files
 
-(week-03-linux-for-devops\screenshots\A4 screenshot 4 ls var-www-html.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A4 screenshot 4 ls var-www-html.PNG>)(week-03-linux-for-devops\screenshots\A4 screenshot 4 ls var-www-html.PNG)
 
 ---
 
@@ -82,13 +82,13 @@ Verify the deployed website is publicly accessible and the footer contains your 
 
 #### Screenshot 5 — Output of `curl ifconfig.me` showing the server's public IP address
 
-(week-03-linux-for-devops\screenshots\A4 screenshot 5 curl ifconfigme.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A4 screenshot 5 curl ifconfigme.PNG>)(week-03-linux-for-devops\screenshots\A4 screenshot 5 curl ifconfigme.PNG)
 
 ---
 
 #### Screenshot 6 — Browser showing the live website with your Full Name and deployment details in the footer
 
-(week-03-linux-for-devops\screenshots\A4 Screenshot 2 Nano editor open with the updated footer.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A4 Screenshot 2 Nano editor open with the updated footer.PNG>)(week-03-linux-for-devops\screenshots\A4 Screenshot 2 Nano editor open with the updated footer.PNG)
 
 ---
 
@@ -102,13 +102,13 @@ Verify the deployed website and Nginx service are healthy.
 
 #### Screenshot 7 — Output of `systemctl is-enabled nginx`
 
-(week-03-linux-for-devops\screenshots\A4 Screenshot 7 systemctl is-enabled nginx.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A4 Screenshot 7 systemctl is-enabled nginx.PNG>)(week-03-linux-for-devops\screenshots\A4 Screenshot 7 systemctl is-enabled nginx.PNG)
 
 ---
 
 #### Screenshot 8 — Output of `curl -I http://localhost` showing 200 OK
 
-(week-03-linux-for-devops\screenshots\A4 Screenshot 8 curl -I http-localhost.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A4 Screenshot 8 curl -I http-localhost.PNG>)(week-03-linux-for-devops\screenshots\A4 Screenshot 8 curl -I http-localhost.PNG)
 
 ---
 
@@ -120,17 +120,13 @@ Verify the deployed website and Nginx service are healthy.
 
 Paste your LinkedIn post URL here:
 
-<<<<<<< HEAD:week-03-linux-for-devops/assignment-04-deploy-epicreads-portfolio-website-via-nginx.md
-`https://lnkd.in/p/eMjXjJ37`
-=======
-`Add your URL here`
->>>>>>> upstream/main:week-03-linux-and-bash-for-devops/assignment-04-deploy-epicreads-portfolio-website-via-nginx.md
+`https://www.linkedin.com/posts/michael-okanlawon_devops-linux-ubuntu-ugcPost-7483474019393036288-84tw/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw`
 
 ---
 
 #### Screenshot — Published LinkedIn post showing the live website with your Full Name in the footer
 
-(week-03-linux-for-devops\screenshots\A4 LinkedIn Crafted screenshot.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/A4 LinkedIn Crafted screenshot.PNG>)(week-03-linux-for-devops\screenshots\A4 LinkedIn Crafted screenshot.PNG)
 
 ---
 

@@ -16,17 +16,21 @@ In this assignment, you will set up your local development environment for Agent
 
 Install the Claude Code CLI globally and authenticate it using your Anthropic account.
 
-Claude code (week-02-agentic-ai\screenshots\Screenshot 1.PNG)
+Claude code ![alt text](<screenshots/Screenshot 1.PNG>)
 
 #### Screenshot 1 — Terminal showing `claude --version` with the version number visible
 
-Claude installation evidence (week-02-agentic-ai\screenshots\Screenshot 1.PNG)
+Claude installation evidence 
+
+![alt text](<screenshots/Screenshot 1.PNG>)(week-02-agentic-ai\screenshots\Screenshot 1.PNG)
 
 ---
 
 #### Screenshot 2 — Claude Code authenticated and showing the terminal prompt (your name visible)
 
-Claude code authentication evidence (week-02-agentic-ai\screenshots\Screenshot 2.PNG)
+Claude code authentication evidence
+
+![alt text](<screenshots/Screenshot 2.PNG>)(week-02-agentic-ai\screenshots\Screenshot 2.PNG)
 
 ---
 

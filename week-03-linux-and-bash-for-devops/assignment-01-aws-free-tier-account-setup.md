@@ -60,7 +60,7 @@ Confirm that your AWS account setup is complete by navigating to the Account sec
 
 #### Screenshot 1 — AWS Account page showing account name (email may be blurred)
 
-(week-03-linux-for-devops\screenshots\AWS account page.PNG)
+![alt text](<../week-03-linux-for-devops/screenshots/AWS account page.PNG>)(week-03-linux-for-devops\screenshots\AWS account page.PNG)
 
 ---
 

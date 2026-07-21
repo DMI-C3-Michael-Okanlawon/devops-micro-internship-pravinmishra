@@ -20,13 +20,13 @@ Confirm that Git works and that you are inside the correct `CodeTrack` repositor
 
 #### Screenshot 1 — Output of `pwd` showing you're inside `CodeTrack`
 
-(week-04-git-and-github\screenshots\Wk4-screenshot-1-pwd.PNG)
+![alt text](screenshots/Wk4-screenshot-1-pwd.PNG)(week-04-git-and-github\screenshots\Wk4-screenshot-1-pwd.PNG)
 
 ---
 
 #### Screenshot 2 — Output of `git status` showing no "not a git repository" error
 
-(week-04-git-and-github\screenshots\Wk4-screenshot-2-git-status.PNG)
+![alt text](screenshots/Wk4-screenshot-2-git-status.PNG)(week-04-git-and-github\screenshots\Wk4-screenshot-2-git-status.PNG)
 
 ---
 
@@ -40,7 +40,7 @@ Create the two starter UI files inside `CodeTrack`.
 
 #### Screenshot 3 — Output of `ls` showing `index.html` and `style.css`
 
-(week-04-git-and-github\screenshots\Wk4-screenshot-3-ls-index-and-style-css.PNG)
+![alt text](screenshots/Wk4-screenshot-3-ls-index-and-style-css.PNG)(week-04-git-and-github\screenshots\Wk4-screenshot-3-ls-index-and-style-css.PNG)
 
 ---
 
@@ -54,7 +54,7 @@ Copy the provided starter HTML and CSS content into your local `index.html` and 
 
 #### Screenshot 4 — Your editor showing the contents of `index.html` and `style.css`
 
-(week-04-git-and-github\screenshots\Wk4-screenshot-4-index-html-content.PNG)(week-04-git-and-github\screenshots\Wk4-screenshot-4-style-css-content.PNG)
+![alt text](screenshots/Wk4-screenshot-4-index-html-content.PNG)![(week-04-git-and-github\screenshots\Wk4-screenshot-4-style-css-content.PNG)](screenshots/Wk4-screenshot-4-style-css-content.PNG)
 
 ---
 
@@ -68,13 +68,13 @@ Confirm both files show as untracked, then stage them individually with `git add
 
 #### Screenshot 5 — Output of `git status` showing both files as untracked
 
-(week-04-git-and-github\screenshots\Wk4-screenshot-5-git-files-untracked.PNG)
+![alt text](screenshots/Wk4-screenshot-5-git-files-untracked.PNG)(week-04-git-and-github\screenshots\Wk4-screenshot-5-git-files-untracked.PNG)
 
 ---
 
 #### Screenshot 6 — Output of `git status` showing both files staged under "Changes to be committed"
 
-(week-04-git-and-github\screenshots\Wk4-screenshot-6-changes-to-be-commit.PNG)
+![alt text](screenshots/Wk4-screenshot-6-changes-to-be-commit.PNG)(week-04-git-and-github\screenshots\Wk4-screenshot-6-changes-to-be-commit.PNG)
 
 ---
 
@@ -88,13 +88,13 @@ Commit the staged starter files using the message `Initial UI scaffold: add inde
 
 #### Screenshot 7 — Output of `git commit`
 
-(week-04-git-and-github\screenshots\Wk4-screenshot-7-git-commit-output.PNG)
+![alt text](screenshots/Wk4-screenshot-7-git-commit-output.PNG)(week-04-git-and-github\screenshots\Wk4-screenshot-7-git-commit-output.PNG)
 
 ---
 
 #### Screenshot 8 — Output of `git log --oneline` showing the first commit
 
-(week-04-git-and-github\screenshots\Wk4-screenshot-8-git-log-oneline.PNG)
+![alt text](screenshots/Wk4-screenshot-8-git-log-oneline.PNG)(week-04-git-and-github\screenshots\Wk4-screenshot-8-git-log-oneline.PNG)
 
 ---
 
@@ -108,24 +108,24 @@ Follow the instruction comment inside `index.html` to update the Student Name an
 
 #### Screenshot 9 — Browser showing the updated page with your Student Name and Group Name visible
 
-(week-04-git-and-github\screenshots\Wk4-screenshot-9-browser-showing-index-html.PNG)
+![alt text](screenshots/Wk4-screenshot-9-browser-showing-index-html.PNG)(week-04-git-and-github\screenshots\Wk4-screenshot-9-browser-showing-index-html.PNG)
 
 ---
 
 #### Screenshot 10 — Output of `git status` showing `index.html` as modified
 
-(week-04-git-and-github\screenshots\Wk4-screenshot-10-git-status-modified.PNG)
+![alt text](screenshots/Wk4-screenshot-10-git-status-modified.PNG)(week-04-git-and-github\screenshots\Wk4-screenshot-10-git-status-modified.PNG)
 
 ---
 
 #### Screenshot 11 — Output of `git commit`
 
-(week-04-git-and-github\screenshots\Wk4-screenshot-11-git-commit.PNG)
+![alt text](screenshots/Wk4-screenshot-11-git-commit.PNG)(week-04-git-and-github\screenshots\Wk4-screenshot-11-git-commit.PNG)
 ---
 
 #### Screenshot 12 — Output of `git log --oneline` showing two commits
 
-(week-04-git-and-github\screenshots\Wk4-screenshot-12-git-log--oneline.PNG)
+![alt text](screenshots/Wk4-screenshot-12-git-log--oneline.PNG)(week-04-git-and-github\screenshots\Wk4-screenshot-12-git-log--oneline.PNG)
 
 ---
 
@@ -139,19 +139,19 @@ Install and start Nginx on your EC2 instance, then copy `index.html` and `style.
 
 #### Screenshot 13 — Output of `systemctl status nginx --no-pager` showing Nginx `active (running)`
 
-(week-04-git-and-github\screenshots\Wk4-screenshot-13-systemctl-status-nginx.PNG)
+![alt text](screenshots/Wk4-screenshot-13-systemctl-status-nginx.PNG)(week-04-git-and-github\screenshots\Wk4-screenshot-13-systemctl-status-nginx.PNG)
 
 ---
 
 #### Screenshot 14 — Output of `curl -I http://localhost` showing `HTTP/1.1 200 OK`
 
-(week-04-git-and-github\screenshots\Wk4-screenshot-14-http-localhost.PNG)
+![alt text](screenshots/Wk4-screenshot-14-http-localhost.PNG)(week-04-git-and-github\screenshots\Wk4-screenshot-14-http-localhost.PNG)
 
 ---
 
 #### Screenshot 15 — Browser showing the CodeTrack site loaded at `http://<EC2_PUBLIC_IP>`, with your Full Name and Group Name visible
 
-(week-04-git-and-github\screenshots\Wk4-screenshot-15-website-loaded.PNG)
+![alt text](screenshots/Wk4-screenshot-15-website-loaded.PNG)(week-04-git-and-github\screenshots\Wk4-screenshot-15-website-loaded.PNG)
 
 ---
 
@@ -169,6 +169,7 @@ Paste your LinkedIn post URL here:
 
 #### Screenshot — LinkedIn post showing the deployed CodeTrack application
 
+![alt text](screenshots/LinkedIn-Post-SS-CodeTrack-Website.PNG)
 (week-04-git-and-github\screenshots\LinkedIn-Post-SS-CodeTrack-Website.PNG)
 
 ---

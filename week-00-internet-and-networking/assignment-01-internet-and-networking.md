@@ -25,7 +25,8 @@ Take a screenshot of your interaction showing:
 
 Save your screenshot in the `screenshots` folder and update the file name below.
 
-![Task 1 Screenshot](week-00-internet-and-networking\screenshots\task-1-chatgpt.PNG)
+![Task 1 Screenshot]
+![alt text](screenshots/task-1-chatgpt.PNG)
 
 
 Replace `task-1-chatgpt.png` with your actual screenshot file name.
@@ -34,7 +35,7 @@ Replace `task-1-chatgpt.png` with your actual screenshot file name.
 
 ## What I Learned (2–3 lines)
 
-Add your answer here...
+I learned that writing a clear and detailed prompt helps ChatGPT provide more accurate and beginner-friendly explanations.
 
 ---
 
@@ -59,7 +60,7 @@ Write a short explanation (**100–150 words**) that includes:
 
 ## Answer
 
-Add your answer here...
+When a user anywhere in the world visits the EpicReads website hosted in Finland, their browser sends a request over the internet. The request is broken into smaller pieces through packet switching, allowing the data to travel efficiently across different network paths. Each packet is directed using the website server's IP address, which uniquely identifies its location on the internet. The TCP/IP protocol suite manages the communication, with IP handling the routing of packets and TCP ensuring they arrive completely, in the correct order, and without errors. Once the connection is established, HTTP or the more secure HTTPS protocol is used to transfer the website's pages between the user's browser and the server. This process allows people from anywhere in the world to access EpicReads quickly, reliably, and securely.
 
 ---
 
@@ -92,7 +93,7 @@ EpicReads bookstore has two application versions:
 Save your diagram image in the `screenshots` folder and update the file name below.
 
 ![Application Architecture Diagram](screenshots/task-3-diagram.png)
-
+![alt text](screenshots/task-3-diagram.png)
 
 Replace `task-3-diagram.png` with your actual diagram file name.
 
@@ -177,7 +178,7 @@ ls
 ## Screenshot
 
 Save your screenshot in the `screenshots` folder and update the file name below.
-
+![alt text](screenshots/task-5-vscode.PNG)
 ![VS Code Setup Screenshot](screenshots/task-5-vscode.png)
 
 
