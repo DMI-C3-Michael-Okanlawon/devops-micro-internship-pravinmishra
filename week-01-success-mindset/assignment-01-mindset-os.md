@@ -376,8 +376,8 @@ Paste your LinkedIn post link here:
 
 ## 10. Proof of Work
 
-LinkedIn Post URL: [**ADD LINK HERE**  ]
-Blog / Medium : **ADD LINK HERE**  
+LinkedIn Post URL: [**https://www.linkedin.com/posts/michael-okanlawon_my-20-version-looking-back-from-the-future-ugcPost-7477624769455091714-8KLu/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw**]
+Blog / Medium : [**https://medium.com/@monolegend62/my-2-0-version-looking-back-from-the-future-553f51048ed8?sharedUserId=monolegend62**] 
 
 `https://medium.com/@monolegend62/my-2-0-version-looking-back-from-the-future-553f51048ed8?sharedUserId=monolegend62`
 
