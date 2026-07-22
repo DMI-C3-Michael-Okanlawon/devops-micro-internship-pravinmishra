@@ -214,7 +214,7 @@ Add the following credit note at the end of your post:
 
 ## LinkedIn Post URL
 
-`https://www.linkedin.com/posts/michael-okanlawon_devops-micro-internship-dmi-by-pravin-activity-7442557463683313664-Z0BJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw`
+`https://www.linkedin.com/posts/michael-okanlawon_devops-micro-internship-dmi-by-pravin-share-7442557460806270976-FesC/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw`
 
 ---
 

@@ -162,7 +162,6 @@ His journey demonstrated that integrity, consistency, and continuous learning re
 Paste your link here:
 
 `https://www.linkedin.com/posts/michael-okanlawon_my-20-version-looking-back-from-the-future-ugcPost-7477624769455091714-8KLu/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw`
-`Add your URL here`
 
 ---
 
