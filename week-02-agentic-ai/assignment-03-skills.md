@@ -74,8 +74,6 @@ Initialize Terraform and execute the `/tf-plan` skill to observe plan execution 
 
 #### Screenshot 6 — Claude's `/tf-plan` response showing it ran the command and analyzed the result (pass or auth error both count)
 
-Add your screenshot here.
-
 ![alt text](<screenshots/Assignment 3 Screenshot 6  Claudes tf-plan.PNG>)
 
 # Submission Instructions

@@ -74,19 +74,19 @@ Add the provided Contact Page link to `index.html` and commit it separately usin
 
 #### Screenshot 6 — Output of `git status` showing `index.html` as modified before staging
 
-![Add your screenshot here.](screenshots/Wk4-task3-screenshot-6-git-status-modified-index-html.PNG)
+![](screenshots/Wk4-task3-screenshot-6-git-status-modified-index-html.PNG)
 
 ---
 
 #### Screenshot 7 — Output of `git commit`
 
-![Add your screenshot here.](screenshots/Wk4-task3-screenshot-7-git-commit-contact-us-in-index-html.PNG)
+![](screenshots/Wk4-task3-screenshot-7-git-commit-contact-us-in-index-html.PNG)
 
 ---
 
 #### Screenshot 8 — Browser showing the Contact Page link on the homepage while on `feature/contact-page`
 
-![Add your screenshot here.](screenshots/Wk4-task3-screenshot-8-contact-in-index-html-browser.PNG)
+![](screenshots/Wk4-task3-screenshot-8-contact-in-index-html-browser.PNG)
 
 ---
 
@@ -100,13 +100,13 @@ Switch back to the default branch and confirm that `contact.html` and the Contac
 
 #### Screenshot 9 — Terminal showing the checkout and `ls` output, proving `contact.html` is absent
 
-![Add your screenshot here.](screenshots/Wk4-task3-screenshot-9-master-branch-without-contact-html.PNG)
+![](screenshots/Wk4-task3-screenshot-9-master-branch-without-contact-html.PNG)
 
 ---
 
 #### Screenshot 10 — Browser showing the homepage on the default branch with no Contact Page link
 
-![Add your screenshot here.](screenshots/Wk4-task3-screenshot-10-browser-showing-contact-missing-local-dr.PNG)
+![](screenshots/Wk4-task3-screenshot-10-browser-showing-contact-missing-local-dr.PNG)
 
 ---
 
@@ -120,19 +120,19 @@ Merge `feature/contact-page` into your default branch and confirm the Contact pa
 
 #### Screenshot 11 — Output of `git merge feature/contact-page`
 
-![Add your screenshot here.](screenshots/Wk4-task3-screenshot-11-git-merge.PNG)
+![](screenshots/Wk4-task3-screenshot-11-git-merge.PNG)
 
 ---
 
 #### Screenshot 12 — Output of `ls` showing `contact.html` after the merge
 
-![Add your screenshot here.](screenshots/Wk4-task3-screenshot-12-ls-showing-contact-html.PNG)
+![](screenshots/Wk4-task3-screenshot-12-ls-showing-contact-html.PNG)
 
 ---
 
 #### Screenshot 13 — Browser showing the Contact page opened from the homepage link on the default branch
 
-![Add your screenshot here.](screenshots/Wk4-task3-screenshot-13-contact-opened-from-home-page.PNG)
+![](screenshots/Wk4-task3-screenshot-13-contact-opened-from-home-page.PNG)
 
 ---
 
@@ -146,7 +146,7 @@ Display the repository history as a graph and locate both feature commits.
 
 #### Screenshot 14 — Full output of `git log --oneline --graph --decorate --all`
 
-![Add your screenshot here.](screenshots/Wk4-task3-screenshot-14-git-log-oneline.PNG)
+![](screenshots/Wk4-task3-screenshot-14-git-log-oneline.PNG)
 
 ---
 
@@ -160,7 +160,7 @@ Delete the merged `feature/contact-page` branch to keep your branch list clean.
 
 #### Screenshot 15 (Optional) — Output showing `feature/contact-page` deleted and no longer listed
 
-![Add your screenshot here.](screenshots/Wk4-task3-screenshot-15-deleted-branch-successfully.PNG)
+![](screenshots/Wk4-task3-screenshot-15-deleted-branch-successfully.PNG)
 
 ---
 
