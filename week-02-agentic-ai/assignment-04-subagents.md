@@ -20,7 +20,7 @@ Create the `.claude/agents/` directory and add all required agent files.
 
 #### Screenshot 1 — VS Code sidebar showing `.claude/agents/` with all 3 files
 
-(week-02-agentic-ai\screenshots\A4 Screenshot 1 Agent showing VS Code sidebar showing.PNG)
+![alt text](<screenshots/A4 Screenshot 1 Agent showing VS Code sidebar showing.PNG>)
 
 ---
 
@@ -47,19 +47,20 @@ The security auditor's role is to review and identify security issues, not to ch
 #### 3. Why does the tf-writer use `inherit` instead of a specific model?
 
 The Terraform writer is responsible for creating and updating infrastructure code. By using inherit, it automatically uses the default model configured in Claude Code, making it easier to manage and allowing the model to be changed centrally without updating the agent's configuration.
+
 ---
 
 ### Evidence
 
 #### Screenshot 2 — `security-auditor.md` frontmatter showing model and tools configuration
 
-(week-02-agentic-ai\screenshots\A4 Screenshot 2 — security-auditor.md)
+![alt text](<screenshots/A4 Screenshot 2 — security-auditor.png>)
 
 ---
 
 #### Screenshot 3 — `cost-optimizer.md` frontmatter showing the model and tools configuration
 
-(week-02-agentic-ai\screenshots\A4 Screenshot 3 — cost-optimizer.md)
+![alt text](<screenshots/A4 Screenshot 3 — cost-optimizer.png>)
 
 ---
 
@@ -73,13 +74,13 @@ Trigger the security auditor agent and analyze the generated security report for
 
 #### Screenshot 4 — The delegation message showing Claude launched the security-auditor
 
-(week-02-agentic-ai\screenshots\A4 Screenshot 4 — The delegation message.PNG)
+![alt text](<screenshots/A4 Screenshot 4 — The delegation message.PNG>)
 
 ---
 
 #### Screenshot 5 — Security audit report output
 
-(week-02-agentic-ai\screenshots\A4 Screenshot 5 — Security audit report.PNG)
+![alt text](<screenshots/A4 Screenshot 5 — Security audit report.PNG>)
 
 ---
 
@@ -92,7 +93,8 @@ Trigger the cost optimizer agent and review the generated cost optimization repo
 ### Evidence
 
 #### Screenshot 6 — The full cost optimization report
-(week-02-agentic-ai\screenshots\A4 Screenshot 6 — The full cost optimization report.PNG)
+
+![alt text](<screenshots/A4 Screenshot 6 — The full cost optimization report.PNG>)
 
 ---
 

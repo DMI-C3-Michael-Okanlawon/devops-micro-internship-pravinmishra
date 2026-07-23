@@ -20,7 +20,7 @@ Create the required `.claude/skills/` directory structure for all skills.
 
 #### Screenshot 1 — VS Code sidebar showing `.claude/skills/` folder with all 4 subfolders visible
 
-(week-02-agentic-ai\screenshots\Assignment3Screenshot 1 VS Code sidebar showing claude skills folder with all 4 subfolders visible.PNG)
+![alt text](<screenshots/Assignment3Screenshot 1 VS Code sidebar showing claude skills folder with all 4 subfolders visible.PNG>)
 
 ---
 
@@ -34,13 +34,13 @@ Place all required skill files into their correct directories and verify their c
 
 #### Screenshot 2 — `.claude/skills/scaffold-terraform/` open in VS Code showing both `SKILL.md` and `template-spec.md`
 
-(week-02-agentic-ai\screenshots\Assignment3 Screenshot 2  claude skills scaffold-terraform open in VS Code showing both SKILL md and template-spec md.PNG)
+![alt text](<screenshots/Assignment3 Screenshot 2  claude skills scaffold-terraform open in VS Code showing both SKILL md and template-spec md.PNG>)
 
 ---
 
 #### Screenshot 3 — Screenshot 3 — `tf-plan/SKILL.md` frontmatter showing `allowed-tools: Bash, Read, Grep` (no Write) and `disable-model-invocation: true`
 
-(week-02-agentic-ai\screenshots\Assignment3 Screenshot 3 — Screenshot  tf-plan SKILL md frontmatter showing allowed-tools Bash Read Grep no Write and disable-model-invocation true.PNG)
+![alt text](<screenshots/Assignment3 Screenshot 3 — Screenshot  tf-plan SKILL md frontmatter showing allowed-tools Bash Read Grep no Write and disable-model-invocation true.PNG>)
 
 ---
 
@@ -54,13 +54,13 @@ Execute the `/scaffold-terraform` skill to generate a full Terraform infrastruct
 
 #### Screenshot 4 — Claude's response showing the scaffold complete with the file list
 
-(week-02-agentic-ai\screenshots\Assignment3 Screenshot 3 — Screenshot  tf-plan SKILL md frontmatter showing allowed-tools Bash Read Grep no Write and disable-model-invocation true.PNG)
+![alt text](<screenshots/Assignment3 Screenshot 3 — Screenshot  tf-plan SKILL md frontmatter showing allowed-tools Bash Read Grep no Write and disable-model-invocation true.PNG>)
 
 ---
 
 #### Screenshot 5 — VS Code sidebar showing the `terraform/` folder with all generated files inside
 
-(week-02-agentic-ai\screenshots\Assignment3Screenshot 1 VS Code sidebar showing claude skills folder with all 4 subfolders visible.PNG)
+![alt text](<screenshots/assignment3 screenshot 5 Terraform initialized.PNG>)
 
 ---
 
@@ -76,7 +76,7 @@ Initialize Terraform and execute the `/tf-plan` skill to observe plan execution 
 
 Add your screenshot here.
 
-(week-02-agentic-ai\screenshots\Assignment 3 Screenshot 6  Claudes tf-plan.PNG)
+![alt text](<screenshots/Assignment 3 Screenshot 6  Claudes tf-plan.PNG>)
 
 # Submission Instructions
 

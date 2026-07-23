@@ -20,7 +20,7 @@ Capture Claude’s response before `CLAUDE.md` exists in the project to establis
 
 #### Screenshot 1 — Claude’s generic response before CLAUDE.md exists (project contains only `index.html`, `style.css`, `images/`, `README.MD`, `privacy.html`, `terms.html`)
 
-week-02-agentic-ai\screenshots\Screenshot 1 shows a generic Claude response (no CLAUDE.md).PNG
+![alt text](<screenshots/Screenshot 1 shows a generic Claude response (no CLAUDE.md).PNG>)
 
 ---
 
@@ -34,7 +34,7 @@ week-02-agentic-ai\screenshots\Screenshot 1 shows a generic Claude response (no 
 
 #### Screenshot 2 — The auto-generated CLAUDE.md open in VS Code showing its content
 
-(week-02-agentic-ai\screenshots\Screenshot 2 shows the auto-generated init output.jpg)
+![alt text](<screenshots/Screenshot 2 shows the auto-generated init output.jpg>)
 
 ---
 
@@ -48,8 +48,7 @@ Update the generated `CLAUDE.md` file by adding project-specific instructions ac
 
 #### Screenshot 3 — Your customized CLAUDE.md in VS Code showing all 5 sections (scroll to show the full file)
 
-(week-02-agentic-ai\screenshots\Screenshot 3 shows all 5 sections in your customized CLAUDE md.PNG)
-
+![alt text](<screenshots/Screenshot 3 shows all 5 sections in your customized CLAUDE md.PNG>)
 ---
 
 # Task 4 — Test the After State
@@ -62,13 +61,13 @@ Verify that Claude’s behavior changes after adding `CLAUDE.md` by running a ne
 
 #### Screenshot 4 — Claude's specific, detailed answer after reading CLAUDE.md (Claude mentioning S3, CloudFront and Terraform)
 
-(week-02-agentic-ai\screenshots\Screenshot 4 shows Claude mentioning S3, CloudFront, and Terraform.PNG)
+![alt text](<screenshots/Screenshot 4 shows Claude mentioning S3, CloudFront, and Terraform.PNG>)
 
 ---
 
 #### Screenshot 5 — Claude refusing or warning against adding React because of the "No JavaScript" convention defined in CLAUDE.md
 
-(week-02-agentic-ai\screenshots\Screenshot 5 shows Claude refusing the React request.PNG)
+![alt text](<screenshots/Screenshot 5 shows Claude refusing the React request.PNG>)
 
 ---
 
@@ -82,7 +81,7 @@ Commit the `CLAUDE.md` file and push it to your GitHub fork so the project instr
 
 #### Screenshot 6 — `CLAUDE.md` visible in your GitHub repository after pushing the commit
 
-(week-02-agentic-ai\screenshots\Screenshot 6 shows CLAUDE md committed and visible in your GitHub repository.PNG)
+![alt text](<screenshots/Screenshot 6 shows CLAUDE md committed and visible in your GitHub repository.PNG>)
 
 ---
 

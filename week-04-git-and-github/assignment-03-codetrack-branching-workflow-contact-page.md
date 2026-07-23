@@ -34,7 +34,7 @@ Create a branch named exactly `feature/contact-page` and switch to it.
 
 #### Screenshot 2 — Output of `git checkout -b feature/contact-page` and `git branch` showing `* feature/contact-page`
 
-![Add your screenshot here.](screenshots/Wk4-task3-screenshot-2-feature-contact-html-creation.PNG)
+![](screenshots/Wk4-task3-screenshot-2-feature-contact-html-creation.PNG)
 
 ---
 

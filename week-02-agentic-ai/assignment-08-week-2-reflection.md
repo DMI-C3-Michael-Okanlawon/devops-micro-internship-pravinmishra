@@ -46,7 +46,7 @@ You can publish your blog on:
 
 #### Screenshot 1 — Blog published and visible
 
-(week-02-agentic-ai\screenshots\Week 2 Medium DMI.PNG)
+![alt text](<screenshots/Week 2 Medium DMI.PNG>)
 
 ---
 
@@ -54,11 +54,7 @@ You can publish your blog on:
 
 Blog Link:
 
-<<<<<<< HEAD:week-02-agentic-ai/solution-assignment-08-Week-2-reflection.md
 `https://medium.com/@monolegend62/week-2-reflection-of-my-devops-mini-internship-dfb4eeb13517`
-=======
-`Add your URL here`
->>>>>>> upstream/main:week-02-agentic-ai/assignment-08-week-2-reflection.md
 
 ---
 
@@ -96,7 +92,7 @@ Your post must include:
 
 #### Screenshot 2 — LinkedIn post published
 
-(week-02-agentic-ai\screenshots\Week 2 LinkedIn post DMI.PNG)
+![alt text](<screenshots/Week 2 LinkedIn post DMI.PNG>)
 
 ---
 
@@ -106,49 +102,27 @@ LinkedIn Post Content (copy-paste here):
 
 Reflection – Week 2
 
-
-
 By Michael Oladunni Okanlawon
-
-
 
 Week 2 of the DevOps Micro Internship gave me a different perspective on how I can work with AI. Before this week, I mostly used AI to answer questions or generate code. This week introduced me to Agentic AI, where Claude Code can work with Skills, Subagents, Hooks, Permissions, MCP, and Memory to complete tasks more effectively.
 
-
-
 One of the most interesting topics for me was Hooks. I learned how hooks can automatically perform actions before or after a command runs. Setting up a hook to log Terraform commands looked simple at first, but I spent quite some time troubleshooting path issues and making sure the log was generated correctly. It was frustrating at some points, but the process taught me that paying attention to small configuration details is very important.
-
-
 
 I also explored Permissions and learned how they control what Claude Code is allowed to execute. Instead of giving unrestricted access, I configured permissions for Terraform and AWS commands while blocking commands that could be destructive. This helped me understand the importance of security and guardrails when using AI in a DevOps environment.
 
-
-
 Another valuable lesson came from working with Memory. I learned how persistent memory helps an AI agent retain useful project context so that future interactions become more consistent. Instead of repeating the same instructions every time, the agent can build on previous work and provide more relevant assistance.
-
-
 
 The biggest lesson from this week was not just about Terraform or Claude Code. It was about developing patience while troubleshooting. I encountered issues with terraform validate, hook execution, Git, and Windows configuration. Most of the solutions came from carefully reading error messages, understanding what they meant, and fixing one problem at a time. That experience reminded me that troubleshooting is one of the most important skills every DevOps engineer should develop.
 
-
-
 Going forward, one habit I plan to implement is validating every step before moving to the next one. Whether I am running terraform validate, checking Git status before committing changes, or testing a hook after making updates, I will make it a habit to verify each step before proceeding. I believe this approach will help me identify problems earlier and reduce unnecessary debugging.
 
-
-
 Week 2 strengthened both my technical knowledge and my problem solving mindset. It showed me that Agentic AI is not just about generating code. It is about building reliable workflows, improving productivity, and learning how to collaborate effectively with AI while still understanding the technology behind the solutions.
-
-
 
 P.S. This post is a part of DevOps Micro Internship with Agentic AI Cohort-3 by Pravin Mishra. You can start your DevOps journey by joining this Discord community ( [https://discord.pravinmishra.com/](https://discord.pravinmishra.com/) ).
 
 ### LinkedIn Post Link:
 
-<<<<<<< HEAD:week-02-agentic-ai/solution-assignment-08-Week-2-reflection.md
 `https://www.linkedin.com/posts/michael-okanlawon_reflection-week-2-by-michael-oladunni-share-7481398657775341568-V3sO/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw`
-=======
-`Add your URL here`
->>>>>>> upstream/main:week-02-agentic-ai/assignment-08-week-2-reflection.md
 
 ---
 
