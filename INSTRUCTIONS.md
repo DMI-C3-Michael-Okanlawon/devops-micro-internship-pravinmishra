@@ -70,7 +70,6 @@ git add .
 git commit -m "Week 03 - Linux for DevOps assignment"
 git push
 ```
-
 ---
 
 ## Step 6 — Submit

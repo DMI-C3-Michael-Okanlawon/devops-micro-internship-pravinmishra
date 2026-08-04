@@ -370,18 +370,16 @@ Every Sunday at 8:00pm, I will break down the weekly assignment into clear daily
 
 Paste your LinkedIn post link here:
 
-<<<<<<< HEAD:week-01-success-mindset/assignment-01-mindset-os.md
-`Add your URL here`
-=======
 `https://www.linkedin.com/posts/michael-okanlawon_my-20-version-looking-back-from-the-future-ugcPost-7477624769455091714-8KLu/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw`
->>>>>>> 5b2df09 (Completed DMI C3 week 01 assignment):week-01-success-mindset/README.md
 
 ---
 
 ## 10. Proof of Work
 
-- LinkedIn Post URL: [**ADD LINK HERE**  ](https://www.linkedin.com/posts/michael-okanlawon_my-20-version-looking-back-from-the-future-ugcPost-7477624769455091714-8KLu/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw)
-- Blog / Medium : **ADD LINK HERE**  (https://medium.com/@monolegend62/my-2-0-version-looking-back-from-the-future-553f51048ed8?sharedUserId=monolegend62)
+LinkedIn Post URL: [**https://www.linkedin.com/posts/michael-okanlawon_my-20-version-looking-back-from-the-future-ugcPost-7477624769455091714-8KLu/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw**]
+Blog / Medium : [**https://medium.com/@monolegend62/my-2-0-version-looking-back-from-the-future-553f51048ed8?sharedUserId=monolegend62**] 
+
+`https://medium.com/@monolegend62/my-2-0-version-looking-back-from-the-future-553f51048ed8?sharedUserId=monolegend62`
 
 ---
 
@@ -394,10 +392,10 @@ It helps learners build strong DevOps foundations with hands-on experience.
 
 ## 📌 Resources
 
-- 🌐 **DMI Official Website:** https://dmi.pravinmishra.com?utm_source=github&utm_medium=readme  
-- 🎓 **University:** https://university.pravinmishra.com?utm_source=github&utm_medium=readme  
-- 💬 **Discord Community:** https://discord.pravinmishra.com?utm_source=github&utm_medium=readme  
-- 📝 **Blog:** https://dmi.pravinmishra.com/blog?utm_source=github&utm_medium=readme  
+- 🌐 **DMI Official Website:** https://pravinmishra.com/dmi  
+- 🎓 **DevOps for Beginners (Udemy):** https://www.udemy.com/course/devops-for-beginners-docker-k8s-cloud-cicd-4-projects/  
+- 🎓 **Ultimate Agentic AI DevOps with Clude Code** https://www.udemy.com/course/ultimate-agentic-ai-devops-with-claude-code/?referralCode=448389767BC96284087B
+- 🎓 **DevOps with Claude Code: Terraform, EKS, ArgoCD & Helm** https://www.udemy.com/course/devops-with-claude-code-terraform-eks-argocd-helm/?referralCode=1C5B734505D65A010FA3
 - ▶️ **YouTube Playlist (DMI Cohort 3):** https://www.youtube.com/playlist?list=PLFeSNDtI4Cho  
 - 🔗 **Pravin Mishra (LinkedIn):** https://www.linkedin.com/in/pravin-mishra-aws-trainer/  
 - 🏢 **CloudAdvisory (LinkedIn):** https://www.linkedin.com/company/thecloudadvisory/

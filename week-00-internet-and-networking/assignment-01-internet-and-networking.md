@@ -25,7 +25,7 @@ Take a screenshot of your interaction showing:
 
 Save your screenshot in the `screenshots` folder and update the file name below.
 
-![Task 1 Screenshot](screenshots/task-1-chatgpt.png)
+![alt text](screenshots/task-1-chatgpt.PNG)
 
 
 Replace `task-1-chatgpt.png` with your actual screenshot file name.
@@ -34,7 +34,7 @@ Replace `task-1-chatgpt.png` with your actual screenshot file name.
 
 ## What I Learned (2–3 lines)
 
-Add your answer here...
+I learned that writing a clear and detailed prompt helps ChatGPT provide more accurate and beginner-friendly explanations.
 
 ---
 
@@ -59,7 +59,7 @@ Write a short explanation (**100–150 words**) that includes:
 
 ## Answer
 
-Add your answer here...
+When a user anywhere in the world visits the EpicReads website hosted in Finland, their browser sends a request over the internet. The request is broken into smaller pieces through packet switching, allowing the data to travel efficiently across different network paths. Each packet is directed using the website server's IP address, which uniquely identifies its location on the internet. The TCP/IP protocol suite manages the communication, with IP handling the routing of packets and TCP ensuring they arrive completely, in the correct order, and without errors. Once the connection is established, HTTP or the more secure HTTPS protocol is used to transfer the website's pages between the user's browser and the server. This process allows people from anywhere in the world to access EpicReads quickly, reliably, and securely.
 
 ---
 
@@ -93,7 +93,6 @@ Save your diagram image in the `screenshots` folder and update the file name bel
 
 ![Application Architecture Diagram](screenshots/task-3-diagram.png)
 
-
 Replace `task-3-diagram.png` with your actual diagram file name.
 
 ---
@@ -102,18 +101,18 @@ Replace `task-3-diagram.png` with your actual diagram file name.
 
 ### Frontend
 
-* Add your answer here...
-* Add your answer here...
+* HTML, CSS and JavaScript
+* React
 
 ### Backend
 
-* Add your answer here...
-* Add your answer here...
+* Node.js
+* Express.js
 
 ### Database
 
-* Add your answer here...
-* Add your answer here...
+* MYSQL
+* PostgreSQL
 
 ---
 
@@ -142,7 +141,7 @@ In **50–100 words**, explain in your own words:
 
 ## Answer
 
-Add your answer here...
+The Domain Name System (DNS) is like the internet's phonebook. It translates an easy-to-remember domain name such as epicreads.com into an IP address that computers use to locate a server. To connect the domain to the server with IP address 52.172.142.222, an A record should be used because it maps a domain name directly to an IPv4 address. This allows users to access the website using the domain instead of typing the IP address.
 
 ---
 
@@ -215,11 +214,7 @@ Add the following credit note at the end of your post:
 
 ## LinkedIn Post URL
 
-Paste your LinkedIn post URL here:
-
-```text
-Add your URL here...
-```
+`https://www.linkedin.com/posts/michael-okanlawon_devops-micro-internship-dmi-by-pravin-share-7442557460806270976-FesC/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw`
 
 ---
 
@@ -227,7 +222,50 @@ Add your URL here...
 
 Paste the full text of your LinkedIn post here:
 
-Add your post content here...
+🚀 DevOps Micro Internship – Week 0 Assignment Completed
+As part of my DevOps learning journey, I completed the Week-0 assignment covering basic concepts in networking, application architecture, DNS, and development environment setup. 
+
+Here is a summary of what I learned:
+🔹 ChatGPT
+Used ChatGPT as a learning assistant to understand networking concepts.
+ I created a clear prompt to learn what a network protocol is, and received a simplified explanation with a real-life example.
+ This helped me see how AI can be used as a study companion while learning DevOps.
+
+🌐 Internet & Networking
+I explained how users around the world can access a website hosted in another country.
+ Key concepts used:
+Packet Switching – breaks data into small packets sent across the internet
+IP Address – unique identifier for devices on the network
+TCP/IP – ensures reliable communication between devices
+HTTP / HTTPS – protocol used to load websites (HTTPS adds encryption for security)
+Together, these technologies make global internet communication possible.
+
+🏗 App Architecture
+Learned the difference between Two-Tier and Three-Tier application architecture.
+Two-Tier
+ Frontend + Database
+Three-Tier
+ Frontend + Backend + Database
+Examples of technologies:
+Frontend: HTML, CSS, JavaScript
+Backend: Node.js, Python, Java
+Database: MySQL, PostgreSQL, MongoDB
+This helped me understand how real-world applications are structured.
+
+🌍 DNS
+DNS (Domain Name System) translates domain names into IP addresses.
+ Example: epicreads.com → 52.172.142.222
+To connect a domain to an IP address, an A record is used.
+ This allows users to access a website using a name instead of numbers.
+
+💻 VS Code Setup
+Installed Visual Studio Code and practiced using the built-in terminal.
+ Ran basic commands to verify the setup:
+dir (Windows)
+pwd / ls (Linux / Mac)
+This step is important for working with code, scripts, and DevOps tools.
+
+P.S. This post is part of the FREE DevOps Micro Internship Cohort run by Pravin Mishra(https://lnkd.in/dvFWkr2y). You can start your DevOps journey for free from his YouTube Playlist (https://lnkd.in/dreweTQc).
 
 ---
 
@@ -235,19 +273,19 @@ Add your post content here...
 
 ### What did you find easy?
 
-Add your answer here...
+I found it easy to understand the basic networking concepts and complete the VS Code setup. Learning about protocols, DNS, and application architecture was straightforward with the help of examples.
 
 ---
 
 ### What was difficult?
 
-Add your answer here...
+The most difficult part was understanding how all the networking components work together behind the scenes, especially packet switching and TCP/IP. I had to read through the concepts more than once before they became clear.
 
 ---
 
 ### What will you improve next week?
 
-Add your answer here...
+Next week, I will spend more time practicing instead of only reading. I also plan to improve my understanding of DevOps fundamentals by completing more hands-on exercises and asking questions whenever I get stuck.
 
 ---
 

@@ -28,8 +28,8 @@
 
 This is not a course. It is an internship-style program — real deployments, real pipelines, real evidence reviewed by mentors every week.
 
-- 🌐 Program Website: https://dmi.pravinmishra.com?utm_source=github&utm_medium=readme
-- 💬 Discord Community: https://discord.pravinmishra.com?utm_source=github&utm_medium=readme
+- 🌐 Program Website: https://dmi.pravinmishra.com
+- 💬 Discord Community: https://discord.pravinmishra.com
 - 📺 YouTube: [Pravin Mishra](https://www.youtube.com/@awswithpravinmishra)
 - 🔗 Instructor: [LinkedIn](https://www.linkedin.com/in/pravin-mishra-aws-trainer/)
 
@@ -61,26 +61,26 @@ This is not a course. It is an internship-style program — real deployments, re
 
 **Preview — what your full stack looks like:**
 
-[![Week 00](./badges/week-00.svg)](./week-00-internet-and-networking/)[![Week 01](./badges/week-01.svg)](./week-01-success-mindset/)[![Week 02](./badges/week-02.svg)](./week-02-agentic-ai/)[![Week 03](./badges/week-03.svg)](./week-03-linux-and-bash-for-devops/)[![Week 04](./badges/week-04.svg)](./week-04-git-and-github/)[![Week 05](./badges/week-05.svg)](./week-05-devops-lifecycle/)[![Week 06](./badges/week-06.svg)](./week-06-aws-cloud/)[![Week 07](./badges/week-07.svg)](./week-07-azure-cloud/)[![Week 08](./badges/week-08.svg)](./week-08-terraform/)[![Week 09](./badges/week-09.svg)](./week-09-ansible/)[![Week 10](./badges/week-10.svg)](./week-10-azure-devops/)[![Week 11](./badges/week-11.svg)](./week-11-docker/)[![Week 12](./badges/week-12.svg)](./week-12-kubernetes/)[![Week 13](./badges/week-13.svg)](./week-13-final-project/)
+[![Week 00](./badges/week-00.svg)](./week-00-internet-and-networking/)[![Week 01](./badges/week-01.svg)](./week-01-success-mindset/)[![Week 02](./badges/week-02.svg)](./week-02-agentic-ai/)[![Week 03](./badges/week-03.svg)](./week-03-linux-and-bash-for-devops/)[![Week 04](./badges/week-04.svg)](./week-04-github/)[![Week 05](./badges/week-05.svg)](./week-05-devops-lifecycle/)[![Week 06](./badges/week-06.svg)](./week-06-aws-cloud/)[![Week 07](./badges/week-07.svg)](./week-07-azure-cloud/)[![Week 08](./badges/week-08.svg)](./week-08-terraform/)[![Week 09](./badges/week-09.svg)](./week-09-ansible/)[![Week 10](./badges/week-10.svg)](./week-10-azure-devops/)[![Week 11](./badges/week-11.svg)](./week-11-docker/)[![Week 12](./badges/week-12.svg)](./week-12-kubernetes/)[![Week 13](./badges/week-13.svg)](./week-13-final-project/)
 
 ---
 
 **Your stack (uncomment each badge as you earn it):**
 
  Week 00 → Internet & Networking Basics 
- [![Week 00 – Networking](./badges/week-00.svg)](./week-00-internet-and-networking/) 
+ [![Week 00 – Networking](./badges/week-00.svg)](./week-00-internet-and-networking/)
 
  Week 01 → Success Mindset
  [![Week 01 – Mindset](./badges/week-01.svg)](./week-01-success-mindset/)
 
-<!-- Week 02 → Agentic AI with Claude Code -->
-<!-- [![Week 02 – Agentic AI](./badges/week-02.svg)](./week-02-agentic-ai/) -->
+ Week 02 → Agentic AI with Claude Code
+ [![Week 02 – Agentic AI](./badges/week-02.svg)](./week-02-agentic-ai/)
 
-<!-- Week 03 → Linux & Bash for DevOps -->
-<!-- [![Week 03 – Linux & Bash](./badges/week-03.svg)](./week-03-linux-and-bash-for-devops/) -->
+ Week 03 → Linux for DevOps
+ [![Week 03 – Linux](./badges/week-03.svg)](./week-03-linux-for-devops/)
 
-<!-- Week 04 → Git & GitHub -->
-<!-- [![Week 04 – Git](./badges/week-04.svg)](./week-04-git-and-github/) -->
+ Week 04 → Git & GitHub
+ [![Week 04 – Git](./badges/week-04.svg)](./week-04-github/)
 
 <!-- Week 05 → DevOps Lifecycle & Agile -->
 <!-- [![Week 05 – Agile](./badges/week-05.svg)](./week-05-devops-lifecycle/) -->
@@ -130,11 +130,11 @@ This is not a course. It is an internship-style program — real deployments, re
 
 | Week | Topic | Status | Assignment | LinkedIn Post | Blog Post |
 |------|-------|--------|------------|---------------|-----------|
-| 00 | Internet & Networking Basics | ✅ Completed | ✅ Solved | — | — |
-| 01 | Success Mindset | ⬜ ✅ Completed | ⏳ ✅ Solved |https://www.linkedin.com/posts/michael-okanlawon_my-20-version-looking-back-from-the-future-ugcPost-7477624769455091714-8KLu/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw | https://medium.com/@monolegend62/my-2-0-version-looking-back-from-the-future-553f51048ed8?sharedUserId=monolegend62 |
-| 02 | Agentic AI with Claude Code | ⬜ Not Started | ⏳ Pending | — | — |
-| 03 | Linux & Bash for DevOps | ⬜ Not Started | ⏳ Pending | — | — |
-| 04 | Git & GitHub | ⬜ Not Started | ⏳ Pending | — | — |
+| 00 | Internet & Networking Basics | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/michael-okanlawon_devops-micro-internship-dmi-by-pravin-activity-7442557463683313664-Z0BJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw | https://medium.com/@monolegend62/devops-micro-internship-week-0-assignment-completed-8549d28e3ddb |
+| 01 | Success Mindset | ✅ Completed | ✅ Solved |https://www.linkedin.com/posts/michael-okanlawon_my-20-version-looking-back-from-the-future-ugcPost-7477624769455091714-8KLu/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw | https://medium.com/@monolegend62/my-2-0-version-looking-back-from-the-future-553f51048ed8?sharedUserId=monolegend62 |
+| 02 | Agentic AI with Claude Code | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/michael-okanlawon_reflection-week-2-by-michael-oladunni-share-7481398657775341568-V3sO/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw | https://medium.com/@monolegend62/week-2-reflection-of-my-devops-mini-internship-dfb4eeb13517 |
+| 03 | Linux for DevOps | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/michael-okanlawon_devops-linux-aws-activity-7483906002413719552-tFYV?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw | https://medium.com/@monolegend62/week-3-of-the-devops-micro-internship-has-stretched-me-in-ways-i-did-not-expect-4bae6d47363f?sharedUserId=monolegend62 |
+| 04 | Git & GitHub | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/michael-okanlawon_devops-git-github-share-7485977831941005312-sY0_/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw |https://medium.com/@monolegend62/week-4-one-week-six-assignments-countless-git-commands-plenty-of-lessons-667563174fda|
 | 05 | DevOps Lifecycle & Agile | ⬜ Not Started | ⏳ Pending | — | — |
 | 06 | AWS Cloud | ⬜ Not Started | ⏳ Pending | — | — |
 | 07 | Azure Cloud | ⬜ Not Started | ⏳ Pending | — | — |
@@ -164,5 +164,5 @@ If you found this repo useful or want to follow my DevOps journey:
 
 - ⭐ Star this repo
 - 🔗 Connect with me on [LinkedIn](#)
-- 🌐 Learn more about the program: https://dmi.pravinmishra.com?utm_source=github&utm_medium=readme
-- 💬 Join the community: https://discord.pravinmishra.com?utm_source=github&utm_medium=readme
+- 🌐 Learn more about the program: https://dmi.pravinmishra.com
+- 💬 Join the community: https://discord.pravinmishra.com
