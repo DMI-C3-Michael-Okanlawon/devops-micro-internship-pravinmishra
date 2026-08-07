@@ -20,13 +20,13 @@ Create the footer Story (`Add footer with version and deploy date`, 1 point, `fr
 
 #### Screenshot 1 — Sprint 1 created with the Story inside it
 
-Add your screenshot here.
+![alt text](screenshots/Wk5-assgn3-screenshot1-story-in-sprint1.PNG)
 
 ---
 
 #### Screenshot 2 — Active Sprint board showing the Sprint Goal
 
-Add your screenshot here.
+![alt text](screenshots/Wk5-assgn3-screenshot2-Active-Spring-Board-showing-goal.PNG)
 
 ---
 
@@ -40,25 +40,25 @@ Add the required footer text (`Pravin Mishra Portfolio v1.0 — Deployed on <DD 
 
 #### Screenshot 3 — Jira board showing the Day 1 Sub-task in Done
 
-Add your screenshot here.
+![alt text](screenshots/Wk5-assgn3-screenshot3-footer-done.PNG)
 
 ---
 
 #### Screenshot 4 — Successful Git commit output
 
-Add your screenshot here.
+![alt text](screenshots/Wk5-assgn3-screenshot4-git-commit.PNG)
 
 ---
 
 #### Screenshot 5 — EC2 browser view showing the complete footer text, with the URL visible
 
-Add your screenshot here.
+![alt text](screenshots/Wk5-assgn3-screenshot5-complete-footer-visible.PNG)
 
 ---
 
 #### Screenshot 6 — Jira Story comment showing the Day 1 Daily Scrum update
 
-Add your screenshot here.
+![alt text](screenshots/Wk5-assgn3-screenshot6-Jira-comment.PNG)
 
 ---
 
@@ -72,25 +72,25 @@ Update the footer so the deployment date is generated automatically (or updated 
 
 #### Screenshot 7 — Code editor showing the footer and date logic or deployment-time template snippet
 
-Add your screenshot here.
+![alt text](screenshots/Wk5-assgn3-screenshot7-code-editor.PNG)
 
 ---
 
 #### Screenshot 8 — EC2 browser view showing the updated footer with the current date
 
-Add your screenshot here.
+![alt text](screenshots/Wk5-assgn3-screenshot8-automated-date-via-browser.PNG)
 
 ---
 
 #### Screenshot 9 — README snippet documenting the footer and date behavior
 
-Add your screenshot here.
+![alt text](screenshots/Wk5-assgn3-screenshot9-README-md-update.PNG)
 
 ---
 
 #### Screenshot 10 — Jira Story comment showing the Day 2 Daily Scrum update
 
-Add your screenshot here.
+![alt text](screenshots/Wk5-assgn3-screenshot10-day2-comment-updated.PNG)
 
 ---
 
@@ -104,19 +104,19 @@ Improve the footer's spacing, contrast, and readability, then validate it at bot
 
 #### Screenshot 11 — Desktop EC2 view showing the polished footer
 
-Add your screenshot here.
+![alt text](screenshots/Wk5-assgn3-screenshot11-footer-styled.PNG)
 
 ---
 
 #### Screenshot 12 — Mobile responsive view showing the footer remains readable
 
-Add your screenshot here.
+![alt text](screenshots/Wk5-assgn3-screenshot12-mobile-responsive-view.PNG)
 
 ---
 
 #### Screenshot 13 — Jira Story comment showing the Day 3 Daily Scrum update
 
-Add your screenshot here.
+![alt text](screenshots/Wk5-assgn3-screenshot13-Jira-comment-updated.PNG)
 
 ---
 
@@ -130,7 +130,7 @@ Replace the existing homepage tagline with the required DMI Website call-to-acti
 
 #### Screenshot 14 — EC2 browser view showing "Start your DevOps Journey here" and the clickable "Visit the DMI Website" link
 
-Add your screenshot here.
+![alt text](screenshots/Wk5-assgn3-screenshot14-clickable-link-on-EC2.PNG)
 
 ---
 
@@ -144,19 +144,19 @@ Record a two-to-three-minute demo video of the shipped footer, add a retrospecti
 
 #### Screenshot 15 — Burndown Chart for Sprint 1
 
-Add your screenshot here.
+![alt text](screenshots/Wk5-assgn3-screenshot15-Burndown-sprint.PNG)
 
 ---
 
 #### Screenshot 16 — Jira retrospective comment
 
-Add your screenshot here.
+![alt text](screenshots/Wk5-assgn3-screenshot16-Jira-comment.PNG)
 
 ---
 
 #### Screenshot 17 — Final EC2 browser view showing the complete footer requirement
 
-Add your screenshot here.
+![alt text](screenshots/Wk5-assgn3-screenshot17-ec2-showing-footer-requirement.PNG)
 
 ---
 
@@ -180,13 +180,13 @@ Publish a LinkedIn post about your five-day mini-Sprint, including your GitHub r
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+`https://www.linkedin.com/posts/michael-okanlawon_devops-aws-ec2-share-7491140222273888258-hyYJ/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw`
 
 ---
 
 #### LinkedIn Screenshot 1 — Published LinkedIn post showing the post content and at least one required link or proof image
 
-Add your screenshot here.
+![alt text](screenshots/Wk5-assign3-LinkedIn-post-screenshot.PNG)
 
 ---
 

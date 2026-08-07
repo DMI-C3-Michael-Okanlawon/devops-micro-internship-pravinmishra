@@ -20,7 +20,7 @@ Choose Team Mode or Solo Mode, and document how each Scrum role (Product Owner, 
 
 #### Screenshot 1 — Jira "Create project" screen, or the project sidebar after creation
 
-Add your screenshot here.
+![alt text](screenshots/Wk5-assgn4-screenshot1-Project-created.PNG)
 
 ---
 
@@ -28,7 +28,13 @@ Add your screenshot here.
 
 Write one line for each role: PO (what you prioritized), SM (how you ensured process), Dev Lead (what you built), DevOps Lead (how you shipped).
 
-Write your answer here.
+PO (Product Owner): Prioritized the highest-value UI improvements that would improve user discoverability and trust in the Gotto Job application.
+
+SM (Scrum Master): Followed the Scrum process by organizing the backlog, planning Sprint 1, and ensuring work was tracked from Backlog to Done.
+
+Dev Lead: Implemented a small UI enhancement, verified the changes locally, and ensured the acceptance criteria were met.
+
+DevOps Lead: Committed the code to Git, pushed it to GitHub, deployed the update to the live environment, and verified the deployment was successful.
 
 ---
 
@@ -42,7 +48,7 @@ Create a Team-managed Scrum project named `Gotto Job – Team <#>` (Team Mode) o
 
 #### Screenshot 2 — Project created page showing the project name and key
 
-Add your screenshot here.
+![alt text](screenshots/Wk5-assgn4-screenshot1-Project-created.PNG)
 
 ---
 
@@ -56,7 +62,7 @@ Create the Epic `Improve Gotto Job UI discoverability & trust` to group the UI i
 
 #### Screenshot 3 — Backlog showing the Epic panel with the Epic visible
 
-Add your screenshot here.
+![alt text](screenshots/Wk5-assgn4-screenshot3-epic-created.PNG)
 
 ---
 
@@ -70,13 +76,13 @@ Create at least six Stories under the Epic, estimate each with 1, 2, or 3 story 
 
 #### Screenshot 4 — Backlog showing the Epic and at least six Stories under it
 
-Add your screenshot here.
+![alt text](screenshots/Wk5-assgn4-screenshot4-showing-stories.PNG)
 
 ---
 
 #### Screenshot 5 — One Story opened showing its Story Points and acceptance criteria filled in
 
-Add your screenshot here.
+![alt text](screenshots/Wk5-assgn4-screenshot5-showing-acceptable-criteria.PNG)
 
 ---
 
@@ -90,7 +96,7 @@ Confirm the Story Points (1, 2, or 3) for each Story and record brief reasoning 
 
 #### Screenshot 6 — Backlog showing Story Points visible, or two or three Stories opened showing their points
 
-Add your screenshot here.
+![alt text](screenshots/Wk5-assgn4-screenshot6-story-point-estimate.PNG)
 
 ---
 
@@ -98,7 +104,29 @@ Add your screenshot here.
 
 For each story, explain in one or two lines why it is a 1, 2, or 3 (mention any debate, even in Solo Mode).
 
-Write your answer here.
+GJMO-2 – Hero tagline clarity (1 Point)
+This is a simple text update to the hero section with minimal implementation effort. In Solo Mode, I considered 2 points but settled on 1 because it only requires changing the headline and verifying the layout.
+
+GJMO-3 – Primary CTA color (1 Point)
+Changing the CTA color is a straightforward CSS modification with minimal testing required. I assigned 1 point since it does not affect functionality.
+
+GJMO-4 – Job card typography (2 Points)
+This requires updating typography across multiple job cards and checking readability on different screen sizes. I considered 1 point initially but assigned 2 due to the broader visual impact.
+
+GJMO-5 – Remote badge (UI-only) (2 Points)
+Adding and styling a "Remote" badge involves updating several UI elements and ensuring consistent placement. I assigned 2 points because it requires more design verification than a simple text change.
+
+GJMO-6 – Posted on date text (1 Point)
+This is a minor UI text enhancement with minimal effort. I assigned 1 point since it only involves displaying or formatting the date text.
+
+GJMO-7 – Advanced search labels (2 Points)
+Updating search labels affects multiple filter components and requires checking usability and consistency. I assigned 2 points because several UI elements are involved.
+
+GJMO-8 – Job detail Apply Now CTA (1 Point)
+This is a simple improvement to the Apply Now call-to-action on the job details page. I assigned 1 point because it is a localized UI change with little implementation effort.
+
+GJMO-9 – Footer trust links (1 Point)
+Adding the About and Contact links to the footer is a small UI enhancement with minimal complexity. I assigned 1 point because it requires only basic layout updates and verification.
 
 ---
 
@@ -112,13 +140,13 @@ Create Sprint 1, move three or four Stories into it (approximately 3–6 points)
 
 #### Screenshot 7 — Sprint 1 with the selected Stories inside it
 
-Add your screenshot here.
+![alt text](screenshots/Wk5-assgn4-screenshot7-backlogs-in-sprint1.PNG)
 
 ---
 
 #### Screenshot 8 — One Story showing the Sub-tasks created
 
-Add your screenshot here.
+![alt text](screenshots/Wk5-assgn4-screenshot8-story-with-subtasks.PNG)
 
 ---
 
@@ -132,7 +160,7 @@ Open the Burndown Chart and confirm it exists for Sprint 1. It is acceptable if 
 
 #### Screenshot 9 — Burndown Chart page opened, even if empty
 
-Add your screenshot here.
+![alt text](screenshots/Wk5-assgn4-screenshot9-burndown.PNG)
 
 ---
 
@@ -146,19 +174,19 @@ Implement one small UI-only Story from Sprint 1, commit it, deploy it live, and 
 
 #### Screenshot 10 — Jira board showing the Story moved to Done
 
-Add your screenshot here.
+![alt text](screenshots/Wk5-assgn4-screenshot10-stories-done.PNG)
 
 ---
 
 #### Screenshot 11 — Git commit output
 
-Add your screenshot here.
+![alt text](screenshots/Wk5-assgn4-screenshot11-git-commit-output.PNG)
 
 ---
 
 #### Screenshot 12 — Live URL in the browser showing the UI change, with the URL visible
 
-Add your screenshot here.
+![alt text](screenshots/Wk5-assgn4-screenshot12-EC2-browser-showing-change.PNG)
 
 ---
 
@@ -172,7 +200,7 @@ Add a retro comment covering what went well, what to improve, one Scrum pillar o
 
 #### Screenshot 13 — Jira retro comment visible
 
-Add your screenshot here.
+![alt text](screenshots/Wk5-assgn4-screenshot13-retro.PNG)
 
 ---
 
@@ -188,13 +216,13 @@ Publish a LinkedIn post about what you delivered, including your live URL, three
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+`https://www.linkedin.com/posts/michael-okanlawon_devops-scrum-agile-share-7491494280172187649-GCFO/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw`
 
 ---
 
 #### Screenshot 14 — Published LinkedIn post
 
-Add your screenshot here.
+![alt text](screenshots/Wk5-assgn4-linkedin-post-proof.PNG)
 
 ---
 
