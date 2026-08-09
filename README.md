@@ -82,8 +82,8 @@ This is not a course. It is an internship-style program — real deployments, re
  Week 04 → Git & GitHub
  [![Week 04 – Git](./badges/week-04.svg)](./week-04-github/)
 
-<!-- Week 05 → DevOps Lifecycle & Agile -->
-<!-- [![Week 05 – Agile](./badges/week-05.svg)](./week-05-devops-lifecycle/) -->
+ Week 05 → DevOps Lifecycle & Agile
+ [![Week 05 – Agile](./badges/week-05.svg)](./week-05-devops-lifecycle/)
 
 <!-- Week 06 → AWS Cloud -->
 <!-- [![Week 06 – AWS](./badges/week-06.svg)](./week-06-aws-cloud/) -->
@@ -135,7 +135,7 @@ This is not a course. It is an internship-style program — real deployments, re
 | 02 | Agentic AI with Claude Code | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/michael-okanlawon_reflection-week-2-by-michael-oladunni-share-7481398657775341568-V3sO/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw | https://medium.com/@monolegend62/week-2-reflection-of-my-devops-mini-internship-dfb4eeb13517 |
 | 03 | Linux for DevOps | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/michael-okanlawon_devops-linux-aws-activity-7483906002413719552-tFYV?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw | https://medium.com/@monolegend62/week-3-of-the-devops-micro-internship-has-stretched-me-in-ways-i-did-not-expect-4bae6d47363f?sharedUserId=monolegend62 |
 | 04 | Git & GitHub | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/michael-okanlawon_devops-git-github-share-7485977831941005312-sY0_/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw |https://medium.com/@monolegend62/week-4-one-week-six-assignments-countless-git-commands-plenty-of-lessons-667563174fda|
-| 05 | DevOps Lifecycle & Agile | ⬜ Not Started | ⏳ Pending | — | — |
+| 05 | DevOps Lifecycle & Agile | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/michael-okanlawon_devops-cloudcomputing-aws-share-7492276759191715840-5Wal/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw | https://medium.com/@monolegend62/week-5-of-my-devops-micro-internship-c5d6ec95ade5 |
 | 06 | AWS Cloud | ⬜ Not Started | ⏳ Pending | — | — |
 | 07 | Azure Cloud | ⬜ Not Started | ⏳ Pending | — | — |
 | 08 | Terraform | ⬜ Not Started | ⏳ Pending | — | — |
