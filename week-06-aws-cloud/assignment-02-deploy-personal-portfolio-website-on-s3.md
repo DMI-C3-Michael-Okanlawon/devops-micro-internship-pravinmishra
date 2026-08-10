@@ -20,8 +20,7 @@ Download or clone the portfolio website template from GitHub and confirm `index.
 
 #### Screenshot 1 — File Explorer or terminal showing the template folder contents with `index.html` visible
 
-Add your screenshot here.
-
+![alt text](screenshots/W6-A2-SS1-Cat-Index-Html.PNG)
 ---
 
 # Task 2 — Create an S3 Bucket for Website Hosting
@@ -34,7 +33,7 @@ Create a globally unique S3 bucket in your chosen AWS region.
 
 #### Screenshot 2 — S3 bucket created screen showing the bucket name and region
 
-Add your screenshot here.
+![alt text](screenshots/W6-A2-SS2-Created-S3-Bucket.PNG)
 
 ---
 
@@ -48,7 +47,7 @@ Upload the contents of the template folder (not the folder itself) so `index.htm
 
 #### Screenshot 3 — S3 bucket Objects view showing `index.html` at the top or root level
 
-Add your screenshot here.
+![alt text](screenshots/W6-A2-SS3-Index-uploaded-to-S3.PNG)
 
 ---
 
@@ -62,7 +61,7 @@ Enable S3 Static Website Hosting with `index.html` as the index document and `er
 
 #### Screenshot 4 — Static website hosting enabled screen showing the Website endpoint
 
-Add your screenshot here.
+![alt text](screenshots/W6-A2-SS4-Static-website.PNG)
 
 ---
 
@@ -76,7 +75,7 @@ Adjust Block Public Access settings and save a bucket policy that grants public 
 
 #### Screenshot 5 — Bucket policy page showing the policy saved successfully, with the bucket name visible
 
-Add your screenshot here.
+![alt text](screenshots/W6-A2-SS5-bucket-policy.PNG)
 
 ---
 
@@ -90,7 +89,7 @@ Load the site through the S3 website endpoint and confirm the homepage, images, 
 
 #### Screenshot 6 — Browser showing the live website with the S3 website endpoint visible in the address bar
 
-Add your screenshot here.
+![alt text](screenshots/W6-A2-SS6-static-website-via-browser.PNG)
 
 ---
 
@@ -104,7 +103,7 @@ Edit a small visible detail, re-upload it to S3, and confirm the change appears 
 
 #### Screenshot 7 (optional) — Before and after views, or a browser view showing the updated text
 
-Add your screenshot here.
+![alt text](screenshots/W6-A2-SS7-new-tagline.PNG)
 
 ---
 
