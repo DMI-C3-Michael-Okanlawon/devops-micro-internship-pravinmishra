@@ -30,7 +30,7 @@ In the Billing Dashboard, create a monthly Cost Budget with a name, amount, and 
 
 #### Screenshot 1 — AWS Budget setup page showing the budget name, budget amount, and alert thresholds
 
-Add your screenshot here.
+![alt text](screenshots/Wk6-A1-SS1-Created-Budget.PNG)
 
 ---
 
@@ -40,7 +40,8 @@ Answer the following in your own words:
 
 **1. Why is it important to set up budget alerts when using an AWS account?**
 
-Write your answer here.
+Budget alerts are important because they help monitor AWS spending and provide an early warning when costs approach a set limit. This is especially useful as accidentally running resources for longer than necessary defeats cost effectiveness goal. Budget alerts help me identify unusual spending early and take action before the costs increase.
+
 
 ---
 
