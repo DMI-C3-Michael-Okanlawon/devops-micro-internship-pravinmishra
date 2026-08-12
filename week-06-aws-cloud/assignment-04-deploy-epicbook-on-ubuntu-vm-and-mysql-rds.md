@@ -20,19 +20,19 @@ Create `epicbook-vpc` (10.0.0.0/16) with a public subnet (10.0.1.0/24) and a pri
 
 #### Screenshot 1 — VPC details showing CIDR 10.0.0.0/16
 
-Add your screenshot here.
+![alt text](screenshots/Wk6-A4-SS1-IPv4-CIDR.PNG)
 
 ---
 
 #### Screenshot 2 — Subnets list showing both subnets and their CIDRs
 
-Add your screenshot here.
+![alt text](screenshots/Wk6-A4-SS2-Public-Private-Subnets.PNG)
 
 ---
 
 #### Screenshot 3 — Route table showing 0.0.0.0/0 → IGW and association with the public subnet
 
-Add your screenshot here.
+![alt text](screenshots/Wk6-A4-SS3-Route-0000-igw.PNG)
 
 ---
 
@@ -46,13 +46,13 @@ Create `epicbook-ec2-sg` (SSH from your IP, HTTP/HTTPS public) and `epicbook-rds
 
 #### Screenshot 4 — EC2 security-group inbound rules showing ports and sources
 
-Add your screenshot here.
+![alt text](screenshots/Wk6-A4-SS4-Security-Group-inbound-rules.PNG)
 
 ---
 
 #### Screenshot 5 — RDS security-group inbound rule showing MySQL 3306 allowed from the EC2 security group
 
-Add your screenshot here.
+![alt text](screenshots/Wk6-A4-SS5-RDS-Security-Group-inbound-showing-inbound-rule.PNG)
 
 ---
 
@@ -66,13 +66,13 @@ Launch an Ubuntu 20.04 instance in the public subnet with `epicbook-ec2-sg` atta
 
 #### Screenshot 6 — EC2 instance summary showing the public IPv4 address, subnet, and security group
 
-Add your screenshot here.
+![alt text](screenshots/Wk6-A4-SS6-EC2-publicIP-SG-subnet-ID.PNG)
 
 ---
 
 #### Screenshot 7 — Terminal showing a successful SSH login with the `ubuntu@...` prompt
 
-Add your screenshot here.
+![alt text](screenshots/Wk6-A4-SS7-SSH-Ubuntu-Connection.PNG)
 
 ---
 
@@ -86,19 +86,19 @@ Install Node.js, npm, Nginx, and the MySQL client on the instance, and confirm N
 
 #### Screenshot 8 — Output of `node -v` and `npm -v`
 
-Add your screenshot here.
+![alt text](screenshots/Wk6-A4-SS8-node-and-npm-v.PNG)
 
 ---
 
 #### Screenshot 9 — Output of `systemctl status nginx`
 
-Add your screenshot here.
+![alt text](screenshots/Wk6-A4-SS9-nginx-active-output.PNG)
 
 ---
 
 #### Screenshot 10 — Output of `mysql --version`
 
-Add your screenshot here.
+![alt text](screenshots/Wk6-A4-SS10-mysql--version-output.PNG)
 
 ---
 
@@ -112,13 +112,13 @@ Create a private MySQL RDS instance in `epicbook-vpc` using a DB Subnet Group ov
 
 #### Screenshot 11 — RDS instance summary showing Publicly accessible: No
 
-Add your screenshot here.
+![alt text](screenshots/Wk6-A4-SS11-db-public-accessible-NO.PNG)
 
 ---
 
 #### Screenshot 12 — Connectivity & security section showing the VPC and attached security group
 
-Add your screenshot here.
+![alt text](screenshots/Wk6-A4-SS12-VPC-Attached-SGs.PNG)
 
 ---
 
@@ -132,7 +132,7 @@ Connect to RDS from EC2, create the `epicbook` database, and import the provided
 
 #### Screenshot 13 — Terminal showing successful `SHOW TABLES;` output with tables listed
 
-Add your screenshot here.
+![alt text](screenshots/Wk6-A4-SS13-output-of-sql-dumps-from-ec2.PNG)
 
 ---
 
@@ -146,19 +146,19 @@ Clone the EpicBook repository, install backend dependencies, configure `.env` wi
 
 #### Screenshot 14 — Terminal showing the repository cloned and the `ls` output
 
-Add your screenshot here.
+![alt text](screenshots/Wk6-A4-SS14-theepicbook-ls.PNG)
 
 ---
 
 #### Screenshot 15 — Terminal showing the backend running, or `ss -tulpn` showing the port open
 
-Add your screenshot here.
+![alt text](<screenshots/Wk6-A4-SS15-backend running-ss-tulpn-showing-port-3000.PNG>)
 
 ---
 
 #### Screenshot 16 — `curl` output proving the backend responds; a 200, 301, or 404 response is acceptable if the service responds
 
-Add your screenshot here.
+![alt text](screenshots/Wk6-A4-SS16-http-localhost-200-OK.PNG)
 
 ---
 
@@ -172,13 +172,13 @@ Copy the frontend files to the Nginx web root and configure Nginx to reverse-pro
 
 #### Screenshot 17 — `nginx -t` success output
 
-Add your screenshot here.
+![alt text](screenshots/Wk6-A4-SS17-nginx-t.PNG)
 
 ---
 
 #### Screenshot 18 — Nginx configuration snippet showing the `/api/` reverse proxy
 
-Add your screenshot here.
+![alt text](screenshots/Wk6-A4-SS18-location-api.PNG)
 
 ---
 
@@ -192,19 +192,19 @@ Verify the frontend loads publicly, the backend responds through Nginx, and EC2 
 
 #### Screenshot 19 — Browser showing the EpicBook application loaded with the public IP visible
 
-Add your screenshot here.
+![alt text](screenshots/Wk6-A4-SS19-browser-showing-epicbook-app.PNG)
 
 ---
 
 #### Screenshot 20 — Terminal showing a successful API call through the public endpoint, such as `curl http://<EC2_PUBLIC_IP>/api/...`
 
-Add your screenshot here.
+![alt text](screenshots/Wk6-A4-SS20-curl-public-IP.PNG)
 
 ---
 
 #### Screenshot 21 — Terminal showing the successful database connectivity test using `SELECT 1;` or similar
 
-Add your screenshot here.
+![alt text](screenshots/Wk6-A4-SS21-database-connectivity.PNG)
 
 ---
 
