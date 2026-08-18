@@ -20,7 +20,7 @@ Create an architecture diagram showing the custom VPC (10.0.0.0/16), the six sub
 
 #### Diagram image or link
 
-Add your diagram image or link here.
+![alt text](screenshots/Wk6-A6-SS1-Book-Review-App-Architecture-diagram.png)
 
 ---
 
