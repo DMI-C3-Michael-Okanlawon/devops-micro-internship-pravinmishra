@@ -20,13 +20,13 @@ Create an architecture diagram and implementation plan identifying the presentat
 
 #### Screenshot 1 — Architecture diagram showing the public entry point, three tiers, network boundaries, and traffic flow
 
-Add your screenshot here.
+![alt text](screenshots/Wk7-A6-SS1-Book-Review-App-Architecture-Diagram.PNG)
 
 ---
 
 #### Screenshot 2 — Written architecture assumptions and selected Azure services
 
-Add your screenshot here.
+![alt text](screenshots/Wk7-A6-SS2-Written-Architecture-Assumptions.PNG)
 
 ---
 
@@ -40,19 +40,20 @@ Create a dedicated Resource Group and VNet with separate subnets for the web, ap
 
 #### Screenshot 3 — Resource Group overview showing the assignment resources
 
-Add your screenshot here.
+![alt text](screenshots/Wk7-A6-SS3-Resources-in-RG.PNG)
 
 ---
 
 #### Screenshot 4 — VNet overview showing the address space and all required subnets
 
-Add your screenshot here.
+![](screenshots/Wk7-A6-SS4A-Vnet-Overview-Page-Showing-Address-Space.PNG)
+![alt text](screenshots/Wk7-A6-SS4B-Subnets-Created-In-Vnet.PNG)
 
 ---
 
 #### Screenshot 5 — Route-table or Private DNS evidence where applicable
 
-Add your screenshot here.
+![alt text](screenshots/Wk7-A6-SS5-Private-DNS-VNet-Link.PNG)
 
 ---
 
@@ -66,13 +67,17 @@ Apply least-privilege NSG rules so traffic flows Internet → public entry point
 
 #### Screenshot 6 — NSG rules proving least-privilege access between the tiers
 
-Add your screenshot here.
+![alt text](screenshots/Wk7-A6-SS6A-Web-NSG-Inbound-Rules.PNG)
+![alt text](screenshots/Wk7-A6-SS6B-Showing-App-NSG-Inbound-Rules.PNG)
+![alt text](screenshots/Wk7-A6-SS6C-DB-Showing-InBound-Rules.PNG)
 
 ---
 
 #### Screenshot 7 — Key Vault or approved secret-management configuration (without displaying secret values)
 
-Add your screenshot here.
+![alt text](screenshots/Wk7-A6-SS7A-KeyVault-Managed-Identity-RBAC.PNG)
+![alt text](screenshots/Wk7-A6-SS7B-App-Tier-Managed-Identity.PNG)
+![alt text](screenshots/Wk7-A6-SS7C-Book-Review-App-Vault-Networking.PNG)
 
 ---
 
@@ -86,13 +91,13 @@ Deploy the Book Review App presentation layer on the approved web-tier compute s
 
 #### Screenshot 8 — Web-tier compute overview showing subnet and availability configuration
 
-Add your screenshot here.
+![alt text](screenshots/Wk7-A6-SS8-Web-Tier-Overview-Page-Showing-Subnet.PNG)
 
 ---
 
 #### Screenshot 9 — Terminal or service output proving the presentation layer is running
 
-Add your screenshot here.
+![alt text](screenshots/Wk7-A6-SS9-Terminal-Showing-Presentation-Layer-Running.PNG)
 
 ---
 
@@ -106,19 +111,19 @@ Deploy the Book Review App backend privately in the application subnet, configur
 
 #### Screenshot 10 — Application-tier compute overview showing private subnet placement
 
-Add your screenshot here.
+![alt text](screenshots/Wk7-A6-SS10-App-Tier-Overview-Page-Showing-Private-Subnet.PNG)
 
 ---
 
 #### Screenshot 11 — Backend process, service, or listening-port evidence
 
-Add your screenshot here.
+![alt text](screenshots/Wk7-A6-SS11-Backend-Listening-Port-Evidence.PNG)
 
 ---
 
 #### Screenshot 12 — Internal health-check or API response (without exposing secrets)
 
-Add your screenshot here.
+![alt text](screenshots/Wk7-A6-SS12-API-Running.PNG)
 
 ---
 
@@ -132,19 +137,19 @@ Create a private Azure managed database (public access disabled), with availabil
 
 #### Screenshot 13 — Database overview showing private connectivity and public access disabled
 
-Add your screenshot here.
+![alt text](screenshots/Wk7-A6-SS13-DB-Overview-Page-Showing-Private-Access.PNG)
 
 ---
 
 #### Screenshot 14 — Availability, backup, and retention configuration
 
-Add your screenshot here.
+![alt text](screenshots/Wk7-A6-SS14-DB-Availability-Retention-Page.PNG)
 
 ---
 
 #### Screenshot 15 — Successful schema or connectivity verification (without exposing credentials)
 
-Add your screenshot here.
+![alt text](screenshots/Wk7-A6-SS15-Connectivity-Verification.PNG)
 
 ---
 
@@ -158,19 +163,20 @@ Configure the approved public entry service with health probes and backend pools
 
 #### Screenshot 16 — Public entry service showing listener, frontend endpoint, and healthy web targets
 
-Add your screenshot here.
+![alt text](screenshots/Wk7-A6-SS16-Frontend-Healthy-Web-Target.PNG)
+![alt text](screenshots/Wk7-A6-SS16B-Overview-Page-Frontend-Healthy-Web-Target.PNG)
 
 ---
 
 #### Screenshot 17 — Internal application-tier load-balancing or routing configuration where applicable
 
-Add your screenshot here.
+![alt text](screenshots/Wk7-A6-SS17-Web-To-App-Private-Routing.PNG)
 
 ---
 
 #### Screenshot 18 — Azure Monitor, diagnostic settings, logs, metrics, or alert evidence
 
-Add your screenshot here.
+![alt text](screenshots/Wk7-A6-SS18-Application-Gateway-Monitoring.PNG)
 
 ---
 
@@ -184,25 +190,27 @@ Confirm the Book Review App works end to end through the public endpoint, with a
 
 #### Screenshot 19 — Browser showing the Book Review App through the public endpoint
 
-Add your screenshot here.
+![alt text](screenshots/Wk7-A6-SS19-Public-Book-Review-App.PNG)
 
 ---
 
 #### Screenshot 20 — Proof of successful database-backed read and write operations
 
-Add your screenshot here.
+![alt text](screenshots/Wk7-A6-SS20-Database-Read-Write.PNG)
 
 ---
 
 #### Screenshot 21 — Evidence that private tiers are not publicly accessible
 
-Add your screenshot here.
+![alt text](screenshots/Wk7-A6-SS21A-App-Tier-Private.PNG)
+![alt text](screenshots/Wk7-A6-SS21B-Database-Private.PNG)
 
 ---
 
 #### Screenshot 22 — Availability-test and healthy-target evidence
 
-Add your screenshot here.
+![alt text](screenshots/Wk7-A6-SS22A-Service-Recovery-Test.PNG)
+![alt text](screenshots/Wk7-A6-SS22B-Healthy-Backend-After-Test.PNG)
 
 ---
 
@@ -210,7 +218,7 @@ Add your screenshot here.
 
 Paste your public endpoint URL here:
 
-`Add your URL here`
+`http://20.253.37.54`
 
 ---
 
@@ -218,7 +226,13 @@ Paste your public endpoint URL here:
 
 Summarize what worked, issues encountered and how they were fixed, and the availability/security/secrets/monitoring/backup choices made.
 
-Write your answer here.
+The Book Review App was successfully deployed as a three-tier Azure architecture with Application Gateway as the public entry point, a Web VM running Next.js/Nginx, a private App VM running the Node.js API, and Azure Database for MySQL Flexible Server on a private delegated subnet. The final application supports login, book retrieval and database-backed review creation through the public endpoint.
+
+Issues encountered included the Application Gateway being stopped, Nginx serving its default page instead of Next.js, the backend process not running persistently, lack of outbound Internet access from the private App subnet, incorrect frontend API routing, and CORS restrictions. These were resolved by starting and validating the gateway, configuring Nginx reverse proxying, managing frontend/backend processes with PM2, adding a NAT Gateway for controlled outbound access, correcting /api routing, and updating allowed origins.
+
+Security was tightened using least-privilege NSGs: Internet traffic reaches the Web Tier only through the Application Gateway, port 3001 is restricted from Web to App, and MySQL 3306 is restricted from App to DB. The App VM has no public NIC IP, MySQL public network access is disabled, and the NAT Gateway provides outbound-only connectivity. Azure Key Vault was configured with RBAC and the App VM's system-assigned managed identity for approved secret-access management without exposing Azure credentials.
+
+Availability was validated through PM2 service recovery, public HTTP 200 tests, and Application Gateway backend health showing Healthy 1 of 1. Azure Monitor/Application Gateway metrics were used for monitoring, while Azure Database for MySQL automated backup and retention settings provide database recovery protection.
 
 ---
 
