@@ -88,8 +88,8 @@ This is not a course. It is an internship-style program — real deployments, re
  Week 06 → AWS Cloud
  [![Week 06 – AWS](./badges/week-06.svg)](./week-06-aws-cloud/) 
 
-<!-- Week 07 → Azure Cloud -->
-<!-- [![Week 07 – Azure](./badges/week-07.svg)](./week-07-azure-cloud/) -->
+ Week 07 → Azure Cloud
+ [![Week 07 – Azure](./badges/week-07.svg)](./week-07-azure-cloud/)
 
 <!-- Week 08 → Terraform -->
 <!-- [![Week 08 – Terraform](./badges/week-08.svg)](./week-08-terraform/) -->
@@ -137,7 +137,7 @@ This is not a course. It is an internship-style program — real deployments, re
 | 04 | Git & GitHub | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/michael-okanlawon_devops-git-github-share-7485977831941005312-sY0_/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw |https://medium.com/@monolegend62/week-4-one-week-six-assignments-countless-git-commands-plenty-of-lessons-667563174fda|
 | 05 | DevOps Lifecycle & Agile | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/michael-okanlawon_devops-cloudcomputing-aws-share-7492276759191715840-5Wal/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw | https://medium.com/@monolegend62/week-5-of-my-devops-micro-internship-c5d6ec95ade5 |
 | 06 | AWS Cloud | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/michael-okanlawon_aws-cloudsecurity-devops-ugcPost-7497684742608252928-pfcd/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw |https://medium.com/@monolegend62/week-6-aws-cloud-security-and-ai-assisted-auditing-90c627ecba48|
-| 07 | Azure Cloud | 🔄 In Progress | ⏳ Pending | — | — |
+| 07 | Azure Cloud | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/michael-okanlawon_azure-cloudsecurity-devops-ugcPost-7499033776438726656-YWpP/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw | https://medium.com/@monolegend62/week-7-took-me-properly-into-microsoft-azure-and-it-tested-both-my-technical-knowledge-and-7c802672e2f2 |
 | 08 | Terraform | ⬜ Not Started | ⏳ Pending | — | — |
 | 09 | Ansible | ⬜ Not Started | ⏳ Pending | — | — |
 | 10 | Azure DevOps (CI/CD) | ⬜ Not Started | ⏳ Pending | — | — |
