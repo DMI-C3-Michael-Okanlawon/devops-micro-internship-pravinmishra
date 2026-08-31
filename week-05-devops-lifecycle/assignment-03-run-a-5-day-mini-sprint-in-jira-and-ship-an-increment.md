@@ -12,7 +12,7 @@ In this assignment, you will run a five-day mini-Sprint in Jira and ship a small
 
 # Task 1 — Set Up and Start Sprint 1
 
-## Goal
+## Goal 
 
 Create the footer Story (`Add footer with version and deploy date`, 1 point, `frontend` label) with its five required Sub-tasks (Day 1–Day 5), move it into Sprint 1, set the required Sprint Goal, and start the Sprint.
 
@@ -164,7 +164,7 @@ Record a two-to-three-minute demo video of the shipped footer, add a retrospecti
 
 Paste your unlisted YouTube or accessible Google Drive demo-video link here:
 
-`Add your URL here`
+`https://www.loom.com/share/29a2d07624fc47309d81af6f924d8ab8`
 
 ---
 
