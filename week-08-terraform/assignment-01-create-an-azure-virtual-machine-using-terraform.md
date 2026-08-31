@@ -20,19 +20,19 @@ Prepare your local environment for Terraform deployment by installing Terraform,
 
 #### Screenshot 1 — Terminal showing successful `terraform version` output
 
-Add your screenshot here.
+![alt text](screenshots/Wk8-A1-SS1-Terraform-Version.PNG)
 
 ---
 
 #### Screenshot 2 — Terminal showing successful `az version` output
 
-Add your screenshot here.
+![alt text](screenshots/Wk8-A1-SS2-AZ-Version.PNG)
 
 ---
 
 #### Screenshot 3 — VS Code Extensions panel showing the HashiCorp Terraform extension installed and enabled
 
-Add your screenshot here.
+![alt text](screenshots/Wk8-A1-SS3-HashiCorp-Terraform-Extension-Instaled.PNG)
 
 ---
 
@@ -46,13 +46,13 @@ Create a new Terraform project and define the complete Azure Virtual Machine env
 
 #### Screenshot 4 — VS Code showing the AzureRM provider configuration and resource group configuration in `main.tf`
 
-Add your screenshot here.
+![alt text](screenshots/Wk8-A1-SS4-Main-tf-Provider-and-RG.PNG)
 
 ---
 
 #### Screenshot 5 — VS Code showing the Linux virtual machine configuration and public IP `output` block in `main.tf`. Ensure that the VM password is hidden or redacted
 
-Add your screenshot here.
+![alt text](screenshots/Wk8-A1-SS5-Linux-VM-Config.PNG)
 
 ---
 
@@ -66,7 +66,7 @@ Initialize the Terraform working directory and download the required provider co
 
 #### Screenshot 6 — Terminal showing the successful `terraform init` output
 
-Add your screenshot here.
+![alt text](screenshots/Wk8-A1-SS6-Terraform-Init.PNG)
 
 ---
 
@@ -80,23 +80,23 @@ Review the Terraform execution plan and provision the Azure resources.
 
 #### Screenshot 7 — Terraform plan summary showing the proposed resources
 
-Add your screenshot here.
+![alt text](screenshots/Wk8-A1-SS7-Terraforn-Plan-Summary.PNG)
 
 ---
 
 #### Screenshot 8 — Terraform apply output showing successful completion
 
-Add your screenshot here.
+![alt text](screenshots/Wk8-A1-SS8-Terraform-Apply-Output.PNG)
 
 ---
 
 #### Screenshot 9 — Terraform output showing the public IP address of the VM
 
-Add your screenshot here.
+![alt text](screenshots/Wk8-A1-SS9-Public-IP-Address.PNG)
 
 ### Question
 
-VM Public IP Address: [Enter the public IP shown by terraform output]
+VM Public IP Address: 4.227.211.107
 
 ---
 
@@ -110,7 +110,7 @@ Confirm through Azure CLI that the virtual machine was created successfully and 
 
 #### Screenshot 10 — Azure CLI output showing the deployed VM name and `VM running` status
 
-Add your screenshot here.
+![alt text](screenshots/Wk8-A1-SS10-VM-Running-Output.PNG)
 
 ---
 
@@ -124,7 +124,7 @@ Remove all Azure resources created by Terraform after completing the deployment 
 
 #### Screenshot 11 — Terminal showing successful `terraform destroy` completion
 
-Add your screenshot here.
+![alt text](screenshots/Wk8-A1-SS11-Terraform-Destroy-Output.PNG)
 
 ---
 
