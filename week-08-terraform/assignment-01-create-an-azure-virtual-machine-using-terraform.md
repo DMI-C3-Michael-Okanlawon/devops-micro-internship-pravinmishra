@@ -96,7 +96,7 @@ Review the Terraform execution plan and provision the Azure resources.
 
 ### Question
 
-VM Public IP Address: 4.227.211.107
+VM Public IP Address: `http://4.227.211.107`
 
 ---
 
