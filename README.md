@@ -91,8 +91,8 @@ This is not a course. It is an internship-style program — real deployments, re
  Week 07 → Azure Cloud
  [![Week 07 – Azure](./badges/week-07.svg)](./week-07-azure-cloud/)
 
-<!-- Week 08 → Terraform -->
-<!-- [![Week 08 – Terraform](./badges/week-08.svg)](./week-08-terraform/) -->
+ Week 08 → Terraform
+ [![Week 08 – Terraform](./badges/week-08.svg)](./week-08-terraform/) 
 
 <!-- Week 09 → Ansible -->
 <!-- [![Week 09 – Ansible](./badges/week-09.svg)](./week-09-ansible/) -->
@@ -138,7 +138,7 @@ This is not a course. It is an internship-style program — real deployments, re
 | 05 | DevOps Lifecycle & Agile | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/michael-okanlawon_devops-cloudcomputing-aws-share-7492276759191715840-5Wal/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw | https://medium.com/@monolegend62/week-5-of-my-devops-micro-internship-c5d6ec95ade5 |
 | 06 | AWS Cloud | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/michael-okanlawon_aws-cloudsecurity-devops-ugcPost-7497684742608252928-pfcd/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw |https://medium.com/@monolegend62/week-6-aws-cloud-security-and-ai-assisted-auditing-90c627ecba48|
 | 07 | Azure Cloud | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/michael-okanlawon_azure-cloudsecurity-devops-ugcPost-7499033776438726656-YWpP/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw | https://medium.com/@monolegend62/week-7-took-me-properly-into-microsoft-azure-and-it-tested-both-my-technical-knowledge-and-7c802672e2f2 |
-| 08 | Terraform | ⬜ Not Started | ⏳ Pending | — | — |
+| 08 | Terraform | ✅ Completed | ✅ Solved | https://www.linkedin.com/feed/?highlightedUpdateUrn=urn%3Ali%3Ashare%3A7505210921880047616&highlightedUpdateType=SOCIAL_SHARE&origin=SOCIAL_SHARE&utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw | https://medium.com/@monolegend62/week-08-terraform-ed630293d4cc |
 | 09 | Ansible | ⬜ Not Started | ⏳ Pending | — | — |
 | 10 | Azure DevOps (CI/CD) | ⬜ Not Started | ⏳ Pending | — | — |
 | 11 | Docker | ⬜ Not Started | ⏳ Pending | — | — |
