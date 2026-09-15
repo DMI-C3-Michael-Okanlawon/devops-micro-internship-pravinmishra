@@ -14,7 +14,7 @@
 
 | | |
 |---|---|
-| **Name** | Michael Okanalwon |
+| **Name** | Michael Okanlawon |
 | **LinkedIn** | [michael-okanlawon](www.linkedin.com/in/michael-okanlawon) |
 | **Location** | Lagos, Nigeria |
 | **Background** | Azure Identity, Technical Support, DevOps Engineer |
