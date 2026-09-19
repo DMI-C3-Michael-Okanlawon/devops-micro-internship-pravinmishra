@@ -1,0 +1,6 @@
+subscription_id     = "bd7cdcb9-62d5-4968-a926-35229aa3fe28"
+location            = "East US"
+resource_group_name = "Week-09-Ansible-RG"
+vm_size             = "Standard_B1s"
+admin_username      = "azureuser"
+ssh_public_key_path = "./id_ed25519.pub"
