@@ -1,0 +1,66 @@
+---
+- name: Install and start Nginx
+  hosts: web
+  become: true
+  gather_facts: true
+
+  tasks:
+    - name: Install Nginx
+      ansible.builtin.apt:
+        name: nginx
+        state: present
+        update_cache: true
+
+    - name: Enable and start Nginx
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: true
+
+- name: Deploy the static website
+  hosts: web
+  become: true
+  gather_facts: false
+
+  tasks:
+    - name: Copy the website to the Nginx document root
+      ansible.builtin.copy:
+        src: files/index.html
+        dest: /var/www/html/index.html
+        owner: www-data
+        group: www-data
+        mode: "0644"
+      notify: Reload Nginx
+
+  handlers:
+    - name: Reload Nginx
+      ansible.builtin.service:
+        name: nginx
+        state: reloaded
+
+- name: Verify the website from the controller
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: Request the website from every web server
+      ansible.builtin.uri:
+        url: "http://{{ hostvars[item].ansible_host }}"
+        method: GET
+        status_code: 200
+        return_content: false
+      loop: "{{ groups['web'] }}"
+      register: website_checks
+
+    - name: Assert that every web server returned HTTP 200
+      ansible.builtin.assert:
+        that:
+          - item.status == 200
+        success_msg: >-
+          {{ item.item }} returned HTTP {{ item.status }}
+        fail_msg: >-
+          {{ item.item }} failed the HTTP 200 verification
+      loop: "{{ website_checks.results }}"
+      loop_control:
+        label: "{{ item.item }}"

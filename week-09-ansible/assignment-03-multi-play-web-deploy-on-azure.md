@@ -20,7 +20,7 @@ Create the `static-web` project directory with `inventory.ini`, `site.yml`, a `f
 
 #### Screenshot 1 — Terminal or editor showing the complete `static-web` folder layout
 
-Add your screenshot here.
+![alt text](screenshots/Wk9-A3-SS1-Static-web-folder.PNG)
 
 ---
 
@@ -34,7 +34,7 @@ Stage `index.html` from `https://github.com/pravinmishraaws/Azure-Static-Website
 
 #### Screenshot 2 — Editor or terminal showing `files/index.html` staged inside the `static-web` project
 
-Add your screenshot here.
+![alt text](screenshots/Wk9-A3-SS2-Index-html.PNG)
 
 ---
 
@@ -48,13 +48,13 @@ Write `site.yml` with three plays: Play 1 (install/start Nginx on `web`), Play 2
 
 #### Screenshot 3 — Editor showing the three plays in `site.yml`
 
-Add your screenshot here.
+![alt text](screenshots/Wk9-A3-SS3-Editor-showing-Site-yml.PNG)
 
 ---
 
 #### Screenshot 4 — Editor showing the copy task, file ownership/mode, handler, uri task, and HTTP 200 assertion
 
-Add your screenshot here.
+![alt text](screenshots/Wk9-A3-SS4-file-ownership.PNG)
 
 ---
 
@@ -68,13 +68,13 @@ Run `ansible-playbook -i inventory.ini site.yml` and confirm all plays complete 
 
 #### Screenshot 5 — Terminal showing the `ansible-playbook` run and final recap with OK/changed results and no failures
 
-Add your screenshot here.
+![alt text](screenshots/Wk9-A3-SS5-Final-Recap.PNG)
 
 ---
 
 #### Screenshot 6 — Terminal showing the successful localhost URI verification results
 
-Add your screenshot here.
+![alt text](screenshots/Wk9-A3-SS6-Localhost-URI-verification.PNG)
 
 ---
 
@@ -88,15 +88,21 @@ Confirm the deployed static website is reachable directly from a web-server publ
 
 #### Screenshot 7 — Browser showing the static website loaded from a web-server public IP
 
-Add your screenshot here.
+![alt text](screenshots/Wk9-A3-SS7-Browser-opening-public-IP.PNG)
 
 ---
 
 ### Notes
 
-Describe an issue you faced and how you fixed it, what you learned, why installation and deployment were split into separate plays, and one benefit of using `copy` instead of cloning from Git directly.
+Describe an issue you faced and how you fixed it, what you learned, why installation and deployment were split into separate plays, and one benefit of using COPY instead of cloning from Git directly.
 
-Write your answer here.
+I faced a YAML formatting issue where yamllint reported trailing spaces and no newline at the end of site.yml. I fixed it by removing the trailing whitespace, adding a proper newline, and rerunning yamllint and the Ansible syntax check until both passed.
+
+I learned how to organise one playbook into multiple plays, use a handler to reload Nginx only when the website file changes, and verify both web servers from the controller using the uri and assert modules.
+
+Installation and deployment were separated because they are different stages. The first play prepares the servers by installing and starting Nginx, while the second manages the website content. This makes the playbook clearer, easier to troubleshoot, and allows each stage to be updated independently.
+
+One benefit of using copy instead of cloning from Git directly is that the web servers do not need Git installed or access to the repository. The controller manages the exact file being deployed, which makes the deployment simpler and more controlled.
 
 ---
 
