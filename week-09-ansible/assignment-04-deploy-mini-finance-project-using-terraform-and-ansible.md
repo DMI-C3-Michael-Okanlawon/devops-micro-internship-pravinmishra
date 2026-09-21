@@ -20,7 +20,7 @@ Create the `mini-finance` project with separate `terraform/` and `ansible/` subd
 
 #### Screenshot 1 — Terminal or editor showing the complete `mini-finance` project tree
 
-Add your screenshot here.
+![alt text](screenshots/Wk9-A4-SS1-Tree.PNG)
 
 ---
 
@@ -34,19 +34,19 @@ Provision an Ubuntu 22.04 Standard_B1s VM with a public IP, SSH key authenticati
 
 #### Screenshot 2 — Terminal showing the end of a successful `terraform apply`
 
-Add your screenshot here.
+![alt text](screenshots/Wk9-A4-SS2-Terraform-Apply.PNG)
 
 ---
 
 #### Screenshot 3 — Terminal showing `terraform output public_ip`
 
-Add your screenshot here.
+![](screenshots/Wk9-A4-SS3-Output-of-public-IP.PNG)
 
 ---
 
 #### Screenshot 4 — Terraform code or Azure Portal showing NSG inbound rules for ports 22 and 80
 
-Add your screenshot here.
+![alt text](screenshots/Wk9-A4-SS4-NSG-Ports-22-and-80.PNG)
 
 ---
 
@@ -60,7 +60,7 @@ Connect to the VM with SSH using the injected key and run `hostname` remotely wi
 
 #### Screenshot 5 — Terminal showing the successful passwordless SSH hostname check
 
-Add your screenshot here.
+![alt text](screenshots/Wk9-A4-SS5-Passwordless-SSH-Hostname-Check.PNG)
 
 ---
 
@@ -74,13 +74,13 @@ Create `ansible/inventory.ini` and a three-play `site.yml` that installs Nginx a
 
 #### Screenshot 6 — Editor showing `inventory.ini` and the three plays in `site.yml`
 
-Add your screenshot here.
+![alt text](screenshots/Wk9-A4-SS6-Editor-showing-inventory-and-site-ini.PNG)
 
 ---
 
 #### Screenshot 7 — Terminal showing `ansible-playbook -i inventory.ini site.yml` with HTTP 200, assertion OK, and no failures
 
-Add your screenshot here.
+![alt text](screenshots/Wk9-A4-SS7-HTTP-200_OK.PNG)
 
 ---
 
@@ -94,7 +94,7 @@ Confirm the Mini Finance site is publicly accessible and correctly served by Ngi
 
 #### Screenshot 8 — Browser showing the Mini Finance site loaded from `http://<public_ip>` with the URL visible
 
-Add your screenshot here.
+![alt text](screenshots/Wk9-A4-SS8-Public-IP-Opened-via-Browser.PNG)
 
 ---
 
@@ -102,7 +102,9 @@ Add your screenshot here.
 
 Describe an issue you faced and how you fixed it, and what you learned.
 
-Write your answer here.
+I faced an intermittent SSH connectivity issue between Ansible and the Azure VM. My ISP changed my public IP, so the NSG rule no longer allowed traffic from my laptop. Even after updating the rule, some connections timed out because of unstable routing. I fixed this by updating the SSH rule with my current IP range and configuring Ansible to retry failed connections and keep successful sessions alive. After that, Ansible connected successfully, installed Nginx and Git, deployed the Mini Finance website, and verified an HTTP 200 response.
+
+I learned how Terraform and Ansible complement each other in a real deployment. Terraform created the Azure infrastructure and security rules, while Ansible handled the server configuration, application deployment, and verification. I also learned the importance of checking each layer separately when troubleshooting: the VM status, NSG rules, SSH service, direct SSH connection, and finally Ansible connectivity.
 
 ---
 
@@ -118,13 +120,13 @@ Publish a LinkedIn post about the Terraform + Ansible deployment, mentioning the
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+`https://www.linkedin.com/posts/michael-okanlawon_devops-terraform-ansible-share-7507729233666801664-sDCq/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw`
 
 ---
 
 #### Screenshot — Published LinkedIn post showing the text and at least one image or proof
 
-Add your screenshot here.
+![alt text](screenshots/Wk9-A4-SS-Linkedin-Post.PNG)
 
 ---
 

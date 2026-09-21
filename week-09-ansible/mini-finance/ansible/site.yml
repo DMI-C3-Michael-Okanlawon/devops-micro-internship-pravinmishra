@@ -1,0 +1,92 @@
+---
+- name: Install web server and deployment tools
+  hosts: web
+  become: true
+
+  tasks:
+    - name: Update the apt package cache
+      ansible.builtin.apt:
+        update_cache: true
+        cache_valid_time: 3600
+
+    - name: Install Nginx, Git, and rsync
+      ansible.builtin.apt:
+        name:
+          - nginx
+          - git
+          - rsync
+        state: present
+
+    - name: Ensure Nginx is enabled and running
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: true
+
+- name: Clone and deploy Mini Finance
+  hosts: web
+  become: true
+
+  vars:
+    repository_url: "https://github.com/pravinmishraaws/mini_finance.git"
+    repository_path: "/opt/mini-finance"
+    web_root: "/var/www/html"
+
+  tasks:
+    - name: Clone or update the Mini Finance repository
+      ansible.builtin.git:
+        repo: "{{ repository_url }}"
+        dest: "{{ repository_path }}"
+        version: main
+        update: true
+        force: true
+
+    - name: Deploy website files to the Nginx document root
+      ansible.builtin.command:
+        argv:
+          - rsync
+          - -a
+          - --delete
+          - --exclude=.git
+          - "{{ repository_path }}/"
+          - "{{ web_root }}/"
+      changed_when: true
+      notify: Reload Nginx
+
+    - name: Set ownership of the deployed website
+      ansible.builtin.file:
+        path: "{{ web_root }}"
+        owner: www-data
+        group: www-data
+        recurse: true
+
+  handlers:
+    - name: Reload Nginx
+      ansible.builtin.service:
+        name: nginx
+        state: reloaded
+
+- name: Verify Mini Finance deployment
+  hosts: web
+  become: false
+
+  tasks:
+    - name: Request the website from localhost
+      ansible.builtin.uri:
+        url: http://localhost
+        method: GET
+        status_code: 200
+        return_content: true
+      register: website_response
+
+    - name: Display the HTTP response status
+      ansible.builtin.debug:
+        msg: "HTTP status returned: {{ website_response.status }}"
+
+    - name: Assert that the website returned HTTP 200
+      ansible.builtin.assert:
+        that:
+          - website_response.status == 200
+        success_msg: "Mini Finance is available and returned HTTP 200."
+        fail_msg: "Mini Finance did not return the expected HTTP 200 response."
+        

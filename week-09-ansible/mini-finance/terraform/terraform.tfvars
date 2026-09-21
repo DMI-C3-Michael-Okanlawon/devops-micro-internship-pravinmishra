@@ -1,0 +1,5 @@
+subscription_id     = "bd7cdcb9-62d5-4968-a926-35229aa3fe28"
+location            = "East US"
+admin_username      = "azureuser"
+ssh_public_key_path = "./id_ed25519.pub"
+ssh_allowed_cidr = "154.113.217.178/32"
