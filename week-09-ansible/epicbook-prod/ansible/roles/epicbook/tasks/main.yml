@@ -1,0 +1,51 @@
+---
+- name: Read configured Git safe directories
+  ansible.builtin.command:
+    argv:
+      - git
+      - config
+      - --global
+      - --get-all
+      - safe.directory
+  register: epicbook_safe_directories
+  changed_when: false
+  failed_when: false
+
+- name: Trust the EpicBook deployment directory
+  ansible.builtin.command:
+    argv:
+      - git
+      - config
+      - --global
+      - --add
+      - safe.directory
+      - "{{ app_dest }}"
+  when: app_dest not in (epicbook_safe_directories.stdout_lines | default([]))
+  changed_when: true
+
+- name: Deploy the static EpicBook entry page
+  ansible.builtin.template:
+    src: index.html.j2
+    dest: "{{ app_dest }}/index.html"
+    owner: "{{ app_user }}"
+    group: "{{ app_group }}"
+    mode: "0644"
+  notify: Reload Nginx
+
+- name: Clone the EpicBook repository
+  ansible.builtin.git:
+    repo: "{{ app_repo }}"
+    dest: "{{ app_dest }}"
+    version: main
+    update: true
+  notify: Reload Nginx
+
+- name: Set EpicBook ownership and permissions
+  ansible.builtin.file:
+    path: "{{ app_dest }}"
+    owner: "{{ app_user }}"
+    group: "{{ app_group }}"
+    mode: "u=rwX,g=rX,o=rX"
+    recurse: true
+    state: directory
+  notify: Reload Nginx

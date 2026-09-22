@@ -20,7 +20,7 @@ Create the `epicbook-prod` project with `terraform/azure` or `terraform/aws`, `a
 
 #### Screenshot 1 — Terminal or editor showing the complete `epicbook-prod` project tree
 
-Add your screenshot here.
+![alt text](screenshots/Wk9-A5-SS1-Project-tree-in-terminal.PNG)
 
 ---
 
@@ -34,13 +34,13 @@ Provision one secure Ubuntu 22.04 VM with SSH key authentication, inbound SSH (2
 
 #### Screenshot 2 — Terminal showing successful `terraform apply` and `terraform output` with `public_ip` and `admin_user`
 
-Add your screenshot here.
+![alt text](screenshots/Wk9-A5-SS1-Terraform-apply-and-output.PNG)
 
 ---
 
 #### Screenshot 3 — Terraform code or cloud console showing inbound rules for ports 22 and 80
 
-Add your screenshot here.
+![alt text](screenshots/Wk9-A5-SS3-Port-80-and-22.PNG)
 
 ---
 
@@ -54,13 +54,13 @@ Create the `[web]` inventory using the Terraform `public_ip` and `admin_user` ou
 
 #### Screenshot 4 — Terminal showing the successful passwordless SSH hostname check
 
-Add your screenshot here.
+![alt text](screenshots/Wk9-A5-SS4-Passwordless-SSH.PNG)
 
 ---
 
 #### Screenshot 5 — Editor or terminal showing `inventory.ini` and a successful Ansible ping
 
-Add your screenshot here.
+![alt text](screenshots/Wk9-A5-SS5-Inventory-content-and-successful-pong.PNG)
 
 ---
 
@@ -74,7 +74,7 @@ Create `site.yml` invoking the `common`, `nginx`, and `epicbook` roles in that e
 
 #### Screenshot 6 — Editor showing `ansible/site.yml` with the three roles in the required order
 
-Add your screenshot here.
+![alt text](screenshots/Wk9-A5-SS6-Site-yml.PNG)
 
 ---
 
@@ -88,7 +88,7 @@ Create `roles/common/tasks/main.yml` to update apt, upgrade packages, install ba
 
 #### Screenshot 7 — Editor showing `roles/common/tasks/main.yml`
 
-Add your screenshot here.
+![alt text](screenshots/Wk9-A5-SS7-Main-yml.PNG)
 
 ---
 
@@ -102,13 +102,13 @@ Create the `nginx` role to install Nginx, deploy the `epicbook.conf.j2` template
 
 #### Screenshot 8 — Editor showing the Nginx role tasks, handler, and `epicbook.conf.j2` template
 
-Add your screenshot here.
+![alt text](screenshots/Wk9-A5-SS8-Task-Handler-mains.PNG)
 
 ---
 
 #### Screenshot 9 — Terminal showing `/etc/nginx/sites-available/epicbook` and a successful Nginx configuration test
 
-Add your screenshot here.
+![alt text](screenshots/Wk9-A5-SS9-Successful-Nginx-configuration-test-from-terminal.PNG)
 
 ---
 
@@ -122,7 +122,7 @@ Create the `epicbook` role to clone the repository to `{{ app_dest }}`, set owne
 
 #### Screenshot 10 — Editor showing `roles/epicbook/tasks/main.yml`
 
-Add your screenshot here.
+![alt text](screenshots/Wk9-A5-SS10-Editor-showing-main-yml.PNG)
 
 ---
 
@@ -136,7 +136,7 @@ Define `app_repo`, `app_dest`, `app_user`, and `app_group` in `ansible/group_var
 
 #### Screenshot 11 — Editor showing `ansible/group_vars/web.yml`
 
-Add your screenshot here.
+![alt text](screenshots/Wk9-A5-SS11-Editor-showing-Ansible-group-var.PNG)
 
 ---
 
@@ -150,7 +150,7 @@ Run `ansible-playbook -i inventory.ini site.yml` and confirm `common` → `nginx
 
 #### Screenshot 12 — Terminal showing the role-based Ansible run and final recap with `failed=0`
 
-Add your screenshot here.
+![alt text](screenshots/Wk9-A5-SS12-Ansible-final-recap.PNG)
 
 ---
 
@@ -164,19 +164,19 @@ Confirm the EpicBook site loads with HTTP 200, inspect the Nginx configuration, 
 
 #### Screenshot 13 — Browser showing the EpicBook site with the public IP visible
 
-Add your screenshot here.
+![alt text](screenshots/Wk9-A5-SS13-Browser-showing-Public-IP.PNG)
 
 ---
 
 #### Screenshot 14 — Terminal showing HTTP 200 and the Nginx site-file snippet
 
-Add your screenshot here.
+![alt text](screenshots/Wk9-A5-SS14-HTTP-200-and-Nginx-site.PNG)
 
 ---
 
 #### Screenshot 15 — Terminal showing the idempotent second Ansible run with mostly OK/UNCHANGED and `failed=0`
 
-Add your screenshot here.
+![alt text](screenshots/Wk9-A5-SS15-Browser-showing-website.PNG)
 
 ---
 
@@ -184,7 +184,11 @@ Add your screenshot here.
 
 Describe an issue you faced and how you fixed it, what you learned, any security issues you identified, and your production remediation plan.
 
-Write your answer here.
+One issue I faced was losing SSH access because my ISP changed my public IP address while the Azure NSG allowed SSH only from the previous /32 address. I confirmed that the VM and SSH service were running, identified my new public IP, and updated the NSG rule. I also encountered Git’s “dubious ownership” error because Ansible cloned the repository as root but later assigned it to www-data. I fixed this by adding the deployment directory as a trusted Git directory before updating the repository.
+
+I learned that an Ansible playbook must handle file ownership, task order, handlers and repeat runs carefully. I also learned that a successful first deployment is not enough; the second run must complete with mostly ok or unchanged results to prove idempotency.
+
+The main security issue was temporarily allowing SSH from 0.0.0.0/0 while troubleshooting changing IP addresses. The site also uses HTTP without TLS, and the VM is directly exposed through a public IP. For production, I would restrict SSH to approved /32 addresses or use Azure Bastion, VPN or Just-In-Time VM access. I would enable HTTPS with a valid certificate, configure a firewall and automatic security updates, run the application with a dedicated non-login user, protect secrets with Ansible Vault or Azure Key Vault, use a remote Terraform backend with state locking, and add monitoring, logging and regular backups.
 
 ---
 
@@ -200,13 +204,13 @@ Publish a LinkedIn post describing the Terraform + Ansible roles deployment (clo
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+`https://www.linkedin.com/posts/michael-okanlawon_devops-terraform-ansible-share-7508199448301264898-CAKL/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw`
 
 ---
 
 #### Screenshot — Published LinkedIn post
 
-Add your screenshot here.
+![alt text](screenshots/Wk9-A5-LinkedIn-Post-SS.PNG)
 
 ---
 

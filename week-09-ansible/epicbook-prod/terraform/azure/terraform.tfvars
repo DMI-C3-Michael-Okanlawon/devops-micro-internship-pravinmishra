@@ -1,0 +1,5 @@
+location            = "eastus"
+resource_group_name = "Week-09-EpicBook-Prod-RG"
+admin_user          = "azureuser"
+ssh_allowed_cidr    = "154.113.217.178/32"
+ssh_public_key_path = "id_ed25519.pub"
