@@ -1,0 +1,31 @@
+
+========================================
+ANSIBLE CHANGE RISK REVIEW
+========================================
+Generated: 2026-09-23 11:46:38 UTC
+Inventory: ansible/inventory.ini
+Playbook: ansible/site.yml
+Ansible check exit code: 0
+Unique changed tasks: 0
+Unreachable hosts: 0
+Failed hosts: 0
+
+Risk-category findings
+----------------------------------------
+No changed tasks were reported.
+Category definitions
+----------------------------------------
+1. Service restarts or handlers
+2. Firewall rule changes
+3. User or sudo changes
+4. Package or file removal
+
+Overall status
+----------------------------------------
+LOW RISK
+Reason: No changed task matched the four required risk categories.
+This is an assessment only, not permission to apply the playbook.
+
+Risky findings: 0
+Other changed tasks: 0
+========================================

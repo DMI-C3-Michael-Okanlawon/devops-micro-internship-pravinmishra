@@ -1,0 +1,20 @@
+server {
+    listen 80;
+    listen [::]:80;
+
+    server_name _;
+
+    root {{ app_dest }};
+    index index.html;
+
+    access_log /var/log/nginx/epicbook_access.log;
+    error_log /var/log/nginx/epicbook_error.log;
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    location ~ /\. {
+        deny all;
+    }
+}

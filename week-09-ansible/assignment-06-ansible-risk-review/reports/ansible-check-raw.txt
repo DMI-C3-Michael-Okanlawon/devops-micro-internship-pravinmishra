@@ -1,0 +1,60 @@
+
+PLAY [Configure the EpicBook production web server] ****************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [epicbook]
+
+TASK [common : Update apt package cache] ***************************************
+ok: [epicbook]
+
+TASK [common : Upgrade installed packages] *************************************
+ok: [epicbook]
+
+TASK [common : Install baseline packages] **************************************
+ok: [epicbook]
+
+TASK [common : Disable SSH password authentication] ****************************
+ok: [epicbook]
+
+TASK [common : Disable direct root SSH login] **********************************
+ok: [epicbook]
+
+TASK [nginx : Install Nginx] ***************************************************
+ok: [epicbook]
+
+TASK [nginx : Deploy EpicBook Nginx configuration] *****************************
+ok: [epicbook]
+
+TASK [nginx : Enable the EpicBook Nginx site] **********************************
+ok: [epicbook]
+
+TASK [nginx : Remove the default Nginx site] ***********************************
+ok: [epicbook]
+
+TASK [nginx : Test the Nginx configuration] ************************************
+skipping: [epicbook]
+
+TASK [nginx : Ensure Nginx is enabled and running] *****************************
+ok: [epicbook]
+
+TASK [epicbook : Read configured Git safe directories] *************************
+skipping: [epicbook]
+
+TASK [epicbook : Trust the EpicBook deployment directory] **********************
+skipping: [epicbook]
+
+TASK [epicbook : Deploy the static EpicBook entry page] ************************
+ok: [epicbook]
+
+TASK [epicbook : Clone the EpicBook repository] ********************************
+ok: [epicbook]
+
+TASK [epicbook : Set EpicBook ownership and permissions] ***********************
+ok: [epicbook]
+
+TASK [Remove unused default Nginx landing page] ********************************
+ok: [epicbook]
+
+PLAY RECAP *********************************************************************
+epicbook                   : ok=15   changed=0    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0   
+

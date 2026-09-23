@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EpicBook | Discover Great Stories</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f6f3ed;
+      color: #172033;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 8%;
+      background: #102a43;
+      color: white;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #f2b84b;
+    }
+
+    nav a {
+      margin-left: 28px;
+      color: #d9e2ec;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .hero {
+      min-height: 520px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+      gap: 50px;
+      padding: 70px 8%;
+      background:
+        radial-gradient(circle at 80% 20%, #d9a44155, transparent 30%),
+        linear-gradient(135deg, #102a43, #243b53);
+      color: white;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 8px 15px;
+      border: 1px solid #f2b84b;
+      border-radius: 30px;
+      color: #f2b84b;
+      font-size: 13px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      max-width: 720px;
+      margin: 22px 0 18px;
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.05;
+    }
+
+    .hero p {
+      max-width: 600px;
+      color: #d9e2ec;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 14px 24px;
+      border-radius: 8px;
+      background: #f2b84b;
+      color: #102a43;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .book-stack {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      min-height: 320px;
+    }
+
+    .book {
+      width: 135px;
+      height: 220px;
+      margin: 0 -12px;
+      padding: 25px 18px;
+      border-radius: 5px 14px 14px 5px;
+      box-shadow: 0 22px 40px #00000055;
+      font-weight: bold;
+      transform: rotate(-7deg);
+    }
+
+    .book:nth-child(1) {
+      background: #d64545;
+    }
+
+    .book:nth-child(2) {
+      height: 250px;
+      background: #287271;
+      transform: rotate(3deg);
+    }
+
+    .book:nth-child(3) {
+      background: #8c5e3c;
+      transform: rotate(9deg);
+    }
+
+    .featured {
+      padding: 65px 8%;
+    }
+
+    .featured h2 {
+      margin-bottom: 8px;
+      color: #102a43;
+      font-size: 32px;
+    }
+
+    .subtitle {
+      margin-top: 0;
+      color: #627d98;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 35px;
+    }
+
+    .card {
+      padding: 30px;
+      border-radius: 12px;
+      background: white;
+      box-shadow: 0 8px 24px #102a4315;
+      border-top: 4px solid #f2b84b;
+    }
+
+    .card .icon {
+      font-size: 35px;
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+      color: #102a43;
+    }
+
+    .card p {
+      color: #627d98;
+      line-height: 1.6;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      padding: 24px 8%;
+      background: #102a43;
+      color: #d9e2ec;
+      font-size: 14px;
+    }
+
+    footer strong {
+      color: #f2b84b;
+    }
+
+    @media (max-width: 800px) {
+      nav {
+        display: none;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .book-stack {
+        display: none;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      footer {
+        display: block;
+        line-height: 1.8;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">Epic<span>Book</span></div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#featured">Featured</a>
+      <a href="#deployment">Deployment</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div>
+        <span class="tag">Stories worth discovering</span>
+
+        <h1>Your next great read starts here.</h1>
+
+        <p>
+          Explore memorable stories, discover inspiring authors and enter
+          new worlds through the power of books.
+        </p>
+
+        <a class="button" href="#featured">Explore EpicBook</a>
+      </div>
+
+      <div class="book-stack">
+        <div class="book">THE<br>LAST<br>CHAPTER</div>
+        <div class="book">BEYOND<br>THE<br>HORIZON</div>
+        <div class="book">THE<br>QUIET<br>LIBRARY</div>
+      </div>
+    </section>
+
+    <section class="featured" id="featured">
+      <h2>Built for readers</h2>
+      <p class="subtitle">A reliable home for discovering remarkable books.</p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="icon">📚</div>
+          <h3>Curated Collection</h3>
+          <p>Discover carefully selected stories across different genres.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🔖</div>
+          <h3>Memorable Reads</h3>
+          <p>Find books that stay with you long after the final page.</p>
+        </article>
+
+        <article class="card" id="deployment">
+          <div class="icon">☁️</div>
+          <h3>Cloud Deployed</h3>
+          <p>Provisioned with Terraform and configured using Ansible roles.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span><strong>EpicBook</strong> production deployment</span>
+    <span>Deployed by Michael Okanlawon | DMI Cohort 3</span>
+  </footer>
+</body>
+</html>

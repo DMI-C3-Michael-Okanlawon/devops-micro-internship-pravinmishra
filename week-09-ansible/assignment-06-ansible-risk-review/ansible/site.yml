@@ -1,0 +1,15 @@
+---
+- name: Configure the EpicBook production web server
+  hosts: web
+  become: true
+
+  roles:
+    - common
+    - nginx
+    - epicbook
+
+  post_tasks:
+    - name: Remove unused default Nginx landing page
+      ansible.builtin.file:
+        path: /var/www/html/index.nginx-debian.html
+        state: absent

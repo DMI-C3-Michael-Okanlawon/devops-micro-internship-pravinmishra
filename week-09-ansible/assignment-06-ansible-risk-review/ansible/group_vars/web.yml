@@ -1,0 +1,7 @@
+---
+app_repo: "https://github.com/DMI-C3-Michael-Okanlawon/theepicbook.git"
+app_dest: "/var/www/epicbook"
+app_user: "www-data"
+app_group: "www-data"
+
+common_ssh_key_access_confirmed: true
