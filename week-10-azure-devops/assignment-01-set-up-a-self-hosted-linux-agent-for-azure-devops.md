@@ -30,7 +30,7 @@ Create a self-hosted agent pool (e.g. `SelfHostedPool`) in Azure DevOps Organiza
 
 #### Screenshot 1 — Azure DevOps Agent Pools page showing the newly created pool
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A1-SS1-Agent-Pool.PNG)
 
 ---
 
@@ -44,13 +44,13 @@ Create an Ubuntu 22.04 (or latest) VM in AWS or Azure with SSH access, and confi
 
 #### Screenshot 2 — Cloud console showing the running Ubuntu VM and its public IP or DNS name
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A1-SS2-VM-created-with-visible-IP-address.PNG)
 
 ---
 
 #### Screenshot 3 — Terminal showing a successful SSH login and Ubuntu version details
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A1-SS3-Terminal-showing-SSH-to-VM.PNG)
 
 ---
 
@@ -64,13 +64,13 @@ Download the Linux agent package, register it with your organization/pool/PAT vi
 
 #### Screenshot 4 — Terminal showing successful agent configuration without exposing the PAT
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A1-SS4-Terminal-showing-Agent-Configuration.PNG)
 
 ---
 
 #### Screenshot 5 — Terminal showing the agent service running successfully
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A1-SS5-Terminal-Showing-Agent-Service-Running.PNG)
 
 ---
 
@@ -84,7 +84,7 @@ Confirm the agent service is running and the agent shows as Online in the Azure 
 
 #### Screenshot 6 — Agent Pool listing showing the registered agent online
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A1-SS6-Agent-Pool-Showing-Registered-Pool-Online.PNG)
 
 ---
 
@@ -98,7 +98,7 @@ Create and run a YAML pipeline targeting the self-hosted pool, running `uname -a
 
 #### Screenshot 7 — Successful test pipeline run output in Azure DevOps showing the Linux commands
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A1-SS7-Verify-Linux-agent.PNG)
 
 ---
 
@@ -106,7 +106,9 @@ Add your screenshot here.
 
 Note the cloud platform used, your Azure DevOps organization/project name, and the agent pool name. Describe any issue you faced and how you resolved it.
 
-Write your answer here.
+I used Microsoft Azure to host the Ubuntu 24.04 VM. My Azure DevOps organization is Michael-Okanlawon-DMI-Cohort-3, the project is Week10-SelfHosted-Agent, and the agent pool is SelfHostedPool. The agent ran as a system service, appeared Online in the pool, and completed a test pipeline running uname -a, whoami, and df -h.
+
+I initially tried to connect with the SSH public key and an incorrect file path, which caused a Permission denied (publickey) error. I fixed it by using the matching .pem private key with the correct path. I also learned that the agent package URL must be downloaded with curl before extraction; entering the URL alone in the terminal does not download it.
 
 ---
 
