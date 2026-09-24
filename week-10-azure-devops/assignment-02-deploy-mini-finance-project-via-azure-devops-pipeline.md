@@ -20,7 +20,7 @@ Import `https://github.com/pravinmishraaws/Azure-Static-Website` into Azure Repo
 
 #### Screenshot 1 — Azure Repos showing the imported repository files with `index.html` visible
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A2-SS1-Imported-Repo-Showing-Index-html.PNG)
 
 ---
 
@@ -34,13 +34,13 @@ Provision a Linux VM with Terraform (ports 22/80 open), then use Ansible to inst
 
 #### Screenshot 2 — Terraform output or cloud console showing the running VM and public IP
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A2-SS2-Cloud-Shell-Showing-running-VM.PNG)
 
 ---
 
 #### Screenshot 3 — Terminal showing Ansible completed successfully and Nginx is active
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A2-SS3-Nginx-running.PNG)
 
 ---
 
@@ -54,7 +54,7 @@ Create the password-based SSH Service Connection `ubuntu-nginx-ssh` pointing to 
 
 #### Screenshot 4 — SSH Service Connection configuration page showing the connection details and successful validation, with the password hidden
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A2-SS4-Connection-details.PNG)
 
 ---
 
@@ -68,7 +68,7 @@ Write a pipeline triggered on `main` that checks out the repo, copies files to `
 
 #### Screenshot 5 — Pipeline YAML definition open in the Azure DevOps editor
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A2-SS5-Pipeline-YAML-Showing-in-Azure-DevOps-Editor.PNG)
 
 ---
 
@@ -82,13 +82,13 @@ Confirm the pipeline run succeeded (checkout, SSH connection, file transfer, rem
 
 #### Screenshot 6 — Successful Azure DevOps pipeline run log summary
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A2-SS6-Log-summary.PNG)
 
 ---
 
 #### Screenshot 7 — Browser showing the deployed website with the VM public IP visible
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A2-SS7-Browser-showing-website.PNG)
 
 ---
 
@@ -96,7 +96,8 @@ Add your screenshot here.
 
 Include the VM public URL. Describe any issue you faced and how you fixed it (e.g. parallelism/agent-pool issues).
 
-Write your answer here.
+VM public URL: http://168.62.42.41/
+Issue and fix: My Azure Cloud Shell session was ephemeral, so the SSH key from an earlier session was unavailable. I generated a new SSH key, added its public key to the VM with az vm user update, and updated the VM’s network security rule to allow SSH from the required source addresses. I then configured Nginx and the deployer account, connected the pipeline through the ubuntu-nginx-ssh service connection, and ran it on the online agent in SelfHostedPool. The checkout, file copy, and remote verification steps all succeeded.
 
 ---
 
