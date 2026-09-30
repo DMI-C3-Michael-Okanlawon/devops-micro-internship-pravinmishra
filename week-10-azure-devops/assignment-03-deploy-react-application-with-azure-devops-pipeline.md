@@ -20,7 +20,7 @@ Import `https://github.com/pravinmishraaws/my-react-app` into Azure Repos and co
 
 #### Screenshot 1 — Azure Repos showing the imported React project with `package.json` and `src/` visible
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A3-SS1-Imported-React-Project-Showing-Package-Json-and-src.PNG)
 
 ---
 
@@ -34,13 +34,13 @@ Provision a new Ubuntu VM with Terraform (ports 22/80 open) and prepare Nginx/`/
 
 #### Screenshot 2 — Terraform output or cloud console showing the new VM and public IP
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A3-SS2-terminal-showing-public-IP-address.PNG)
 
 ---
 
 #### Screenshot 3 — Terminal showing Ansible completed successfully and Nginx is active
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A3-SS3-Ansible-completed-and-Nginx-active.PNG)
 
 ---
 
@@ -54,7 +54,7 @@ Point the `ubuntu-nginx-ssh` Service Connection to the new VM and validate it.
 
 #### Screenshot 4 — SSH Service Connection page showing the new VM connection and successful validation, with the password hidden
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A3-SS4-Connection-page.PNG)
 
 ---
 
@@ -68,7 +68,7 @@ Create the Build (npm install/build), Test (`npm test -- --watchAll=false`, bloc
 
 #### Screenshot 5 — Azure Pipeline YAML definition with the Build, Test, Publish, and Deploy sections visible
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A3-SS5-Pipeline-definition.PNG)
 
 ---
 
@@ -82,19 +82,19 @@ Confirm a commit to `main` triggers the pipeline, all four stages succeed, the b
 
 #### Screenshot 6 — Pipeline run summary showing Build, Test, Publish, and Deploy succeeded
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A3-SS6-Successful-Pipeline-summary.PNG)
 
 ---
 
 #### Screenshot 7 — Terminal or pipeline output showing `/var/www/html` after deployment
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A3-SS7-Terminal-showing-var-www-html.PNG)
 
 ---
 
 #### Screenshot 8 — Browser showing the running React application with the public IP visible
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A3-SS8-Browser-showing-app-using-public-IP.PNG)
 
 ---
 
@@ -110,13 +110,13 @@ Publish a LinkedIn post about the completed assignment, mentioning the Build/Tes
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+`https://www.linkedin.com/posts/michael-okanlawon_azuredevops-devops-react-share-7510972879879143424-jlcV/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw`
 
 ---
 
 #### Screenshot — Published LinkedIn post showing the text and at least one link or image
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A3-SS-LinkedIn-Post.PNG)
 
 ---
 
