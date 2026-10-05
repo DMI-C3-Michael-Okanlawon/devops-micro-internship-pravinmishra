@@ -20,7 +20,7 @@ Prepare `infra-epicbook` (Terraform for network, frontend/backend VMs, MySQL, wi
 
 #### Screenshot 1 — Both repositories showing their required files and separation of responsibilities
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A4-SS1-Both-Repos-Showing.PNG)
 
 ---
 
@@ -34,7 +34,7 @@ Create and validate an Azure Resource Manager SPN service connection (Tenant ID,
 
 #### Screenshot 2 — Azure Resource Manager service connection showing successful configuration with secrets hidden
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A4-SS2-Azure-Resource-Manager-service.PNG)
 
 ---
 
@@ -48,13 +48,13 @@ Create a YAML pipeline for `infra-epicbook` that authenticates via the SPN conne
 
 #### Screenshot 3 — Infra Pipeline run showing `terraform apply` completion and the `app_public_ip` and `mysql_fqdn` outputs
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A4-SS3-Terraform-Apply-result.PNG)
 
 ---
 
 #### Screenshot 4 — Azure Portal confirming the provisioned resources
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A4-SS4-Azure-Portal-Showing-created-resources.PNG)
 
 ---
 
@@ -68,13 +68,13 @@ Upload the SSH private key to Azure DevOps Secure Files, create a YAML pipeline 
 
 #### Screenshot 5 — App Pipeline run summary showing successful completion
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A4-SS5-App-pipeline-run-summary.PNG)
 
 ---
 
 #### Screenshot 6 — Ansible playbook output showing successful configuration with `failed=0`
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A4-SS6-Playbook-output.PNG)
 
 ---
 
@@ -88,7 +88,7 @@ Confirm both pipelines succeeded, the EpicBook application loads through the fro
 
 #### Screenshot 7 — Browser displaying the running EpicBook application with the frontend public IP visible
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A4-SS7-Browser-showing-App-IP-Address.PNG)
 
 ---
 
@@ -96,7 +96,9 @@ Add your screenshot here.
 
 Record the frontend public application URL and a short issue-and-resolution note, if applicable.
 
-Write your answer here.
+Frontend public application URL: http://20.84.49.29
+
+The App Pipeline initially failed because both application VMs were deallocated. I started them and reran the pipeline. A subsequent Ansible permissions error was resolved by adding the acl package to the backend role. After committing the fix and starting a new run, deployment and verification through Nginx succeeded.
 
 ---
 
@@ -112,13 +114,13 @@ Publish a LinkedIn post about the completed capstone project, mentioning the two
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+`https://www.linkedin.com/posts/michael-okanlawon_devops-azuredevops-terraform-share-7512856390114099200-ff0C/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7512856392479789056&highlightedUpdateType=SOCIAL_SHARE&origin=SOCIAL_SHARE&utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw`
 
 ---
 
 #### Screenshot — Published LinkedIn post showing the text and at least one link or image
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A4-SS-LinkedIn-Post.PNG)
 
 ---
 
