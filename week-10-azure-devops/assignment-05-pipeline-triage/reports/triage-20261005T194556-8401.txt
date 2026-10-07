@@ -1,0 +1,12 @@
+EpicBook Pipeline Triage
+Checked at: 2026-10-05T19:45:56Z
+Safety: Read-only remote operations; local reports only.
+
+PIPELINE: EpicBook infrastructure (ID 4)
+UNKNOWN: No run found.
+
+PIPELINE: EpicBook application (ID 5)
+UNKNOWN: No run found.
+
+OVERALL: NOT CONFIRMED HEALTHY — review findings above.
+Report: /mnt/e/dmi/devops-micro-internship-pravinmishra/week-10-azure-devops/assignment-05-pipeline-triage/reports/triage-20261005T194556-8401.txt

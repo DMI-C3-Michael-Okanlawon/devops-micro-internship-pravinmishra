@@ -20,7 +20,7 @@ Confirm the latest run on both Azure DevOps and GitHub Actions currently succeed
 
 #### Screenshot 1 — Latest run status on Azure DevOps and/or GitHub Actions showing a successful run
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A5-SS1-Latest-run-status.PNG)
 
 ---
 
@@ -34,7 +34,7 @@ Create `CLAUDE.md` describing the pipeline-triage workflow (gather → analyze �
 
 #### Screenshot 2 — `CLAUDE.md` showing the workflow and safety rules
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A5-SS2-Claude-MD-Showing-safety-rules.PNG)
 
 ---
 
@@ -48,7 +48,7 @@ Build `pipeline-triage.sh`, a read-only Bash script that fetches the latest run'
 
 #### Screenshot 3 — `pipeline-triage.sh` showing the check functions and their pattern-matching conditionals
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A5-SS3-Check-functions-showing-matching-conditions.PNG)
 
 ---
 
@@ -62,7 +62,7 @@ Run the script against your current, passing pipeline and confirm it produces a 
 
 #### Screenshot 4 — Script output and report showing a healthy result with no failure category triggered
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A5-SS4-Script-output-showing-healthy-result.PNG)
 
 ---
 
@@ -76,13 +76,13 @@ Create a Claude Code skill restricted to read-only tools (no `Write`) that runs 
 
 #### Screenshot 5 — `SKILL.md` frontmatter showing the tool restrictions and safety rules
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A5-SS5-Frontmatter-showing-tool-restriction-and-safety-rules.PNG)
 
 ---
 
 #### Screenshot 6 — `/pipeline-triage` output for the healthy pipeline
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A5-SS6-Pipeline-triage-output.PNG)
 
 ---
 
@@ -96,13 +96,13 @@ Introduce one safe, obvious, and easily reversible failure (for example, an inte
 
 #### Screenshot 7 — The failed pipeline run showing the red/failed status
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A5-SS7-Pipeline-run-showing-error.PNG)
 
 ---
 
 #### Screenshot 8 — `/pipeline-triage` output showing the diagnosed failure category, the quoted log evidence, and the recommended fix
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A5-SS8-Pipeline-triage-output-and-recommendation-using-Claude.PNG)
 
 ---
 
@@ -116,13 +116,13 @@ Apply the recommended fix yourself, push it, confirm the pipeline succeeds again
 
 #### Screenshot 9 — The pipeline run succeeding after your fix
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A5-SS9-Pipeline-succeeded-after-fix.PNG)
 
 ---
 
 #### Screenshot 10 — Second `/pipeline-triage` output confirming the pipeline is healthy again
 
-Add your screenshot here.
+![alt text](screenshots/Wk10-A5-SS10-Pipeline-triage-output-showing-pipeline-is-healthy-again.PNG)
 
 ---
 
@@ -130,7 +130,9 @@ Add your screenshot here.
 
 Explain, in your own words, why the skill was allowed to gather evidence and diagnose the failure but was never allowed to re-trigger the pipeline or apply the fix itself.
 
-Add your answer here
+I kept the skill read-only so it could inspect pipeline status and logs, identify the failure, and recommend a fix while I remained responsible for any changes. Re-triggering a pipeline could consume resources or deploy changes, and applying a fix without my review could introduce another problem.
+
+In my case, the skill identified the invalid Ansible dependency from the logs. I restored the correct package name, committed and pushed the fix, and manually started the pipeline. The skill then confirmed recovery. This let me use AI for diagnosis while keeping control and accountability for the actions taken.
 
 ---
 

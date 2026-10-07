@@ -1,0 +1,638 @@
+
+--- Run 13 / log 1 ---
+trigger:
+  enabled: false
+variables:
+- name: frontendPublicIp
+  value: '20.84.49.29'
+- name: backendPublicIp
+  value: '20.127.125.150'
+- name: backendPrivateIp
+  value: '10.10.2.4'
+- name: mysqlFqdn
+  value: 'epicbook-michael-c3-2026.mysql.database.azure.com'
+stages:
+- stage: __default
+  jobs:
+  - job: Job
+    pool:
+      name: SelfHostedPool
+    steps:
+    - task: 6d15af64-176c-496d-b583-fd2ae21d4df4@1
+      inputs:
+        repository: self
+        clean: true
+    - task: DownloadSecureFile@1
+      name: epicbookKey
+      inputs:
+        secureFile: week10_epicbook
+    - task: Bash@3
+      displayName: Install Ansible
+      inputs:
+        targetType: inline
+        script: |
+          set -euo pipefail
+          python3 -m venv "$(Agent.TempDirectory)/epicbook-venv"
+          "$(Agent.TempDirectory)/epicbook-venv/bin/python" -m pip install \
+            'ansible-core-triage-intentionally-invalid>=2.19,<2.20'
+          "$(Agent.TempDirectory)/epicbook-venv/bin/ansible-playbook" --version
+    - task: Bash@3
+      displayName: Configure servers and deploy EpicBook with Ansible
+      env:
+        SSH_KEY: $(epicbookKey.secureFilePath)
+        FRONTEND_IP: $(frontendPublicIp)
+        BACKEND_IP: $(backendPublicIp)
+        BACKEND_PRIVATE_IP: $(backendPrivateIp)
+        MYSQL_FQDN: $(mysqlFqdn)
+      inputs:
+        targetType: inline
+        script: |
+          set -euo pipefail
+          umask 077
+          cd "$(Build.SourcesDirectory)"
+
+          archive="$(Agent.TempDirectory)/epicbook-app.tar.gz"
+          known_hosts="$(Agent.TempDirectory)/epicbook-known-hosts"
+
+          chmod 600 "$SSH_KEY"
+          git archive --format=tar.gz --output="$archive" HEAD
+          export APP_ARCHIVE="$archive"
+
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+
+          inventory = Path("ansible/inventory.ini.template").read_text()
+          inventory = inventory.replace("FRONTEND_PUBLIC_IP", os.environ["FRONTEND_IP"])
+          inventory = inventory.replace("BACKEND_PUBLIC_IP", os.environ["BACKEND_IP"])
+          Path("ansible/inventory.ini").write_text(inventory)
+
+          variables = Path("ansible/group_vars/all.yml.template").read_text()
+          variables = variables.replace("MYSQL_FQDN", os.environ["MYSQL_FQDN"])
+          variables = variables.replace("BACKEND_PRIVATE_IP", os.environ["BACKEND_PRIVATE_IP"])
+          Path("ansible/group_vars/all.yml").write_text(variables)
+
+              "app_archive": os.environ["APP_ARCHIVE"]
+          }))
+          PY
+
+          export ANSIBLE_SSH_COMMON_ARGS="-o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=$known_hosts"
+
+          "$(Agent.TempDirectory)/epicbook-venv/bin/ansible-playbook" \
+            -i ansible/inventory.ini \
+            ansible/site.yml
+    - task: Bash@3
+      displayName: Verify EpicBook through Nginx
+      inputs:
+        targetType: inline
+        script: |
+          set -euo pipefail
+          curl --fail --silent --show-error \
+            --retry 12 --retry-delay 5 --retry-all-errors \
+            --connect-timeout 10 --max-time 30 \
+            --output "$(Agent.TempDirectory)/epicbook-home.html" \
+            "http://$(frontendPublicIp)/"
+          echo "EpicBook responded successfully at http://$(frontendPublicIp)/"
+
+
+--- Run 13 / log 2 ---
+Template Parameters:
+Begin evaluating template '/azure-pipelines.yml'
+Begin transform: trigger
+End transform: trigger
+Begin transform: variables
+Evaluating: value
+Result: Object
+Evaluating: pair['key']
+Result: 'frontendPublicIp'
+Evaluating: pair['value']
+Result: '20.84.49.29'
+Evaluating: pair['key']
+Result: 'backendPublicIp'
+Evaluating: pair['value']
+Result: '20.127.125.150'
+Evaluating: pair['key']
+Result: 'backendPrivateIp'
+Evaluating: pair['value']
+Result: '10.10.2.4'
+Evaluating: pair['key']
+Result: 'mysqlFqdn'
+Evaluating: pair['value']
+Result: 'epicbook-michael-c3-2026.mysql.database.azure.com'
+End transform: variables
+Begin transform: step
+Evaluating: eq(value['checkout'], 'none')
+Expanded: eq('self', 'none')
+Result: False
+Evaluating: ne(value['checkout'], 'none')
+Expanded: ne('self', 'none')
+Result: True
+Evaluating: transform('stepToTaskBaseProperties', value)
+Evaluating: arg0
+Result: Object
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('checkout', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('clean', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Result: Object
+Evaluating: value['checkout']
+Result: 'self'
+Evaluating: value
+Result: Object
+Evaluating: in(pair['key'], 'clean', 'fetchDepth', 'fetchFilter', 'fetchTags', 'lfs', 'persistCredentials', 'submodules', 'path', 'workspaceRepo', 'sparseCheckoutDirectories', 'sparseCheckoutPatterns')
+Expanded: in('checkout', 'clean', 'fetchDepth', 'fetchFilter', 'fetchTags', 'lfs', 'persistCredentials', 'submodules', 'path', 'workspaceRepo', 'sparseCheckoutDirectories', 'sparseCheckoutPatterns')
+Result: False
+Evaluating: in(pair['key'], 'clean', 'fetchDepth', 'fetchFilter', 'fetchTags', 'lfs', 'persistCredentials', 'submodules', 'path', 'workspaceRepo', 'sparseCheckoutDirectories', 'sparseCheckoutPatterns')
+Expanded: in('clean', 'clean', 'fetchDepth', 'fetchFilter', 'fetchTags', 'lfs', 'persistCredentials', 'submodules', 'path', 'workspaceRepo', 'sparseCheckoutDirectories', 'sparseCheckoutPatterns')
+Result: True
+Evaluating: pair['key']
+Result: 'clean'
+Evaluating: pair['value']
+Result: 'true'
+End transform: step
+Begin transform: step
+Evaluating: transform('stepToTaskBaseProperties', value)
+Evaluating: arg0
+Result: Object
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('bash', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('displayName', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: True
+Evaluating: pair['key']
+Result: 'displayName'
+Evaluating: pair['value']
+Result: 'Install Ansible'
+Result: Object
+Evaluating: value['bash']
+Result: 'set -euo pipefail
+python3 -m venv "$(Agent.TempDirectory)/epicbook-venv"
+"$(Agent.TempDirectory)/epicbook-venv/bin/python" -m pip install \
+  ''ansible-core-triage-intentionally-invalid>=2.19,<2.20''
+"$(Agent.TempDirectory)/epicbook-venv/bin/ansible-playbook" --version
+'
+Evaluating: value['failOnStderr']
+Expanded: Null
+Result: False
+Evaluating: value['workingDirectory']
+Expanded: Null
+Result: False
+End transform: step
+Begin transform: step
+Evaluating: transform('stepToTaskBaseProperties', value)
+Evaluating: arg0
+Result: Object
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('bash', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('displayName', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: True
+Evaluating: pair['key']
+Result: 'displayName'
+Evaluating: pair['value']
+Result: 'Configure servers and deploy EpicBook with Ansible'
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('env', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: True
+Evaluating: pair['key']
+Result: 'env'
+Evaluating: pair['value']
+Result: Object
+Result: Object
+Evaluating: value['bash']
+Result: 'set -euo pipefail
+umask 077
+cd "$(Build.SourcesDirectory)"
+
+archive="$(Agent.TempDirectory)/epicbook-app.tar.gz"
+known_hosts="$(Agent.TempDirectory)/epicbook-known-hosts"
+
+chmod 600 "$SSH_KEY"
+git archive --format=tar.gz --output="$archive" HEAD
+export APP_ARCHIVE="$archive"
+
+python3 - <<''PY''
+import json
+import os
+from pathlib import Path
+
+
+inventory = Path("ansible/inventory.ini.template").read_text()
+inventory = inventory.replace("FRONTEND_PUBLIC_IP", os.environ["FRONTEND_IP"])
+inventory = inventory.replace("BACKEND_PUBLIC_IP", os.environ["BACKEND_IP"])
+Path("ansible/inventory.ini").write_text(inventory)
+
+variables = Path("ansible/group_vars/all.yml.template").read_text()
+variables = variables.replace("MYSQL_FQDN", os.environ["MYSQL_FQDN"])
+variables = variables.replace("BACKEND_PRIVATE_IP", os.environ["BACKEND_PRIVATE_IP"])
+Path("ansible/group_vars/all.yml").write_text(variables)
+
+    "app_archive": os.environ["APP_ARCHIVE"]
+}))
+PY
+
+export ANSIBLE_SSH_COMMON_ARGS="-o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=$known_hosts"
+
+"$(Agent.TempDirectory)/epicbook-venv/bin/ansible-playbook" \
+  -i ansible/inventory.ini \
+  ansible/site.yml
+'
+Evaluating: value['failOnStderr']
+Expanded: Null
+Result: False
+Evaluating: value['workingDirectory']
+Expanded: Null
+Result: False
+End transform: step
+Begin transform: step
+Evaluating: transform('stepToTaskBaseProperties', value)
+Evaluating: arg0
+Result: Object
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('bash', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('displayName', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: True
+Evaluating: pair['key']
+Result: 'displayName'
+Evaluating: pair['value']
+Result: 'Verify EpicBook through Nginx'
+Result: Object
+Evaluating: value['bash']
+Result: 'set -euo pipefail
+curl --fail --silent --show-error \
+  --retry 12 --retry-delay 5 --retry-all-errors \
+  --connect-timeout 10 --max-time 30 \
+  --output "$(Agent.TempDirectory)/epicbook-home.html" \
+  "http://$(frontendPublicIp)/"
+echo "EpicBook responded successfully at http://$(frontendPublicIp)/"
+'
+Evaluating: value['failOnStderr']
+Expanded: Null
+Result: False
+Evaluating: value['workingDirectory']
+Expanded: Null
+Result: False
+End transform: step
+Begin transform: pipeline
+Evaluating: value
+Result: Object
+Evaluating: notIn(pair['key'], 'strategy', 'continueOnError', 'pool', 'container', 'services', 'workspace', 'steps')
+Expanded: notIn('trigger', 'strategy', 'continueOnError', 'pool', 'container', 'services', 'workspace', 'steps')
+Result: True
+Evaluating: pair['key']
+Result: 'trigger'
+Evaluating: pair['value']
+Result: Object
+Evaluating: notIn(pair['key'], 'strategy', 'continueOnError', 'pool', 'container', 'services', 'workspace', 'steps')
+Expanded: notIn('pool', 'strategy', 'continueOnError', 'pool', 'container', 'services', 'workspace', 'steps')
+Result: False
+Evaluating: notIn(pair['key'], 'strategy', 'continueOnError', 'pool', 'container', 'services', 'workspace', 'steps')
+Expanded: notIn('variables', 'strategy', 'continueOnError', 'pool', 'container', 'services', 'workspace', 'steps')
+Result: True
+Evaluating: pair['key']
+Result: 'variables'
+Evaluating: pair['value']
+Result: Object
+Evaluating: notIn(pair['key'], 'strategy', 'continueOnError', 'pool', 'container', 'services', 'workspace', 'steps')
+Expanded: notIn('steps', 'strategy', 'continueOnError', 'pool', 'container', 'services', 'workspace', 'steps')
+Result: False
+Evaluating: value
+Result: Object
+Evaluating: in(pair['key'], 'strategy', 'continueOnError', 'pool', 'container', 'services', 'workspace', 'steps')
+Expanded: in('trigger', 'strategy', 'continueOnError', 'pool', 'container', 'services', 'workspace', 'steps')
+Result: False
+Evaluating: in(pair['key'], 'strategy', 'continueOnError', 'pool', 'container', 'services', 'workspace', 'steps')
+Expanded: in('pool', 'strategy', 'continueOnError', 'pool', 'container', 'services', 'workspace', 'steps')
+Result: True
+Evaluating: pair['key']
+Result: 'pool'
+Evaluating: pair['value']
+Result: Object
+Evaluating: in(pair['key'], 'strategy', 'continueOnError', 'pool', 'container', 'services', 'workspace', 'steps')
+Expanded: in('variables', 'strategy', 'continueOnError', 'pool', 'container', 'services', 'workspace', 'steps')
+Result: False
+Evaluating: in(pair['key'], 'strategy', 'continueOnError', 'pool', 'container', 'services', 'workspace', 'steps')
+Expanded: in('steps', 'strategy', 'continueOnError', 'pool', 'container', 'services', 'workspace', 'steps')
+Result: True
+Evaluating: pair['key']
+Result: 'steps'
+Evaluating: pair['value']
+Result: Object
+End transform: pipeline
+Finished evaluating template '/azure-pipelines.yml'
+Load Time: 00:00:00.0064512
+Estimated Memory: 44,092 bytes (Max: 20,971,520)
+Parser Event Count: 1,072 (Max: 10,000,000)
+Greatest Parser Depth: 14 (Max: 100)
+File Count: 1 (Max: 100)
+Greatest File Size: 3,310 (Max: 1,048,576)
+
+--- Run 13 / log 3 ---
+2026-10-05T21:19:13.4900269Z ##[section]Starting: Prepare job Job
+2026-10-05T21:19:13.5051398Z ContinueOnError: False
+2026-10-05T21:19:13.5051398Z TimeoutInMinutes: 60
+2026-10-05T21:19:13.5051398Z CancelTimeoutInMinutes: 5
+2026-10-05T21:19:13.5051398Z Expand:
+2026-10-05T21:19:13.5051398Z   MaxConcurrency: 0
+2026-10-05T21:19:13.5223879Z   ########## System Pipeline Decorator(s) ##########
+
+2026-10-05T21:19:13.5223879Z   Begin evaluating template 'system-pre-steps.yml'
+Evaluating: eq('true', variables['system.debugContext'])
+Expanded: eq('true', Null)
+Result: False
+Evaluating: resources['repositories']['self']
+Expanded: Object
+Result: True
+Evaluating: not(containsValue(job['steps']['*']['task']['id'], '6d15af64-176c-496d-b583-fd2ae21d4df4'))
+Expanded: not(containsValue(Object, '6d15af64-176c-496d-b583-fd2ae21d4df4'))
+Result: False
+Finished evaluating template 'system-pre-steps.yml'
+********************************************************************************
+Template and static variable resolution complete. Final runtime YAML document:
+steps: []
+
+
+2026-10-05T21:19:13.5231408Z   MaxConcurrency: 0
+2026-10-05T21:19:13.5312432Z ##[section]Finishing: Prepare job Job
+
+--- Run 13 / log 4 ---
+2026-10-06T08:35:50.1882576Z ##[section]Starting: Initialize job
+2026-10-06T08:35:50.1885371Z Agent name: 'week10-ado-agent'
+2026-10-06T08:35:50.1885803Z Agent machine name: 'week10-ado-agent'
+2026-10-06T08:35:50.1886005Z Current agent version: '5.279.0'
+2026-10-06T08:35:52.3002741Z Agent running as: 'azureuser'
+2026-10-06T08:35:52.3039427Z Prepare build directory.
+2026-10-06T08:35:52.3294927Z Set build variables.
+2026-10-06T08:35:52.3310011Z Download all required tasks.
+2026-10-06T08:35:53.3267886Z Checking job knob settings.
+2026-10-06T08:35:53.3270542Z    Knob: DockerActionRetries = true Source: $(VSTSAGENT_DOCKER_ACTION_RETRIES) 
+2026-10-06T08:35:53.3272029Z    Knob: UseGitLongPaths = true Source: $(USE_GIT_LONG_PATHS) 
+2026-10-06T08:35:53.3273317Z    Knob: UseNode24withHandlerData = True Source: $(DistributedTask.Agent.UseNode24withHandlerData) 
+2026-10-06T08:35:53.3274734Z    Knob: EnableIssueSourceValidation = true Source: $(ENABLE_ISSUE_SOURCE_VALIDATION) 
+2026-10-06T08:35:53.3275510Z    Knob: AgentEnablePipelineArtifactLargeChunkSize = true Source: $(AGENT_ENABLE_PIPELINEARTIFACT_LARGE_CHUNK_SIZE) 
+2026-10-06T08:35:53.3277522Z    Knob: ContinueAfterCancelProcessTreeKillAttempt = true Source: $(VSTSAGENT_CONTINUE_AFTER_CANCEL_PROCESSTREEKILL_ATTEMPT) 
+2026-10-06T08:35:53.3278087Z    Knob: ProcessHandlerSecureArguments = true Source: $(AZP_75787_ENABLE_NEW_LOGIC) 
+2026-10-06T08:35:53.3278473Z    Knob: ProcessHandlerSecureArguments = false Source: $(AZP_75787_ENABLE_NEW_LOGIC_LOG) 
+2026-10-06T08:35:53.3278845Z    Knob: ProcessHandlerTelemetry = true Source: $(AZP_75787_ENABLE_COLLECT) 
+2026-10-06T08:35:53.3279320Z    Knob: ProcessHandlerEnableNewLogic = true Source: $(AZP_75787_ENABLE_NEW_PH_LOGIC) 
+2026-10-06T08:35:53.3280097Z    Knob: EnableResourceMonitorDebugOutput = true Source: $(AZP_ENABLE_RESOURCE_MONITOR_DEBUG_OUTPUT) 
+2026-10-06T08:35:53.3280509Z    Knob: EnableResourceUtilizationWarnings = true Source: $(AZP_ENABLE_RESOURCE_UTILIZATION_WARNINGS) 
+2026-10-06T08:35:53.3281078Z    Knob: IgnoreVSTSTaskLib = true Source: $(AZP_AGENT_IGNORE_VSTSTASKLIB) 
+2026-10-06T08:35:53.3281570Z    Knob: FailJobWhenAgentDies = true Source: $(FAIL_JOB_WHEN_AGENT_DIES) 
+2026-10-06T08:35:53.3281812Z    Knob: EnhancedWorkerCrashHandling = true Source: ${AZP_ENHANCED_WORKER_CRASH_HANDLING} 
+2026-10-06T08:35:53.3282298Z    Knob: CheckForTaskDeprecation = true Source: $(AZP_AGENT_CHECK_FOR_TASK_DEPRECATION) 
+2026-10-06T08:35:53.3282820Z    Knob: CheckIfTaskNodeRunnerIsDeprecated246 = True Source: $(DistributedTask.Agent.CheckIfTaskNodeRunnerIsDeprecated246) 
+2026-10-06T08:35:53.3283241Z    Knob: UseNode20ToStartContainer = True Source: $(DistributedTask.Agent.UseNode20ToStartContainer) 
+2026-10-06T08:35:53.3283649Z    Knob: UseNode24ToStartContainer = True Source: $(DistributedTask.Agent.UseNode24ToStartContainer) 
+2026-10-06T08:35:53.3284065Z    Knob: EnableTimeoutLogFlushing = True Source: $(DistributedTask.Agent.EnableTimeoutLogFlushing) 
+2026-10-06T08:35:53.3284626Z    Knob: LogTaskNameInUserAgent = true Source: $(AZP_AGENT_LOG_TASKNAME_IN_USERAGENT) 
+2026-10-06T08:35:53.3285024Z    Knob: UseFetchFilterInCheckoutTask = true Source: $(AGENT_USE_FETCH_FILTER_IN_CHECKOUT_TASK) 
+2026-10-06T08:35:53.3285445Z    Knob: UseFetchFilterInGitSubmoduleUpdate = True Source: $(DistributedTask.Agent.UseFetchFilterInGitSubmoduleUpdate) 
+2026-10-06T08:35:53.3285926Z    Knob: Rosetta2Warning = true Source: $(ROSETTA2_WARNING) 
+2026-10-06T08:35:53.3287197Z    Knob: AddForceCredentialsToGitCheckoutEnhanced = True Source: $(DistributedTask.Agent.AddForceCredentialsToGitCheckoutEnhanced) 
+2026-10-06T08:35:53.3287866Z    Knob: UseLatestTfExe = True Source: $(DistributedTask.Agent.UseLatestTfExe) 
+2026-10-06T08:35:53.3288248Z    Knob: UseSparseCheckoutInCheckoutTask = true Source: $(AGENT_USE_SPARSE_CHECKOUT_IN_CHECKOUT_TASK) 
+2026-10-06T08:35:53.3288770Z    Knob: AgentCDNConnectivityFailWarning = False Source: $(DistributedTask.Agent.AgentCDNConnectivityFailWarning) 
+2026-10-06T08:35:53.3289098Z    Knob: UseEnhancedLogging = true Source: ${AZP_USE_ENHANCED_LOGGING} 
+2026-10-06T08:35:53.3289826Z    Knob: EnableEnhancedContainerDiagnostics = True Source: $(DistributedTask.Agent.EnableEnhancedContainerDiagnostics) 
+2026-10-06T08:35:53.3290246Z    Knob: EnableDockerExecDiagnostics = True Source: $(DistributedTask.Agent.EnableDockerExecDiagnostics) 
+2026-10-06T08:35:53.3290663Z    Knob: UseEnhancedNodeSelection = True Source: $(DistributedTask.Agent.UseEnhancedNodeSelection) 
+2026-10-06T08:35:53.3291735Z Finished checking job knob settings.
+2026-10-06T08:35:53.3609125Z Start tracking orphan processes.
+2026-10-06T08:35:53.3685558Z ##[section]Finishing: Initialize job
+
+--- Run 13 / log 5 ---
+2026-10-06T08:35:53.4012154Z Task         : Download secure file
+2026-10-06T08:35:53.4012550Z Description  : Download a secure file to the agent machine
+2026-10-06T08:35:53.4012702Z Version      : 1.279.0
+2026-10-06T08:35:53.4012921Z Author       : Microsoft Corporation
+2026-10-06T08:35:57.5357074Z [Host] Selected Node version: Node24 (Strategy: Node24Strategy)
+
+--- Run 13 / log 6 ---
+2026-10-06T08:35:58.3179030Z ##[section]Starting: Checkout DMI-C3-Michael-Okanlawon/theepicbook@assignment05-triage to s
+2026-10-06T08:35:58.3190210Z Task         : Get sources
+2026-10-06T08:35:58.3190321Z Description  : Get sources from a repository. Supports Git, TfsVC, and SVN repositories.
+2026-10-06T08:35:58.3190454Z Version      : 1.0.0
+2026-10-06T08:35:58.3190559Z Author       : Microsoft
+2026-10-06T08:35:58.3191034Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=798199)
+2026-10-06T08:36:00.9169549Z Syncing repository: DMI-C3-Michael-Okanlawon/theepicbook (GitHub)
+2026-10-06T08:36:00.9177455Z ##[command]git version
+2026-10-06T08:36:00.9185149Z git version 2.43.0
+2026-10-06T08:36:00.9186865Z ##[command]git config --get remote.origin.url
+2026-10-06T08:36:00.9196378Z ##[command]git clean -ffdx
+2026-10-06T08:36:00.9204927Z ##[command]git reset --hard HEAD
+2026-10-06T08:36:00.9212188Z HEAD is now at 7c05669 Install ACL tools for Ansible service user tasks
+2026-10-06T08:36:00.9213582Z ##[command]git sparse-checkout disable
+2026-10-06T08:36:00.9225991Z ##[command]git config gc.auto 0
+2026-10-06T08:36:00.9234551Z ##[command]git config core.longpaths true
+2026-10-06T08:36:00.9242924Z ##[command]git config --get-all http.https://github.com/DMI-C3-Michael-Okanlawon/theepicbook.extraheader
+2026-10-06T08:36:00.9251718Z ##[command]git config --get-all http.extraheader
+2026-10-06T08:36:00.9259882Z ##[command]git config --get-regexp .*extraheader
+2026-10-06T08:36:00.9268554Z ##[command]git config --get-all http.proxy
+2026-10-06T08:36:00.9276869Z ##[command]git config http.version HTTP/1.1
+2026-10-06T08:36:00.9288489Z ##[command]git config --get-all remote.origin.promisor
+2026-10-06T08:36:00.9297048Z ##[command]git config --get-all remote.origin.partialclonefilter
+2026-10-06T08:36:00.9315932Z remote: Enumerating objects: 5, done.        
+2026-10-06T08:36:00.9316199Z remote: Counting objects:  20% (1/5)        
+2026-10-06T08:36:00.9316464Z remote: Counting objects:  40% (2/5)        
+2026-10-06T08:36:00.9316722Z remote: Counting objects:  60% (3/5)        
+2026-10-06T08:36:00.9316978Z remote: Counting objects:  80% (4/5)        
+2026-10-06T08:36:00.9317242Z remote: Counting objects: 100% (5/5)        
+2026-10-06T08:36:00.9317508Z remote: Counting objects: 100% (5/5), done.        
+2026-10-06T08:36:00.9317776Z remote: Compressing objects: 100% (1/1)        
+2026-10-06T08:36:00.9318055Z remote: Compressing objects: 100% (1/1), done.        
+2026-10-06T08:36:00.9318340Z remote: Total 3 (delta 2), reused 3 (delta 2), pack-reused 0 (from 0)        
+2026-10-06T08:36:00.9318642Z From https://github.com/DMI-C3-Michael-Okanlawon/theepicbook
+2026-10-06T08:36:00.9318968Z  * [new ref]         1fc1d2d2e80bb8fd62126dc2bc76cbc031d14c8f -> origin/1fc1d2d2e80bb8fd62126dc2bc76cbc031d14c8f
+2026-10-06T08:36:01.6994307Z ##[command]git --config-env=http.extraheader=env_var_http.extraheader fetch --force --tags --prune --prune-tags --progress --no-recurse-submodules origin --depth=1  +1fc1d2d2e80bb8fd62126dc2bc76cbc031d14c8f
+2026-10-06T08:36:01.7001649Z remote: Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)        
+2026-10-06T08:36:01.7002350Z From https://github.com/DMI-C3-Michael-Okanlawon/theepicbook
+2026-10-06T08:36:01.7002656Z  * branch            1fc1d2d2e80bb8fd62126dc2bc76cbc031d14c8f -> FETCH_HEAD
+2026-10-06T08:36:02.8253688Z Previous HEAD position was 7c05669 Install ACL tools for Ansible service user tasks
+2026-10-06T08:36:02.8254352Z HEAD is now at 1fc1d2d Introduce intentional dependency failure for pipeline triage
+2026-10-06T08:36:02.8277119Z ##[section]Finishing: Checkout DMI-C3-Michael-Okanlawon/theepicbook@assignment05-triage to s
+
+--- Run 13 / log 7 ---
+2026-10-06T08:36:02.8315186Z ##[section]Starting: Install Ansible
+2026-10-06T08:36:02.8322857Z Task         : Bash
+2026-10-06T08:36:02.8322948Z Description  : Run a Bash script on macOS, Linux, or Windows
+2026-10-06T08:36:02.8323073Z Version      : 3.279.0
+2026-10-06T08:36:02.8323166Z Author       : Microsoft Corporation
+2026-10-06T08:36:02.8323280Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/bash
+2026-10-06T08:36:07.6814949Z [Host] Selected Node version: Node24 (Strategy: Node24Strategy)
+2026-10-06T08:36:07.7672429Z Generating script.
+2026-10-06T08:36:07.7723865Z ========================== Starting Command Output ===========================
+2026-10-06T08:36:11.0272655Z ERROR: Could not find a version that satisfies the requirement ansible-core-triage-intentionally-invalid<2.20,>=2.19 (from versions: none)
+2026-10-06T08:36:11.0294917Z ERROR: No matching distribution found for ansible-core-triage-intentionally-invalid<2.20,>=2.19
+2026-10-06T08:36:11.0782023Z 
+2026-10-06T08:36:11.0847507Z ##[error]Bash exited with code '1'.
+2026-10-06T08:36:11.0872871Z ##[section]Finishing: Install Ansible
+
+--- Run 13 / log 8 ---
+2026-10-06T08:36:11.0926556Z Skipping step due to condition evaluation.
+Evaluating: SucceededNode()
+Result: False
+
+
+--- Run 13 / log 9 ---
+2026-10-06T08:36:11.0957496Z Skipping step due to condition evaluation.
+Evaluating: SucceededNode()
+Result: False
+
+
+--- Run 13 / log 10 ---
+2026-10-06T08:36:11.0989810Z ##[section]Starting: Checkout DMI-C3-Michael-Okanlawon/theepicbook@assignment05-triage to s
+2026-10-06T08:36:11.0995709Z Task         : Get sources
+2026-10-06T08:36:11.0995812Z Description  : Get sources from a repository. Supports Git, TfsVC, and SVN repositories.
+2026-10-06T08:36:11.0995973Z Version      : 1.0.0
+2026-10-06T08:36:11.0996068Z Author       : Microsoft
+2026-10-06T08:36:11.0996160Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=798199)
+2026-10-06T08:36:12.7752498Z Cleaning any cached credential from repository: DMI-C3-Michael-Okanlawon/theepicbook (GitHub)
+2026-10-06T08:36:12.7840085Z ##[section]Finishing: Checkout DMI-C3-Michael-Okanlawon/theepicbook@assignment05-triage to s
+
+--- Run 13 / log 11 ---
+2026-10-06T08:36:12.7865678Z ##[section]Starting: Finalize Job
+2026-10-06T08:36:12.7877369Z Cleaning up task key
+2026-10-06T08:36:12.7878295Z Start cleaning up orphan processes.
+2026-10-06T08:36:12.8083631Z ##[section]Finishing: Finalize Job
+
+--- Run 13 / log 12 ---
+2026-10-06T08:35:48.5397656Z ##[section]Starting: Job
+2026-10-06T08:35:50.1882648Z ##[section]Starting: Initialize job
+2026-10-06T08:35:50.1885391Z Agent name: 'week10-ado-agent'
+2026-10-06T08:35:50.1885808Z Agent machine name: 'week10-ado-agent'
+2026-10-06T08:35:50.1886009Z Current agent version: '5.279.0'
+2026-10-06T08:35:52.3002782Z Agent running as: 'azureuser'
+2026-10-06T08:35:52.3039457Z Prepare build directory.
+2026-10-06T08:35:52.3294960Z Set build variables.
+2026-10-06T08:35:52.3310147Z Download all required tasks.
+2026-10-06T08:35:53.3267929Z Checking job knob settings.
+2026-10-06T08:35:53.3270555Z    Knob: DockerActionRetries = true Source: $(VSTSAGENT_DOCKER_ACTION_RETRIES) 
+2026-10-06T08:35:53.3272034Z    Knob: UseGitLongPaths = true Source: $(USE_GIT_LONG_PATHS) 
+2026-10-06T08:35:53.3273322Z    Knob: UseNode24withHandlerData = True Source: $(DistributedTask.Agent.UseNode24withHandlerData) 
+2026-10-06T08:35:53.3274738Z    Knob: EnableIssueSourceValidation = true Source: $(ENABLE_ISSUE_SOURCE_VALIDATION) 
+2026-10-06T08:35:53.3275531Z    Knob: AgentEnablePipelineArtifactLargeChunkSize = true Source: $(AGENT_ENABLE_PIPELINEARTIFACT_LARGE_CHUNK_SIZE) 
+2026-10-06T08:35:53.3277526Z    Knob: ContinueAfterCancelProcessTreeKillAttempt = true Source: $(VSTSAGENT_CONTINUE_AFTER_CANCEL_PROCESSTREEKILL_ATTEMPT) 
+2026-10-06T08:35:53.3278091Z    Knob: ProcessHandlerSecureArguments = true Source: $(AZP_75787_ENABLE_NEW_LOGIC) 
+2026-10-06T08:35:53.3278476Z    Knob: ProcessHandlerSecureArguments = false Source: $(AZP_75787_ENABLE_NEW_LOGIC_LOG) 
+2026-10-06T08:35:53.3278849Z    Knob: ProcessHandlerTelemetry = true Source: $(AZP_75787_ENABLE_COLLECT) 
+2026-10-06T08:35:53.3279324Z    Knob: ProcessHandlerEnableNewLogic = true Source: $(AZP_75787_ENABLE_NEW_PH_LOGIC) 
+2026-10-06T08:35:53.3280101Z    Knob: EnableResourceMonitorDebugOutput = true Source: $(AZP_ENABLE_RESOURCE_MONITOR_DEBUG_OUTPUT) 
+2026-10-06T08:35:53.3280513Z    Knob: EnableResourceUtilizationWarnings = true Source: $(AZP_ENABLE_RESOURCE_UTILIZATION_WARNINGS) 
+2026-10-06T08:35:53.3281091Z    Knob: IgnoreVSTSTaskLib = true Source: $(AZP_AGENT_IGNORE_VSTSTASKLIB) 
+2026-10-06T08:35:53.3281574Z    Knob: FailJobWhenAgentDies = true Source: $(FAIL_JOB_WHEN_AGENT_DIES) 
+2026-10-06T08:35:53.3281816Z    Knob: EnhancedWorkerCrashHandling = true Source: ${AZP_ENHANCED_WORKER_CRASH_HANDLING} 
+2026-10-06T08:35:53.3282302Z    Knob: CheckForTaskDeprecation = true Source: $(AZP_AGENT_CHECK_FOR_TASK_DEPRECATION) 
+2026-10-06T08:35:53.3282832Z    Knob: CheckIfTaskNodeRunnerIsDeprecated246 = True Source: $(DistributedTask.Agent.CheckIfTaskNodeRunnerIsDeprecated246) 
+2026-10-06T08:35:53.3283244Z    Knob: UseNode20ToStartContainer = True Source: $(DistributedTask.Agent.UseNode20ToStartContainer) 
+2026-10-06T08:35:53.3283652Z    Knob: UseNode24ToStartContainer = True Source: $(DistributedTask.Agent.UseNode24ToStartContainer) 
+2026-10-06T08:35:53.3284068Z    Knob: EnableTimeoutLogFlushing = True Source: $(DistributedTask.Agent.EnableTimeoutLogFlushing) 
+2026-10-06T08:35:53.3284633Z    Knob: LogTaskNameInUserAgent = true Source: $(AZP_AGENT_LOG_TASKNAME_IN_USERAGENT) 
+2026-10-06T08:35:53.3285027Z    Knob: UseFetchFilterInCheckoutTask = true Source: $(AGENT_USE_FETCH_FILTER_IN_CHECKOUT_TASK) 
+2026-10-06T08:35:53.3285450Z    Knob: UseFetchFilterInGitSubmoduleUpdate = True Source: $(DistributedTask.Agent.UseFetchFilterInGitSubmoduleUpdate) 
+2026-10-06T08:35:53.3285930Z    Knob: Rosetta2Warning = true Source: $(ROSETTA2_WARNING) 
+2026-10-06T08:35:53.3287201Z    Knob: AddForceCredentialsToGitCheckoutEnhanced = True Source: $(DistributedTask.Agent.AddForceCredentialsToGitCheckoutEnhanced) 
+2026-10-06T08:35:53.3287870Z    Knob: UseLatestTfExe = True Source: $(DistributedTask.Agent.UseLatestTfExe) 
+2026-10-06T08:35:53.3288251Z    Knob: UseSparseCheckoutInCheckoutTask = true Source: $(AGENT_USE_SPARSE_CHECKOUT_IN_CHECKOUT_TASK) 
+2026-10-06T08:35:53.3288774Z    Knob: AgentCDNConnectivityFailWarning = False Source: $(DistributedTask.Agent.AgentCDNConnectivityFailWarning) 
+2026-10-06T08:35:53.3289347Z    Knob: UseEnhancedLogging = true Source: ${AZP_USE_ENHANCED_LOGGING} 
+2026-10-06T08:35:53.3289831Z    Knob: EnableEnhancedContainerDiagnostics = True Source: $(DistributedTask.Agent.EnableEnhancedContainerDiagnostics) 
+2026-10-06T08:35:53.3290260Z    Knob: EnableDockerExecDiagnostics = True Source: $(DistributedTask.Agent.EnableDockerExecDiagnostics) 
+2026-10-06T08:35:53.3290666Z    Knob: UseEnhancedNodeSelection = True Source: $(DistributedTask.Agent.UseEnhancedNodeSelection) 
+2026-10-06T08:35:53.3291747Z Finished checking job knob settings.
+2026-10-06T08:35:53.3609152Z Start tracking orphan processes.
+2026-10-06T08:35:53.3685571Z ##[section]Finishing: Initialize job
+2026-10-06T08:35:53.3755056Z ##[section]Async Command Start: DetectDockerContainer
+2026-10-06T08:35:53.3755810Z ##[section]Async Command End: DetectDockerContainer
+2026-10-06T08:35:53.3757046Z ##[section]Async Command Start: DetectDockerContainer
+2026-10-06T08:35:53.3757321Z ##[section]Async Command End: DetectDockerContainer
+2026-10-06T08:35:53.4012179Z Task         : Download secure file
+2026-10-06T08:35:53.4012556Z Description  : Download a secure file to the agent machine
+2026-10-06T08:35:53.4012705Z Version      : 1.279.0
+2026-10-06T08:35:53.4012926Z Author       : Microsoft Corporation
+2026-10-06T08:35:57.5357120Z [Host] Selected Node version: Node24 (Strategy: Node24Strategy)
+2026-10-06T08:35:58.3179047Z ##[section]Starting: Checkout DMI-C3-Michael-Okanlawon/theepicbook@assignment05-triage to s
+2026-10-06T08:35:58.3190213Z Task         : Get sources
+2026-10-06T08:35:58.3190325Z Description  : Get sources from a repository. Supports Git, TfsVC, and SVN repositories.
+2026-10-06T08:35:58.3190457Z Version      : 1.0.0
+2026-10-06T08:35:58.3190561Z Author       : Microsoft
+2026-10-06T08:35:58.3191040Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=798199)
+2026-10-06T08:36:00.9169585Z Syncing repository: DMI-C3-Michael-Okanlawon/theepicbook (GitHub)
+2026-10-06T08:36:00.9177473Z ##[command]git version
+2026-10-06T08:36:00.9185156Z git version 2.43.0
+2026-10-06T08:36:00.9186869Z ##[command]git config --get remote.origin.url
+2026-10-06T08:36:00.9196429Z ##[command]git clean -ffdx
+2026-10-06T08:36:00.9204933Z ##[command]git reset --hard HEAD
+2026-10-06T08:36:00.9212194Z HEAD is now at 7c05669 Install ACL tools for Ansible service user tasks
+2026-10-06T08:36:00.9213586Z ##[command]git sparse-checkout disable
+2026-10-06T08:36:00.9226012Z ##[command]git config gc.auto 0
+2026-10-06T08:36:00.9234560Z ##[command]git config core.longpaths true
+2026-10-06T08:36:00.9242932Z ##[command]git config --get-all http.https://github.com/DMI-C3-Michael-Okanlawon/theepicbook.extraheader
+2026-10-06T08:36:00.9251734Z ##[command]git config --get-all http.extraheader
+2026-10-06T08:36:00.9259887Z ##[command]git config --get-regexp .*extraheader
+2026-10-06T08:36:00.9268559Z ##[command]git config --get-all http.proxy
+2026-10-06T08:36:00.9276874Z ##[command]git config http.version HTTP/1.1
+2026-10-06T08:36:00.9288501Z ##[command]git config --get-all remote.origin.promisor
+2026-10-06T08:36:00.9297055Z ##[command]git config --get-all remote.origin.partialclonefilter
+2026-10-06T08:36:00.9315939Z remote: Enumerating objects: 5, done.        
+2026-10-06T08:36:00.9316203Z remote: Counting objects:  20% (1/5)        
+2026-10-06T08:36:00.9316467Z remote: Counting objects:  40% (2/5)        
+2026-10-06T08:36:00.9316725Z remote: Counting objects:  60% (3/5)        
+2026-10-06T08:36:00.9316981Z remote: Counting objects:  80% (4/5)        
+2026-10-06T08:36:00.9317245Z remote: Counting objects: 100% (5/5)        
+2026-10-06T08:36:00.9317512Z remote: Counting objects: 100% (5/5), done.        
+2026-10-06T08:36:00.9317779Z remote: Compressing objects: 100% (1/1)        
+2026-10-06T08:36:00.9318058Z remote: Compressing objects: 100% (1/1), done.        
+2026-10-06T08:36:00.9318350Z remote: Total 3 (delta 2), reused 3 (delta 2), pack-reused 0 (from 0)        
+2026-10-06T08:36:00.9318654Z From https://github.com/DMI-C3-Michael-Okanlawon/theepicbook
+2026-10-06T08:36:00.9318972Z  * [new ref]         1fc1d2d2e80bb8fd62126dc2bc76cbc031d14c8f -> origin/1fc1d2d2e80bb8fd62126dc2bc76cbc031d14c8f
+2026-10-06T08:36:01.6994343Z ##[command]git --config-env=http.extraheader=env_var_http.extraheader fetch --force --tags --prune --prune-tags --progress --no-recurse-submodules origin --depth=1  +1fc1d2d2e80bb8fd62126dc2bc76cbc031d14c8f
+2026-10-06T08:36:01.7001662Z remote: Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)        
+2026-10-06T08:36:01.7002354Z From https://github.com/DMI-C3-Michael-Okanlawon/theepicbook
+2026-10-06T08:36:01.7002660Z  * branch            1fc1d2d2e80bb8fd62126dc2bc76cbc031d14c8f -> FETCH_HEAD
+2026-10-06T08:36:02.8254016Z Previous HEAD position was 7c05669 Install ACL tools for Ansible service user tasks
+2026-10-06T08:36:02.8254356Z HEAD is now at 1fc1d2d Introduce intentional dependency failure for pipeline triage
+2026-10-06T08:36:02.8277135Z ##[section]Finishing: Checkout DMI-C3-Michael-Okanlawon/theepicbook@assignment05-triage to s
+2026-10-06T08:36:02.8315201Z ##[section]Starting: Install Ansible
+2026-10-06T08:36:02.8322861Z Task         : Bash
+2026-10-06T08:36:02.8322952Z Description  : Run a Bash script on macOS, Linux, or Windows
+2026-10-06T08:36:02.8323076Z Version      : 3.279.0
+2026-10-06T08:36:02.8323170Z Author       : Microsoft Corporation
+2026-10-06T08:36:02.8323283Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/bash
+2026-10-06T08:36:07.6814995Z [Host] Selected Node version: Node24 (Strategy: Node24Strategy)
+2026-10-06T08:36:07.7672483Z Generating script.
+2026-10-06T08:36:07.7723891Z ========================== Starting Command Output ===========================
+2026-10-06T08:36:11.0272732Z ERROR: Could not find a version that satisfies the requirement ansible-core-triage-intentionally-invalid<2.20,>=2.19 (from versions: none)
+2026-10-06T08:36:11.0294960Z ERROR: No matching distribution found for ansible-core-triage-intentionally-invalid<2.20,>=2.19
+2026-10-06T08:36:11.0782113Z 
+2026-10-06T08:36:11.0847565Z ##[error]Bash exited with code '1'.
+2026-10-06T08:36:11.0872894Z ##[section]Finishing: Install Ansible
+2026-10-06T08:36:11.0926593Z Skipping step due to condition evaluation.
+Evaluating: SucceededNode()
+Result: False
+
+2026-10-06T08:36:11.0957526Z Skipping step due to condition evaluation.
+Evaluating: SucceededNode()
+Result: False
+
+2026-10-06T08:36:11.0989829Z ##[section]Starting: Checkout DMI-C3-Michael-Okanlawon/theepicbook@assignment05-triage to s
+2026-10-06T08:36:11.0995714Z Task         : Get sources
+2026-10-06T08:36:11.0995828Z Description  : Get sources from a repository. Supports Git, TfsVC, and SVN repositories.
+2026-10-06T08:36:11.0995977Z Version      : 1.0.0
+2026-10-06T08:36:11.0996071Z Author       : Microsoft
+2026-10-06T08:36:11.0996170Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=798199)
+2026-10-06T08:36:12.7752555Z Cleaning any cached credential from repository: DMI-C3-Michael-Okanlawon/theepicbook (GitHub)
+2026-10-06T08:36:12.7840109Z ##[section]Finishing: Checkout DMI-C3-Michael-Okanlawon/theepicbook@assignment05-triage to s
+2026-10-06T08:36:12.7865704Z ##[section]Starting: Finalize Job
+2026-10-06T08:36:12.7877399Z Cleaning up task key
+2026-10-06T08:36:12.7878302Z Start cleaning up orphan processes.
+2026-10-06T08:36:12.8083648Z ##[section]Finishing: Finalize Job
+2026-10-06T08:36:12.8108257Z ##[section]Finishing: Job
