@@ -20,37 +20,37 @@ List Docker networks, verify/pull the Nginx image, run an Nginx container (`mywe
 
 #### Screenshot 1 — Output of `docker network ls`
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS1-Docker-network-ls.PNG)
 
 ---
 
 #### Screenshot 2 — Output of `docker images`
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS2-Docker-images.PNG)
 
 ---
 
 #### Screenshot 3 — Output of `docker search nginx`
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS3-Docker-search-nginx.PNG)
 
 ---
 
 #### Screenshot 4 — Successful `docker pull nginx` (if applicable)
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS4-Docker-pull-nginx.PNG)
 
 ---
 
 #### Screenshot 5 — Output of `docker ps` showing the running `myweb` container
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS5-Docker-ps.PNG)
 
 ---
 
 #### Screenshot 6 — Browser displaying the Nginx Welcome Page using the Public IP address
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS6-Browser-showing-nginx-welcome.PNG)
 
 ---
 
@@ -64,55 +64,56 @@ Create a custom bridge network `mynetwork`, build and run a Node/Express `fronte
 
 #### Screenshot 1 — Output of `docker network create mynetwork`
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS7-docker-network-create-mynetwork.PNG)
 
 ---
 
 #### Screenshot 2 — Output of `docker network ls`
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS8-network-docker-ls.PNG)
 
 ---
 
 #### Screenshot 3 — Frontend Dockerfile
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS9-frontend-dockerfile.PNG)
 
 ---
 
 #### Screenshot 4 — Successful `docker build` for the frontend
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS10-Docker-build.PNG)
 
 ---
 
 #### Screenshot 5 — Output of `docker ps` showing the frontend container
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS11-docker-ps.PNG)
 
 ---
 
 #### Screenshot 6 — Output of `docker ps` showing both frontend and backend containers
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS12-Docker-PS.PNG)
 
 ---
 
 #### Screenshot 7 — Output of `docker network inspect mynetwork`
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS13-Docker-inspect-mynetwork1.PNG)
+![alt text](screenshots/Wk11-A3-SS13-Docker-inspect-mynetwork2.PNG)
 
 ---
 
 #### Screenshot 8 — Successful `curl http://<Public-IP>` showing "Hello from Frontend"
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS14-curl-showing-frontend-hello.PNG)
 
 ---
 
 #### Screenshot 9 — Successful `curl backend` output from the frontend container showing the Nginx Welcome Page
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS15-curl-backend.PNG)
 
 ---
 
@@ -126,91 +127,91 @@ Build a three-tier app (frontend, backend, MongoDB) across `backend-network` (ba
 
 #### Screenshot 1 — Creation of `backend-network`
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS16-creation-of-backend-network.PNG)
 
 ---
 
 #### Screenshot 2 — Creation of `frontend-network`
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS17-creation-of-frontend-network.PNG)
 
 ---
 
 #### Screenshot 3 — Project folder structure
 
-Add your screenshot here.
+![ ](screenshots/Wk11-A3-SS18-folder-structure.PNG)
 
 ---
 
 #### Screenshot 4 — Database Dockerfile
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS19-Database-dockerfile.PNG)
 
 ---
 
 #### Screenshot 5 — Backend Dockerfile
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS20-backend-dockerfile.PNG)
 
 ---
 
 #### Screenshot 6 — Frontend Dockerfile
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS21-frontend-dockerfile.PNG)
 
 ---
 
 #### Screenshot 7 — Successful Docker image builds (database, backend, frontend)
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS22-Docker-image-builds.PNG)
 
 ---
 
 #### Screenshot 8 — Running containers (`docker ps`)
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS23-running-containers.PNG)
 
 ---
 
 #### Screenshot 9 — Output of `docker network inspect backend-network`
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS24-inspect-backend-network.PNG)
 
 ---
 
 #### Screenshot 10 — Output of `docker network inspect frontend-network`
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS25-inspect-frontend-network.PNG)
 
 ---
 
 #### Screenshot 11 — Browser showing the frontend application
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS26-browser-showing-public-IP.PNG)
 
 ---
 
 #### Screenshot 12 — Successful `curl api` from the frontend container
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS27-curl-api.PNG)
 
 ---
 
 #### Screenshot 13 — MongoDB connection using `mongosh`
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS28-MongoDB-connection.PNG)
 
 ---
 
 #### Screenshot 14 — Successful document insertion
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS29-insert-document.PNG)
 
 ---
 
 #### Screenshot 15 — Successful retrieval of the inserted document
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS30-document-retrieval.PNG)
 
 ---
 
@@ -224,31 +225,31 @@ Deploy an Nginx container (`fastapp`) using Host Network Mode and verify it's re
 
 #### Screenshot 1 — Output of `docker run --network host`
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS31-network-host.PNG)
 
 ---
 
 #### Screenshot 2 — Output of `docker ps` showing the running `fastapp` container
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS32-docker-ps-fastapp.PNG)
 
 ---
 
 #### Screenshot 3 — Browser or terminal displaying the Nginx Welcome Page
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS33-nginx-welcome-page.PNG)
 
 ---
 
 #### Screenshot 4 — Output of `docker inspect fastapp | grep "NetworkMode"`
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS34-network-mode.PNG)
 
 ---
 
 #### Screenshot 5 — Successful cleanup showing `docker stop fastapp` and `docker rm fastapp`
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS35-Cleanup.PNG)
 
 ---
 
@@ -264,13 +265,13 @@ Create a LinkedIn post covering the assignment objective, networking modes explo
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+`https://www.linkedin.com/posts/michael-okanlawon_docker-devops-azure-share-7515374194595872769-zu79/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7515374195866980352&highlightedUpdateType=SOCIAL_SHARE&origin=SOCIAL_SHARE&utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw`
 
 ---
 
 #### Screenshot — Published LinkedIn post
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A3-SS36-LinkedIn-Post.PNG)
 
 ---
 
