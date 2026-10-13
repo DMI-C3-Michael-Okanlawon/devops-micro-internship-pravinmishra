@@ -20,61 +20,61 @@ Run an Nginx container (`myweb`) with a Bind Mount from `~/nginx-logs` to `/var/
 
 #### Screenshot 1 — Output of `docker images`
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A4-SS1-docker-images.PNG)
 
 ---
 
 #### Screenshot 2 — Output of `docker search nginx`
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A4-SS2-docker-search-nginx.PNG)
 
 ---
 
 #### Screenshot 3 — Successful `docker pull nginx` (if applicable)
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A4-SS3-Docker-pull-nginx.PNG)
 
 ---
 
 #### Screenshot 4 — Creation of the `~/nginx-logs` directory
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A4-SS4-Creation-of-nginx-logs.PNG)
 
 ---
 
 #### Screenshot 5 — Output of `docker run` with the Bind Mount
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A4-SS5-Docker-run.PNG)
 
 ---
 
 #### Screenshot 6 — Output of `docker ps` showing the running `myweb` container
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A4-SS6-Docker-PS.PNG)
 
 ---
 
 #### Screenshot 7 — Browser displaying the Nginx Welcome Page
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A4-SS7-Browser-showing-nginx-welcome-page.PNG)
 
 ---
 
 #### Screenshot 8 — Output of `ls ~/nginx-logs` showing `access.log` and `error.log`
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A4-SS8-ngix-logs.PNG)
 
 ---
 
 #### Screenshot 9 — Successful removal of the container
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A4-SS9-Removal-of-container.PNG)
 
 ---
 
 #### Screenshot 10 — Output of `ls ~/nginx-logs` confirming the log files remain after the container has been removed
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A4-SS10-ls-nginx-log-showing-removed-container.PNG)
 
 ---
 
@@ -88,73 +88,73 @@ Create a custom network `mynetwork` and a Docker volume `shared-data`, build and
 
 #### Screenshot 1 — Project folder structure
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A4-SS11-Project-folder-structure.PNG)
 
 ---
 
 #### Screenshot 2 — Output of `docker network create mynetwork`
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A4-SS12-docker-create-mynetwork.PNG)
 
 ---
 
 #### Screenshot 3 — Output of `docker volume create shared-data`
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A4-SS13-docker-create-shared-data.PNG)
 
 ---
 
 #### Screenshot 4 — Backend Dockerfile
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A4-SS14-backend-dockerfile.PNG)
 
 ---
 
 #### Screenshot 5 — Successful backend image build
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A4-SS15-Backend-image-build.PNG)
 
 ---
 
 #### Screenshot 6 — Frontend Dockerfile
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A4-SS16-frontend-dockerfile.PNG)
 
 ---
 
 #### Screenshot 7 — Successful frontend image build
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A4-SS17-frontend-image-build.PNG)
 
 ---
 
 #### Screenshot 8 — Output of `docker ps` showing both containers
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A4-SS18-docker-ps-showing-both-containers.PNG)
 
 ---
 
 #### Screenshot 9 — Successful execution of `docker exec backend curl http://localhost/write`
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A4-SS19-backend-curl.PNG)
 
 ---
 
 #### Screenshot 10 — Browser displaying "Hello from Backend!"
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A4-SS20-browser-showing-backend-welcome.PNG)
 
 ---
 
 #### Screenshot 11 — Browser displaying "Test Data 1" after the first update
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A4-SS21-browser-showing-test-1.PNG)
 
 ---
 
 #### Screenshot 12 — Browser displaying "Test Data 2 - New Update" after the second update
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A4-SS22-browser-showing-test-2.PNG)
 
 ---
 
@@ -170,13 +170,13 @@ Create a LinkedIn post covering the assignment, Docker Hub repository, steps per
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+`https://www.linkedin.com/posts/michael-okanlawon_docker-devops-azure-share-7515669975328587776-ywJ0/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7515669976997920768&highlightedUpdateType=SOCIAL_SHARE&origin=SOCIAL_SHARE&utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw`
 
 ---
 
 #### Screenshot — Published LinkedIn post
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A4-SS-linkedin-post.PNG)
 
 ---
 
