@@ -20,13 +20,13 @@ Explore the `theepicbook` repository, identify its components (UI, API, DB, work
 
 #### Deliverable — `docs/01-architecture-diagram.png`
 
-Add your diagram or link here.
+`https://github.com/DMI-C3-Michael-Okanlawon/theepicbook/blob/assignment06-docker-capstone/docs/01-architecture-diagram.png`
 
 ---
 
 #### Deliverable — `docs/02-env-and-ports.md`
 
-Add your content or link here.
+`https://github.com/DMI-C3-Michael-Okanlawon/theepicbook/blob/assignment06-docker-capstone/docs/02-env-and-ports.md`
 
 ---
 
@@ -40,7 +40,7 @@ Create minimal multi-stage Dockerfiles for the frontend and backend services, wi
 
 #### Deliverable — `frontend/Dockerfile`, `backend/Dockerfile`, and `.dockerignore` files, with a note on layer optimizations and security benefits
 
-Add your content or link here.
+`https://github.com/DMI-C3-Michael-Okanlawon/theepicbook/blob/assignment06-docker-capstone/frontend/Dockerfile`, `https://github.com/DMI-C3-Michael-Okanlawon/theepicbook/blob/assignment06-docker-capstone/backend/Dockerfile`, `https://github.com/DMI-C3-Michael-Okanlawon/theepicbook/blob/assignment06-docker-capstone/frontend/.dockerignore`, `https://github.com/DMI-C3-Michael-Okanlawon/theepicbook/blob/assignment06-docker-capstone/backend/.dockerignore`, `https://github.com/DMI-C3-Michael-Okanlawon/theepicbook/blob/assignment06-docker-capstone/docs/11-dockerfile-notes.md`
 
 ---
 
@@ -54,7 +54,7 @@ Author `docker-compose.yml` defining the reverse-proxy, frontend, backend, and d
 
 #### Deliverable — `docker-compose.yml`
 
-Add your content or link here.
+`https://github.com/DMI-C3-Michael-Okanlawon/theepicbook/blob/assignment06-docker-capstone/docker-compose.yml`
 
 ---
 
@@ -68,7 +68,7 @@ Add a database healthcheck, a `/health` endpoint check on the backend, and `depe
 
 #### Deliverable — `docs/03-healthchecks-and-depends-on.md`
 
-Add your content or link here.
+`https://github.com/DMI-C3-Michael-Okanlawon/theepicbook/blob/assignment06-docker-capstone/docs/03-healthchecks-and-depends-on.md`
 
 ---
 
@@ -82,7 +82,7 @@ Configure Nginx or Traefik to route `/api` to the backend and `/` to the fronten
 
 #### Deliverable — `docs/04-proxy-routing-and-cors.md`
 
-Add your content or link here.
+`https://github.com/DMI-C3-Michael-Okanlawon/theepicbook/blob/assignment06-docker-capstone/docs/04-proxy-routing-and-cors.md`
 
 ---
 
@@ -96,13 +96,14 @@ Mount the database data directory to a named volume, document a snapshot/backup 
 
 #### Deliverable — `docs/05-persistence-and-backup.md`
 
-Add your content or link here.
+`https://github.com/DMI-C3-Michael-Okanlawon/theepicbook/blob/assignment06-docker-capstone/docs/05-persistence-and-backup.md`
 
 ---
 
 #### Screenshot — System state before and after a manual snapshot restore cycle
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A6-task5-persistence-and-backup-before-restore.PNG)
+![alt text](screenshots/Wk11-A6-task5-Persistence-Backups-After-Restore.PNG)
 
 ---
 
@@ -116,13 +117,13 @@ Bind-mount the reverse proxy log directory to the host, redirect application log
 
 #### Deliverable — `docs/06-logging-layout.md`
 
-Add your content or link here.
+`https://github.com/DMI-C3-Michael-Okanlawon/theepicbook/blob/assignment06-docker-capstone/docs/06-logging-layout.md`
 
 ---
 
 #### Screenshot — Live running JSON container log entries
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A6-task6-live-running-JSON-container.PNG)
 
 ---
 
@@ -136,19 +137,19 @@ Provision a VM per the security requirements (SSH restricted to your IP; HTTP/HT
 
 #### Deliverable — `docs/07-cloud-deployment-notes.md` (ports, firewall rules, deployment link)
 
-Add your content or link here.
+`https://github.com/DMI-C3-Michael-Okanlawon/theepicbook/blob/assignment06-docker-capstone/docs/07-cloud-deployment-notes.md`
 
 ---
 
 #### Screenshot — Browser showing successful web UI retrieval via the cloud public IP
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A6-task7-browser-showing-Epickbook-app.PNG)
 
 ---
 
 #### Screenshot — Active page interaction confirming backend API data fetches succeed
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A6-task7-Active-page-nteraction-confirming-backend-API-data-fetches-succeed.PNG)
 
 ---
 
@@ -162,13 +163,13 @@ Build a pipeline (Azure Pipelines or GitHub Actions) that builds and tags multi-
 
 #### Deliverable — `docs/08-ci-cd-pipeline.md`
 
-Add your content or link here.
+`https://github.com/DMI-C3-Michael-Okanlawon/theepicbook/blob/assignment06-docker-capstone/docs/08-ci-cd-pipeline.md`
 
 ---
 
 #### Screenshot (optional) — Completed automated pipeline run
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A6-task8-automated-pipeline-run.PNG)
 
 ---
 
@@ -182,13 +183,13 @@ Inject faults (drop backend/database dependencies) and evaluate frontend error h
 
 #### Deliverable — `docs/09-runbook.md`
 
-Add your content or link here.
+`https://github.com/DMI-C3-Michael-Okanlawon/theepicbook/blob/assignment06-docker-capstone/docs/09-runbook.md`
 
 ---
 
 #### Deliverable — `docs/10-reliability-tests.md`
 
-Add your content or link here.
+`https://github.com/DMI-C3-Michael-Okanlawon/theepicbook/blob/assignment06-docker-capstone/docs/10-reliability-tests.md`
 
 ---
 
@@ -204,13 +205,13 @@ Publish a 6–10 line LinkedIn post covering the architectural decision that mos
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+`https://www.linkedin.com/posts/michael-okanlawon_i-deployed-the-epicbook-on-azure-for-my-docker-share-7516508460675485696-2GpP/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7516508463141928960&highlightedUpdateType=SOCIAL_SHARE&origin=SOCIAL_SHARE&utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9A9-IBmPTPhzYSqhRaCI1i6ENsTRA8KEw`
 
 ---
 
 #### Screenshot — Published LinkedIn post showing the text body and a deployment verification image
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A6-SS-linkedin-post.PNG)
 
 ---
 
