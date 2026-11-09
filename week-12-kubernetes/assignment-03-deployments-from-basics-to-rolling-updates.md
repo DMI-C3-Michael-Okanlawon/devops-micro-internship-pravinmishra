@@ -20,7 +20,7 @@ Create the `~/k8s-labs/deployments` working directory.
 
 #### Screenshot 1 — Terminal showing the `~/k8s-labs/deployments` working directory
 
-Add your screenshot here.
+![alt text](screenshots/Wk12-A3-SS1-working-directory.png)
 
 ---
 
@@ -34,7 +34,7 @@ Create `nginx-deployment.yaml` with two replicas and image `nginx:1.21.1`, apply
 
 #### Screenshot 2 — Manifest plus `kubectl` output showing the Deployment, ReplicaSet, and two Pods
 
-Add your screenshot here.
+![alt text](screenshots/Wk12-A3-SS2-kubectl-output-showing-deployment-Replicaset-2-pods.png)
 
 ---
 
@@ -48,7 +48,7 @@ Add `strategy.rollingUpdate` with `maxSurge: 1` and `maxUnavailable: 0` to the D
 
 #### Screenshot 3 — Deployment YAML showing the RollingUpdate strategy and successful apply output
 
-Add your screenshot here.
+![alt text](screenshots/Wk12-A3-SS3-YAML-showing-RollingUpdate-and-successful-app-output.png)
 
 ---
 
@@ -62,7 +62,7 @@ Update the image to `nginx:1.23.1` with `kubectl set image`, watch the rollout, 
 
 #### Screenshot 4 — Rolling-update status, multiple ReplicaSets, and successful rollback/history output
 
-Add your screenshot here.
+![alt text](screenshots/Wk12-A3-SS4-successful-rollback-multiple-ReplicaSets.png)
 
 ---
 
@@ -76,7 +76,7 @@ Scale to five replicas, verify, then scale back to two.
 
 #### Screenshot 5 — Terminal showing the scale-up and scale-down results
 
-Add your screenshot here.
+![alt text](screenshots/Wk12-A3-SS5-terminal-showing-scale-up-and-down-result.png)
 
 ---
 
@@ -84,7 +84,11 @@ Add your screenshot here.
 
 Write a short note describing what the lab demonstrated.
 
-Write your answer here.
+This lab demonstrated how Kubernetes Deployments are used to manage containerized applications. I created an NGINX Deployment with two replicas and configured a RollingUpdate strategy using "maxSurge: 1" and "maxUnavailable: 0" to maintain application availability during updates.
+
+I performed an image upgrade from NGINX 1.21.1 to 1.23.1, monitored the rollout, and successfully rolled back to the previous version. I also demonstrated horizontal scaling by increasing the Deployment to five replicas and subsequently reducing it to two.
+
+Overall, the exercise improved my understanding of Deployments, ReplicaSets, rolling updates, rollbacks, and application scaling, and how Kubernetes helps maintain application availability while managing workload changes.
 
 ---
 
