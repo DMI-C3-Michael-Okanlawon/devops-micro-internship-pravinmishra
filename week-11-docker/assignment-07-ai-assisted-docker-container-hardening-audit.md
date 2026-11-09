@@ -20,7 +20,7 @@ Confirm your production-grade EpicBook containers from this week's capstone are 
 
 #### Screenshot 1 — `docker ps` showing your running EpicBook application container
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A7-SS1-docker-ps.PNG)
 
 ---
 
@@ -34,7 +34,7 @@ Create a `CLAUDE.md` in your workspace that tells Claude this project only ever 
 
 #### Screenshot 2 — `CLAUDE.md` open in VS Code showing the project overview, hardening workflow, and safety rules
 
-Add your screenshot here.
+![alt text](screenshots/Wk11-A7-SS2-VS-code-showing-Claude-md.PNG)
 
 ---
 
